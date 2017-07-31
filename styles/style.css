@@ -1,6 +1,7 @@
 html {
   font-family: 'Lora', serif;
   font-size: 16px;
+  color: #111111;
 }
 
 header {
@@ -13,4 +14,11 @@ header {
 .Logo {
   width: 138px;
   height: 10px;
+}
+
+.Product-Title {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  font-size: 14px;
+  font-weight: 400;
 }
