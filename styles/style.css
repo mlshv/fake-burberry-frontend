@@ -18,7 +18,6 @@ header {
 
 .product-title {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
   margin-left: 1rem;
   font-size: 14px;
   font-weight: 400;
@@ -26,5 +25,65 @@ header {
 
 .product-showcase {
   display: flex;
+  margin-top: 1.5rem;
   overflow-x: scroll;
+}
+
+.product-props {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+}
+
+.product-price-id-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-price {
+  margin: 0;
+  line-height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.product-id {
+  margin: 0;
+}
+
+.product-color-name,
+.product-color-selector {
+  margin-top: 1rem;
+}
+
+.product-id,
+.product-color-name {
+  font-size: 12px;
+}
+
+.product-color-selector {
+  display: flex;
+}
+
+.product-color-selector button {
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+}
+
+.product-color-selector button.active {
+  border: solid 1px #232122;
+}
+
+.product-color-selector button.brown {
+  background-color: #232122;
+}
+
+.product-color-selector button.honey {
+  background-color: #cfa880;
 }
