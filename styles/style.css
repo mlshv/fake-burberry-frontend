@@ -32,6 +32,7 @@ header {
 .product-props {
   margin-top: 1.5rem;
   padding: 0 1rem;
+  padding-bottom: 4rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
 }
 
@@ -86,4 +87,38 @@ header {
 
 .product-color-selector button.honey {
   background-color: #cfa880;
+}
+
+.product-props-divider {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #c6c6c6;
+}
+
+.product-user-actions button {
+  margin-top: 1rem;
+  padding: 15px;
+  width: 100%;
+  border-radius: 2px;
+  border: solid 1px #171717;
+  text-transform: uppercase;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+}
+
+.product-user-actions .size-select {
+  background: #171717;
+  color: white;
+}
+
+.product-user-actions .store-find {
+  background: #fff;
+}
+
+.product-user-actions .size-help {
+  margin-top: 1.5rem;
+  padding: 0;
+  width: auto;
+  border: none;
+  background: transparent;
 }
