@@ -2,3 +2,15 @@ html {
   font-family: 'Lora', serif;
   font-size: 16px;
 }
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.Logo {
+  width: 138px;
+  height: 10px;
+}
