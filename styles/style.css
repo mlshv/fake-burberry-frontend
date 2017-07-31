@@ -4,6 +4,15 @@ html {
   color: #111111;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 header {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -20,7 +29,6 @@ header {
   margin-top: 1.5rem;
   margin-left: 1rem;
   font-size: 14px;
-  font-weight: 400;
 }
 
 .product-showcase {
@@ -47,7 +55,6 @@ header {
   margin: 0;
   line-height: 21px;
   font-size: 18px;
-  font-weight: 400;
 }
 
 .product-id {
@@ -143,18 +150,74 @@ header {
   text-transform: uppercase;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 14px;
-  font-weight: 500;
 }
 
-.product-minimizable-title-arrow {
-
-}
-
-.product-minimizable-content {
+.product-minimizable-content p {
+  margin-top: 2rem;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.product-minimizable-content p {
-    margin-top: 2rem;
+.product-recomendations {
+  padding: 2rem 1rem;
+}
+
+.product-recomendations-title {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+
+.product-recomendations-title h2 {
+  display: inline-block;
+  padding-bottom: 8px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 14px;
+  border-bottom: 1px solid #171717;
+}
+
+.product-recomendations-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.product-recomendations-item {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.product-recomendations-item:first-child {
+  padding-right: 0.875rem;
+}
+
+.product-recomendations-item:last-child {
+  padding-left: 0.875rem;
+}
+
+.product-recomendations-item-img {
+  width: 100%;
+}
+
+.product-recomendations-item-name {
+  margin-top: 12px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.product-recomendations-item-price {
+  margin: 0;
+  font-size: 12px;
+  text-align: left;
+  color: #999999;
+}
+
+.product-recomendations-links a {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  font-style: italic;
 }
