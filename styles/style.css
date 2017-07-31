@@ -122,3 +122,39 @@ header {
   border: none;
   background: transparent;
 }
+
+.product-minimizable {
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #c6c6c6;
+}
+
+.product-minimizable-first {
+  border-top: 2px solid #c6c6c6;
+}
+
+.product-minimizable-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-minimizable-title-text {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-minimizable-title-arrow {
+
+}
+
+.product-minimizable-content {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.product-minimizable-content p {
+    margin-top: 2rem;
+}
