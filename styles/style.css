@@ -11,12 +11,12 @@ header {
   border-bottom: 1px solid #c6c6c6;
 }
 
-.Logo {
+.logo {
   width: 138px;
   height: 10px;
 }
 
-.Product-Title {
+.product-title {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   margin-left: 1rem;
@@ -24,11 +24,7 @@ header {
   font-weight: 400;
 }
 
-.Product-Showcase {
+.product-showcase {
   display: flex;
   overflow-x: scroll;
-}
-
-.Product-Showcase-Img {
-    margin: 0;
 }
