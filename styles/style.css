@@ -48,7 +48,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .product-price {
@@ -99,7 +99,8 @@ header {
 .product-props-divider {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border: 1px solid #c6c6c6;
+  border: none;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 .product-user-actions button {
@@ -132,11 +133,11 @@ header {
 
 .product-minimizable {
   padding: 2rem 1rem;
-  border-bottom: 2px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 .product-minimizable-first {
-  border-top: 2px solid #c6c6c6;
+  border-top: 1px solid #c6c6c6;
 }
 
 .product-minimizable-title {
@@ -159,12 +160,20 @@ header {
 }
 
 .product-recomendations {
-  padding: 2rem 1rem;
+  padding-top: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 4rem;
 }
 
 .product-recomendations-title {
   flex-basis: 100%;
   margin-bottom: 2rem;
+}
+
+.product-recomendations-title-serif {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .product-recomendations-title h2 {
@@ -177,6 +186,10 @@ header {
   border-bottom: 1px solid #171717;
 }
 
+.product-recomendations-title-serif h2 {
+  font-family: 'Lora', serif;
+}
+
 .product-recomendations-row {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +197,8 @@ header {
 }
 
 .product-recomendations-item {
+  display: flex;
+  flex-wrap: wrap;
   flex-basis: 50%;
   box-sizing: border-box;
 }
@@ -197,6 +212,7 @@ header {
 }
 
 .product-recomendations-item-img {
+  align-self: center;
   width: 100%;
 }
 
@@ -209,6 +225,7 @@ header {
 .product-recomendations-item-price {
   margin: 0;
   font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   text-align: left;
   color: #999999;
 }
