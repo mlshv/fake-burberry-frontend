@@ -32,15 +32,20 @@
         <p class="product-color-name">
           Colour: Honey
         </p>
-        <div class="product-color-selector">
-          <button class="brown"></button>
-          <button class="honey active"></button>
+        <div class="product-color-buttons">
+          <button class="product-color-button product-color-button-brown"></button>
+          <button class="product-color-button
+                         product-color-button-honey
+                         product-color-button-active"></button>
         </div>
         <hr class="product-props-divider">
-        <div class="product-user-actions">
-          <button class="size-select">Select a size</button>
-          <button class="store-find">Find in store</button>
-          <button class="size-help">Need size help?</button>
+        <div class="product-props-buttons">
+          <button class="product-props-button
+                         product-props-button-size-select">Select a size</button>
+          <button class="product-props-button
+                         product-props-button-store-find">Find in store</button>
+          <button class="product-props-button
+                         product-props-button-size-help">Need size help?</button>
         </div>
       </section>
       <section class="product-minimizable product-minimizable-first">
@@ -49,32 +54,21 @@
           <span class="product-minimizable-title-arrow">▲</span>
         </div>
         <div class="product-minimizable-content">
-          <p>
-            A refined car coat crafted in protective cotton gabardine.
-            <br>
-            Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.
-            <br>
-            Raglan sleeves and a concealed button closure complement the clean tailored lines.
-            <br>
-            The piece is finished with a distinctive check undercollar.
-          </p>
-          <p>
-            Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly according to size.
-            <br>
-            Outer: 100% cotton
-            <br>
-            Check lining: 100% cotton
-            <br>
-            Sleeve lining: 100% viscose
-            <br>
-            Buttons: buffalo horn
-            <br>
-            Specialist dry clean
-            <br>
-            Made in Europe
-            <br>
-            Item 39428531
-          </p>
+          <p>A refined car coat crafted in protective cotton gabardine.</p>
+          <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.</p>
+          <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
+          <p>The piece is finished with a distinctive check undercollar.</p>
+          <br>
+          <p>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly according to size.</p>
+          <ul>
+            <li>Outer: 100% cotton</li>
+            <li>Check lining: 100% cotton</li>
+            <li>Sleeve lining: 100% viscose</li>
+            <li>Buttons: buffalo horn</li>
+          </ul>
+          <p>Specialist dry clean</p>
+          <p>Made in Europe</p>
+          <p>Item 39428531</p>
         </div>
       </section>
       <section class="product-minimizable">
@@ -88,37 +82,35 @@
           <h2>We recommend</h2>
         </div>
         <div class="product-recomendations-row">
-          <div class="product-recomendations-item">
-            <img class="product-recomendations-item-img" src="assets/recommend1.jpg">
-            <h3 class="product-recomendations-item-name">Emroided Hooded</h3>
-            <h5 class="product-recomendations-item-price">27 000 руб</h5>
+          <div class="product-recomendations-card">
+            <img class="product-recomendations-card-img" src="assets/recommend1.jpg">
+            <h3 class="product-recomendations-card-name">Emroided Hooded</h3>
+            <h5 class="product-recomendations-card-price">27 000 руб</h5>
           </div>
-          <div class="product-recomendations-item">
-            <img class="product-recomendations-item-img" src="assets/recommend2.jpg">
-            <h3 class="product-recomendations-item-name">Relaxed Fit Stretch Jeans</h3>
-            <h5 class="product-recomendations-item-price">22 500 руб</h5>
+          <div class="product-recomendations-card">
+            <img class="product-recomendations-card-img" src="assets/recommend2.jpg">
+            <h3 class="product-recomendations-card-name">Relaxed Fit Stretch Jeans</h3>
+            <h5 class="product-recomendations-card-price">22 500 руб</h5>
           </div>
         </div>
         <div class="product-recomendations-row">
-          <div class="product-recomendations-item">
-            <img class="product-recomendations-item-img" src="assets/recommend3.jpg">
-            <h3 class="product-recomendations-item-name">Leather and House Check</h3>
-            <h5 class="product-recomendations-item-price">120 000 руб</h5>
+          <div class="product-recomendations-card">
+            <img class="product-recomendations-card-img" src="assets/recommend3.jpg">
+            <h3 class="product-recomendations-card-name">Leather and House Check</h3>
+            <h5 class="product-recomendations-card-price">120 000 руб</h5>
           </div>
-          <div class="product-recomendations-item">
-            <img class="product-recomendations-item-img" src="assets/recommend4.jpg">
-            <h3 class="product-recomendations-item-name">Leather Wingtip Check</h3>
-            <h5 class="product-recomendations-item-price">46 000 руб</h5>
+          <div class="product-recomendations-card">
+            <img class="product-recomendations-card-img" src="assets/recommend4.jpg">
+            <h3 class="product-recomendations-card-name">Leather Wingtip Check</h3>
+            <h5 class="product-recomendations-card-price">46 000 руб</h5>
           </div>
         </div>
         <div class="product-recomendations-title product-recomendations-title-serif">
           <h2>More for you</h2>
         </div>
-        <div class="product-recomendations-links">
-          <a href="#">Men's Black Trench Coats</a>
-          <a href="#">Men's Short Trench Coats</a>
-          <a href="#">Men's Long Trench Coats</a>
-        </div>
+        <a class="product-recomendations-link" href="#">Men's Black Trench Coats</a>
+        <a class="product-recomendations-link" href="#">Men's Short Trench Coats</a>
+        <a class="product-recomendations-link" href="#">Men's Long Trench Coats</a>
       </section>
     </main>
     <footer>

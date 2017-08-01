@@ -71,11 +71,11 @@ header {
   font-size: 12px;
 }
 
-.product-color-selector {
+.product-color-buttons {
   display: flex;
 }
 
-.product-color-selector button {
+.product-color-button {
   margin-right: 1rem;
   width: 40px;
   height: 40px;
@@ -84,15 +84,15 @@ header {
   border-radius: 50%;
 }
 
-.product-color-selector button.active {
+.product-color-button-active {
   border: solid 1px #232122;
 }
 
-.product-color-selector button.brown {
+.product-color-button-brown {
   background-color: #232122;
 }
 
-.product-color-selector button.honey {
+.product-color-button-honey {
   background-color: #cfa880;
 }
 
@@ -103,10 +103,15 @@ header {
   border-bottom: 1px solid #c6c6c6;
 }
 
-.product-user-actions button {
+.product-props-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-props-button {
+  flex-basis: 100%;
   margin-top: 1rem;
   padding: 15px;
-  width: 100%;
   border-radius: 2px;
   border: solid 1px #171717;
   text-transform: uppercase;
@@ -114,19 +119,20 @@ header {
   font-size: 12px;
 }
 
-.product-user-actions .size-select {
+.product-props-button-size-select {
   background: #171717;
   color: white;
 }
 
-.product-user-actions .store-find {
+.product-props-button-store-find {
   background: #fff;
 }
 
-.product-user-actions .size-help {
+.product-props-button-size-help {
   margin-top: 1.5rem;
   padding: 0;
   width: auto;
+  text-align: left;
   border: none;
   background: transparent;
 }
@@ -153,10 +159,18 @@ header {
   font-size: 14px;
 }
 
-.product-minimizable-content p {
+.product-minimizable-content {
   margin-top: 2rem;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.product-minimizable-content ul,
+.product-minimizable-content p,
+.product-minimizable-content li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .product-recomendations {
@@ -196,33 +210,33 @@ header {
   margin-bottom: 2rem;
 }
 
-.product-recomendations-item {
+.product-recomendations-card {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 50%;
   box-sizing: border-box;
 }
 
-.product-recomendations-item:first-child {
+.product-recomendations-card:first-child {
   padding-right: 0.875rem;
 }
 
-.product-recomendations-item:last-child {
+.product-recomendations-card:last-child {
   padding-left: 0.875rem;
 }
 
-.product-recomendations-item-img {
+.product-recomendations-card-img {
   align-self: center;
   width: 100%;
 }
 
-.product-recomendations-item-name {
+.product-recomendations-card-name {
   margin-top: 12px;
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
 
-.product-recomendations-item-price {
+.product-recomendations-card-price {
   margin: 0;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -230,7 +244,7 @@ header {
   color: #999999;
 }
 
-.product-recomendations-links a {
+.product-recomendations-link {
   display: block;
   margin-bottom: 1rem;
   font-size: 14px;
