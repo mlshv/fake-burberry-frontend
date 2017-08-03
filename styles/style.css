@@ -213,14 +213,14 @@ header {
   line-height: 1.25rem;
 }
 
-.product-recomendations {
+.product-recommendations {
   padding-top: 0;
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 3rem;
 }
 
-.product-recomendations-title {
+.product-recommendations-title {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   display: inline-block;
@@ -232,42 +232,39 @@ header {
   border-bottom: 1px solid #171717;
 }
 
-.product-recomendations-row {
+.product-recommendations-row {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-.product-recomendations-card {
+.product-recommendation {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 50%;
   box-sizing: border-box;
-}
-
-.product-recomendations-card {
   padding-right: .875rem;
 }
 
-.product-recomendations-card:last-child {
+.product-recommendation:last-child {
   padding-right: 0;
   padding-left: .875rem;
 }
 
-.product-recomendations-card-img {
+.product-recommendation-img {
   display: block;
   width: 130px;
   height: 174px;
 }
 
-.product-recomendations-card-name {
+.product-recommendation-name {
   margin-top: .5rem;
   margin-bottom: .5rem;
   font-size: 1rem;
   line-height: 1.19;
 }
 
-.product-recomendations-card-price {
+.product-recommendation-price {
   margin: 0;
   margin-left: 1px;
   line-height: 1.17;
@@ -277,7 +274,7 @@ header {
   color: #999999;
 }
 
-.product-recomendations-link {
+.product-recommendations-link {
   display: block;
   margin-bottom: 1rem;
   line-height: 1.0625rem;
