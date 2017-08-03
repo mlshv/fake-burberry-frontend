@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,700" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
     <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,700">
+    <!--<link rel="stylesheet" href="//unpkg.com/flexboxgrid2">-->
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
-      <img class="logo" src="assets/logo.svg">
+      <a href="#">
+        <img class="logo" src="assets/logo.svg">
+      </a>
     </header>
     <main>
       <h1 class="product-title">Long Cotton Gabardine Car Coat</h1>
@@ -33,65 +36,58 @@
           Colour: Honey
         </p>
         <div class="product-color-buttons">
-          <button class="product-color-button product-color-button-brown"></button>
+          <button class="product-color-button product-color-button-black" type="button" aria-label="black"></button>
           <button class="product-color-button
                          product-color-button-honey
-                         product-color-button-active"></button>
+                         product-color-button-active" type="button" aria-label="honey"></button>
         </div>
         <hr class="product-props-divider">
         <div class="product-props-buttons">
-          <button class="product-props-button
-                         product-props-button-size-select">Select a size</button>
-          <button class="product-props-button
-                         product-props-button-store-find">Find in store</button>
-          <button class="product-props-button
-                         product-props-button-size-help">Need size help?</button>
+          <button class="btn btn-dark">Select a size</button>
+          <button class="btn btn-light">Find in store</button>
+          <button class="btn product-props-button-size-help">Need size help?</button>
         </div>
       </section>
-      <section class="product-description">
-        <button class="product-description-button-toggle">
-          <h2 class="product-description-title">Description</h2>
-          <img class="product-description-title-arrow" src="assets/triangle-up.svg">
+      <section class="accordion accordion-active">
+        <button class="accordion-btn-toggle">
+          <h2 class="accordion-title">Description</h2>
         </button>
-        <div class="product-description-content">
+        <div class="accordion-content">
           <p>A refined car coat crafted in protective cotton gabardine.</p>
           <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.</p>
           <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
           <p>The piece is finished with a distinctive check undercollar.</p>
           <br>
-          <p>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly according to size.</p>
           <ul>
+            <li>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly according to size.</li>
             <li>Outer: 100% cotton</li>
             <li>Check lining: 100% cotton</li>
             <li>Sleeve lining: 100% viscose</li>
             <li>Buttons: buffalo horn</li>
+            <li>Specialist dry clean</li>
+            <li>Made in Europe</>
+            <li>Item 39428531</li>
           </ul>
-          <p>Specialist dry clean</p>
-          <p>Made in Europe</p>
-          <p>Item 39428531</p>
         </div>
       </section>
-      <section class="product-shipping">
-        <button class="product-shipping-button-toggle">
-          <h2 class="product-shipping-title">Shipping &amp; returns</h2>
-          <img class="product-shipping-title-arrow" src="assets/triangle-down.svg">
+      <section class="accordion product-accordion-shipping">
+        <button class="accordion-btn-toggle">
+          <h2 class="accordion-title">Shipping & returns</h2>
         </button>
       </section>
       <section class="product-recomendations">
-        <div class="product-recomendations-title">
-          <h2>We recommend</h2>
-        </div>
+        <div class="product-recomendations-title">We recommend</div>
         <div class="product-recomendations-row">
-          <div class="product-recomendations-card">
+          <a class="product-recomendations-card">
             <img class="product-recomendations-card-img" src="assets/recommend1.jpg">
             <h3 class="product-recomendations-card-name">Emroided Hooded</h3>
             <h5 class="product-recomendations-card-price">27 000 руб.</h5>
-          </div>
-          <div class="product-recomendations-card">
+          </a>
+          <a class="product-recomendations-card">
             <img class="product-recomendations-card-img" src="assets/recommend2.jpg">
             <h3 class="product-recomendations-card-name">Relaxed Fit Stretch Jeans</h3>
             <h5 class="product-recomendations-card-price">22 500 руб.</h5>
-          </div>
+          </a>
         </div>
         <div class="product-recomendations-row">
           <div class="product-recomendations-card">
@@ -99,15 +95,13 @@
             <h3 class="product-recomendations-card-name">Leather and House Check</h3>
             <h5 class="product-recomendations-card-price">120 000 руб.</h5>
           </div>
-          <div class="product-recomendations-card">
+          <a class="product-recomendations-card">
             <img class="product-recomendations-card-img" src="assets/recommend4.jpg">
             <h3 class="product-recomendations-card-name">Leather Wingtip Check</h3>
             <h5 class="product-recomendations-card-price">46 000 руб.</h5>
-          </div>
+          </a>
         </div>
-        <div class="product-recomendations-title product-recomendations-title">
-          <h2>More for you</h2>
-        </div>
+        <h2 class="product-recomendations-title">More for you</h2>
         <a class="product-recomendations-link" href="#">Men's Black Trench Coats</a>
         <a class="product-recomendations-link" href="#">Men's Short Trench Coats</a>
         <a class="product-recomendations-link" href="#">Men's Long Trench Coats</a>

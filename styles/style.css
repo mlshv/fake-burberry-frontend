@@ -29,7 +29,7 @@ header {
   margin: 0;
   margin-top: 1rem;
   margin-left: 1rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.2;
 }
 
@@ -75,7 +75,7 @@ header {
 
 .product-id,
 .product-color-name {
-  font-size: 12px;
+  font-size: .75rem;
 }
 
 .product-color-buttons {
@@ -94,7 +94,7 @@ header {
   border: solid 1px #232122;
 }
 
-.product-color-button-brown {
+.product-color-button-black {
   background-color: #232122;
 }
 
@@ -114,25 +114,25 @@ header {
   flex-wrap: wrap;
 }
 
-.product-props-button {
+.btn {
   flex-basis: 100%;
   margin-top: 1rem;
   padding: 1rem 0;
   line-height: .875rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 0.75rem;
+  font-size: .75rem;
   letter-spacing: normal;
   text-transform: uppercase;
   border-radius: 2px;
 }
 
-.product-props-button-size-select {
+.btn-dark {
   background: #171717;
   border: solid 1px #171717;
   color: white;
 }
 
-.product-props-button-store-find {
+.btn-light {
   background: #fff;
   border: solid 1px #999999;
 }
@@ -144,23 +144,32 @@ header {
   padding-top: 1px;
   width: auto;
   line-height: .875rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: .75rem;
   text-align: left;
   border: none;
   background: transparent;
 }
 
-.product-description,
-.product-shipping {
+.accordion {
   display: flex;
   padding: 2rem 1rem;
-  padding-bottom: 30px;
   flex-wrap: wrap;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
 }
 
-.product-description-button-toggle,
-.product-shipping-button-toggle {
+.accordion::after {
+  position: absolute;
+  content: url(../assets/triangle-down.svg);
+  right: 1rem;
+}
+
+.accordion-active::after {
+  transform: rotate(180deg);
+}
+
+.accordion-btn-toggle{
   display: flex;
   flex-basis: 100%;
   padding: 0;
@@ -171,8 +180,7 @@ header {
   background: transparent;
 }
 
-.product-shipping-title,
-.product-description-title {
+.accordion-title {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
@@ -180,15 +188,15 @@ header {
   line-height: 1.25rem;
 }
 
-.product-description-content {
+.accordion-content {
   margin-top: 2rem;
   font-size: .875rem;
   line-height: 1.5rem;
 }
 
-.product-description-content ul,
-.product-description-content p,
-.product-description-content li {
+.accordion-content ul,
+.accordion-content p,
+.accordion-content li {
   margin: 0;
   padding: 0;
   font-size: .875rem;
@@ -196,13 +204,13 @@ header {
   list-style: none;
 }
 
-.product-shipping {
+.product-accordion-shipping {
   border-top: none;
-  padding-bottom: 31px;
+  margin-bottom: 1.9375rem;;
 }
 
-.product-shipping-title {
-  line-height: 21px;
+.product-accordion-shipping .accordion-title {
+  line-height: 1.25rem;
 }
 
 .product-recomendations {
@@ -213,15 +221,10 @@ header {
 }
 
 .product-recomendations-title {
-  flex-basis: 100%;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
-}
-
-.product-recomendations-title * {
   display: inline-block;
-  padding-bottom: 8px;
-  margin: 0;
+  padding-bottom: .5rem;
   line-height: 1.1875rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 1rem;
@@ -268,7 +271,7 @@ header {
   margin: 0;
   margin-left: 1px;
   line-height: 1.17;
-  font-size: 12px;
+  font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   text-align: left;
   color: #999999;
@@ -277,8 +280,8 @@ header {
 .product-recomendations-link {
   display: block;
   margin-bottom: 1rem;
-  line-height: 17px;
-  font-size: 14px;
+  line-height: 1.0625rem;
+  font-size: .875rem;
   font-style: italic;
   text-decoration: none;
   color: inherit;
@@ -294,7 +297,7 @@ footer {
   margin-top: 1rem;
   padding: 0;
   line-height: 1rem;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   background: transparent;
   border: none;
@@ -315,7 +318,7 @@ footer {
 .footer-link-contact {
   display: block;
   margin-bottom: 1rem;
-  font-size: 14px;
+  font-size: .875rem;
   line-height: 1.0625rem;
   font-family: 'Lora', serif;
   font-style: italic;
