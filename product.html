@@ -4,7 +4,7 @@
     <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,700">
-    <!--<link rel="stylesheet" href="//unpkg.com/flexboxgrid2">-->
+    <link rel="stylesheet" href="flexboxgrid2.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,40 +15,42 @@
         <img class="logo" src="assets/logo.svg">
       </a>
     </header>
-    <main>
-      <h1 class="product-title">Long Cotton Gabardine Car Coat</h1>
-      <div class="product-showcase">
-        <img src="assets/product-showcase1.jpg">
-        <img src="assets/product-showcase2.jpg">
-        <img src="assets/product-showcase4.jpg">
-        <img src="assets/product-showcase3.jpg">
-      </div>
-      <section class="product-props">
-        <div class="product-price-id-wrap">
-          <h2 class="product-price">
-            110 000 руб.
-          </h2>
-          <p class="product-id">
-            Item 39428531
+    <main class="container">
+      <h1 class="product-title row">Long Cotton Gabardine Car Coat</h1>
+      <div class="row">
+        <div class="product-showcase col-md-7">
+          <img src="assets/product-showcase1.jpg">
+          <img src="assets/product-showcase2.jpg">
+          <img src="assets/product-showcase3.jpg">
+          <img src="assets/product-showcase4.jpg">
+        </div>
+        <section class="product-props col-md-5 col-xs-12">
+          <div class="product-price-id-wrap">
+            <h2 class="product-price">
+              110 000 руб.
+            </h2>
+            <p class="product-id">
+              Item 39428531
+            </p>
+          </div>
+          <p class="product-color-name">
+            Colour: Honey
           </p>
-        </div>
-        <p class="product-color-name">
-          Colour: Honey
-        </p>
-        <div class="product-color-buttons">
-          <button class="product-color-button product-color-button-black" type="button" aria-label="black"></button>
-          <button class="product-color-button
-                         product-color-button-honey
-                         product-color-button-active" type="button" aria-label="honey"></button>
-        </div>
-        <hr class="product-props-divider">
-        <div class="product-props-buttons">
-          <button class="btn btn-dark">Select a size</button>
-          <button class="btn btn-light">Find in store</button>
-          <button class="btn product-props-button-size-help">Need size help?</button>
-        </div>
-      </section>
-      <section class="accordion accordion-active">
+          <div class="product-color-buttons">
+            <button class="product-color-button product-color-button-black" type="button" aria-label="black"></button>
+            <button class="product-color-button
+                           product-color-button-honey
+                           product-color-button-active" type="button" aria-label="honey"></button>
+          </div>
+          <hr class="product-props-divider">
+          <div class="product-props-buttons">
+            <button class="btn btn-dark">Select a size</button>
+            <button class="btn btn-light">Find in store</button>
+            <button class="btn product-props-button-size-help">Need size help?</button>
+          </div>
+        </section>
+      </div>
+      <section class="accordion accordion-active row">
         <button class="accordion-btn-toggle">
           <h2 class="accordion-title">Description</h2>
         </button>
@@ -70,12 +72,18 @@
           </ul>
         </div>
       </section>
-      <section class="accordion product-accordion-shipping">
+      <section class="accordion product-accordion-shipping row">
         <button class="accordion-btn-toggle">
           <h2 class="accordion-title">Shipping & returns</h2>
         </button>
+        <div class="accordion-content">
+          <img class="img-shipping-box" src="assets/shipping-box.jpg">
+          <h2 class="accordion-title product-delivery-title">
+            Delivery
+          </h2>
+        </div>
       </section>
-      <section class="product-recommendations">
+      <section class="product-recommendations row">
         <div class="product-recommendations-title">We recommend</div>
         <div class="product-recommendations-row">
           <a class="product-recommendation">
@@ -101,10 +109,14 @@
             <h5 class="product-recommendation-price">46 000 руб.</h5>
           </a>
         </div>
-        <h2 class="product-recommendations-title">More for you</h2>
-        <a class="product-recommendations-link" href="#">Men's Black Trench Coats</a>
-        <a class="product-recommendations-link" href="#">Men's Short Trench Coats</a>
-        <a class="product-recommendations-link" href="#">Men's Long Trench Coats</a>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="product-recommendations-title">More for you</h2>
+          </div>
+          <a class="product-recommendations-link col-xs-12" href="#">Men's Black Trench Coats</a>
+          <a class="product-recommendations-link col-xs-12" href="#">Men's Short Trench Coats</a>
+          <a class="product-recommendations-link col-xs-12" href="#">Men's Long Trench Coats</a>
+        </div>
       </section>
     </main>
     <footer>
