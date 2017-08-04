@@ -30,6 +30,10 @@ header {
   height: 10px;
 }
 
+.container {
+  width: auto;
+}
+
 .product-title {
   margin-top: 1rem;
   margin-right: 0;
@@ -225,10 +229,10 @@ header {
 
 .accordion-title {
   margin: 0;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.25rem;
 }
 
@@ -240,7 +244,7 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .accordion-content {
-    display: block;
+    display: flex;
     margin-top: 0;
   }
 }
@@ -279,12 +283,29 @@ header {
 
   .product-accordion-shipping .product-delivery-title {
     display: block;
+    line-height: 1.18rem;
   }
 }
 
+.product-delivery-subtitle {
+  margin: 0;
+  margin-bottom: .25rem;
+  line-height: .875rem;
+  font-size: .75rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-weight: bold;
+}
+
+.product-delivery-text {
+  margin-bottom: 1.5rem!important;
+  line-height: 1.35!important;
+  font-size: .75rem!important;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+}
+
 .img-shipping-box {
-  max-width: 432px;
-  height: auto;
+  display: block;
+  width: 100%;
 }
 
 .product-recommendations {
@@ -329,6 +350,12 @@ header {
   display: block;
   width: 130px;
   height: 174px;
+}
+@media screen and (min-width: 48rem) {
+  .product-recommendation-img {
+    width: 176px;
+    height: 235px;
+  }
 }
 
 .product-recommendation-name {
