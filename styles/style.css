@@ -30,7 +30,7 @@ header {
   height: 10px;
 }
 
-.container {
+.container-fullwidth {
   width: auto;
 }
 
@@ -48,7 +48,7 @@ header {
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    margin-left: 0;
+    margin-left: .5rem;
   }
 }
 
@@ -78,7 +78,7 @@ header {
 @media screen and (min-width: 48rem) {
   .product-props {
     margin-top: 0;
-    padding-right: .5rem;
+    padding: 0;
   }
 }
 
@@ -235,6 +235,11 @@ header {
   font-weight: 500;
   line-height: 1.25rem;
 }
+@media screen and (min-width: 48rem) {
+  .accordion-title {
+    margin-bottom: 1rem;
+  }
+}
 
 .accordion-content {
   display: none;
@@ -269,7 +274,9 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .product-accordion-shipping {
+    margin-bottom: .5rem;
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -314,6 +321,13 @@ header {
   padding-left: 1rem;
   padding-bottom: 3rem;
 }
+@media screen and (min-width: 48rem) {
+  .product-recommendations {
+    padding-right: .5rem;
+    padding-bottom: 2rem;
+    padding-left: .5rem;
+  }
+}
 
 .product-recommendations-title {
   margin-top: 1rem;
@@ -326,36 +340,21 @@ header {
   text-transform: uppercase;
   border-bottom: 1px solid #171717;
 }
-
-.product-recommendations-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+@media screen and (min-width: 48rem) {
+  .product-recommendations-title {
+    margin-bottom: 1rem;
+  }
 }
 
 .product-recommendation {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 50%;
-  box-sizing: border-box;
-  padding-right: .875rem;
-}
-
-.product-recommendation:last-child {
-  padding-right: 0;
-  padding-left: .875rem;
+  display: block;
+  margin-bottom: 2rem;
 }
 
 .product-recommendation-img {
   display: block;
-  width: 130px;
-  height: 174px;
-}
-@media screen and (min-width: 48rem) {
-  .product-recommendation-img {
-    width: 176px;
-    height: 235px;
-  }
+  width: 100%;
+  height: auto;
 }
 
 .product-recommendation-name {
@@ -367,12 +366,17 @@ header {
 
 .product-recommendation-price {
   margin: 0;
-  margin-left: 1px;
   line-height: 1.17;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   text-align: left;
   color: #999999;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-recommendations-more {
+    display: none;
+  }
 }
 
 .product-recommendations-link {
@@ -389,6 +393,49 @@ footer {
   background: #f3f3f3;
   padding: 1rem;
 }
+@media screen and (min-width: 48px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-right: .5rem;
+    padding-bottom: 2rem;
+    padding-left: .5rem;
+  }
+}
+
+.footer-nav {
+  display: none;
+}
+@media screen and (min-width: 48px) {
+  .footer-nav {
+    flex-basis: 100%;
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.footer-nav-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-weight: bold;
+  line-height: .875rem;
+  text-transform: uppercase;
+  color: #171717;
+}
+
+.footer-nav-link {
+  display: block;
+  margin-bottom: .75rem;
+  font-size: .75rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  color: #999999;
+}
 
 .footer-button-text {
   display: block;
@@ -402,6 +449,12 @@ footer {
   outline: none;
   color: #999;
 }
+@media screen and (min-width: 48rem) {
+  .footer-button-text {
+    margin-top: 1.25rem;
+    margin-right: 1.5rem;
+  }
+}
 
 .footer-need-help {
   margin-top: 1.5rem;
@@ -411,6 +464,11 @@ footer {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-weight: bold;
   text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .footer-need-help {
+    display: none;
+  }
 }
 
 .footer-link-contact {
@@ -423,4 +481,9 @@ footer {
   text-decoration: none;
   text-align: center;
   color: inherit;
+}
+@media screen and (min-width: 48rem) {
+  .footer-link-contact {
+    display: none;
+  }
 }
