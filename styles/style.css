@@ -34,7 +34,7 @@ header {
   margin-top: 1rem;
   margin-right: 0;
   margin-bottom: 1rem;
-  margin-left: .5rem;
+  margin-left: 1rem;
   padding: 0;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -51,13 +51,18 @@ header {
 .product-showcase {
   display: flex;
   overflow-x: scroll;
+  margin: 0 -.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .product-showcase {
+    margin: 0;
+  }
 }
 
 .product-showcase img {
   width: 300px;
   height: 400px;
 }
-
 @media screen and (min-width: 48rem) {
   .product-showcase img {
     width: 432px;
@@ -67,7 +72,7 @@ header {
 
 .product-props {
   margin-top: 1rem;
-  padding: 0 1rem;
+  padding: 0 .5rem;
   padding-bottom: 3rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
 }
@@ -268,6 +273,7 @@ header {
 .product-accordion-shipping {
   border-top: none;
   margin-bottom: 1.9375rem;;
+  flex-basis: 100%;
 }
 @media screen and (min-width: 48rem) {
   .product-accordion-shipping {
@@ -388,23 +394,23 @@ header {
 
 footer {
   background: #f3f3f3;
-  padding: 1rem;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
-@media screen and (min-width: 48px) {
+@media screen and (min-width: 48rem) {
   footer {
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
-    padding-right: .5rem;
     padding-bottom: 2rem;
-    padding-left: .5rem;
   }
 }
 
 .footer-nav {
   display: none;
 }
-@media screen and (min-width: 48px) {
+@media screen and (min-width: 48rem) {
   .footer-nav {
     flex-basis: 100%;
     display: block;
@@ -448,8 +454,9 @@ footer {
 }
 @media screen and (min-width: 48rem) {
   .footer-button-text {
+    display: inline-block;
     margin-top: 1.25rem;
-    margin-right: 1.5rem;
+    margin-right: 1.25rem;
   }
 }
 
@@ -470,7 +477,6 @@ footer {
 
 .footer-link-contact {
   display: block;
-  margin-bottom: 1rem;
   font-size: .875rem;
   line-height: 1.0625rem;
   font-family: 'Lora', serif;
