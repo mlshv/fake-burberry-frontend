@@ -394,7 +394,7 @@ h6 {
 
 .footer {
   background: #f3f3f3;
-  padding: 0;
+  padding: 0 .5rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
@@ -402,6 +402,7 @@ h6 {
   .footer {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
