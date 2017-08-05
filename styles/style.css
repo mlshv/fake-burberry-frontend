@@ -1,7 +1,7 @@
 body {
   font-family: 'Lora', serif;
   font-size: 16px;
-  color: #111111;
+  color: #171717;
 }
 
 h1,
@@ -427,7 +427,6 @@ h6 {
   font-weight: bold;
   line-height: .875rem;
   text-transform: uppercase;
-  color: #171717;
 }
 
 .footer-nav-link {
