@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
+    <header class="header">
       <a href="#">
-        <img class="logo" src="assets/logo.svg">
+        <img class="logo" alt="Logo" src="assets/logo.svg">
       </a>
     </header>
     <main class="container">
@@ -22,10 +22,10 @@
       <div class="row">
         <div class="col-xs-12 col-md-7">
           <div class="product-showcase">
-            <img src="assets/product-showcase1.jpg">
-            <img src="assets/product-showcase2.jpg">
-            <img src="assets/product-showcase3.jpg">
-            <img src="assets/product-showcase4.jpg">
+            <img src="assets/product-showcase1.jpg" alt="Product photo">
+            <img src="assets/product-showcase2.jpg" alt="Product photo">
+            <img src="assets/product-showcase3.jpg" alt="Product photo">
+            <img src="assets/product-showcase4.jpg" alt="Product photo">
           </div>
         </div>
         <div class="col-xs-12 col-md-5">
@@ -42,23 +42,23 @@
               Colour: Honey
             </p>
             <div class="product-color-buttons">
-              <button class="product-color-button product-color-button-black" type="button" aria-label="black">Black</button>
+              <button class="product-color-button product-color-button-black" type="button">Select black color</button>
               <button class="product-color-button
                              product-color-button-honey
-                             product-color-button-active" type="button" aria-label="honey">Honey</button>
+                             product-color-button-active" type="button">Select honey color</button>
             </div>
             <hr class="product-props-divider">
             <div class="product-props-buttons">
-              <button class="btn btn-dark">Select a size</button>
-              <button class="btn btn-light">Find in store</button>
-              <button class="btn product-props-button-size-help">Need size help?</button>
+              <button class="btn btn-dark" type="button">Select a size</button>
+              <button class="btn btn-light" type="button">Find in store</button>
+              <button class="btn product-props-button-size-help" type="button">Need size help?</button>
             </div>
           </section>
         </div>
       </div>
       <div class="row">
         <section class="accordion accordion-active">
-          <button class="accordion-btn-toggle">
+          <button class="accordion-btn-toggle" type="button">
             <h2 class="accordion-title">Description</h2>
           </button>
           <div class="accordion-content">
@@ -82,13 +82,13 @@
       </div>
       <div class="row">
         <section class="accordion product-accordion-shipping">
-          <button class="accordion-btn-toggle">
+          <button class="accordion-btn-toggle" type="button">
             <h2 class="accordion-title">Shipping & returns</h2>
           </button>
           <div class="accordion-content">
             <div class="row">
               <div class="col-md-7">
-                <img class="img-shipping-box" src="assets/shipping-box.jpg">
+                <img class="img-shipping-box" alt="Gift packaging demo" src="assets/shipping-box.jpg">
               </div>
               <div class="col-md-5">
                 <h2 class="accordion-title product-delivery-title">
@@ -129,28 +129,28 @@
           <div class="row">
             <div class="col-xs-6 col-md-3">
               <a class="product-recommendation">
-                <img class="product-recommendation-img" src="assets/recommend1.jpg">
+                <img class="product-recommendation-img" alt="" src="assets/recommend1.jpg">
                 <h3 class="product-recommendation-name">Emroided Hooded Content For Three Lines</h3>
                 <h5 class="product-recommendation-price">27 000 руб.</h5>
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="product-recommendation">
-                <img class="product-recommendation-img" src="assets/recommend2.jpg">
+                <img class="product-recommendation-img" alt="" src="assets/recommend2.jpg">
                 <h3 class="product-recommendation-name">Relaxed Fit Stretch Jeans Content For Three Lines</h3>
                 <h5 class="product-recommendation-price">22 500 руб.</h5>
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="product-recommendation">
-                <img class="product-recommendation-img" src="assets/recommend3.jpg">
+                <img class="product-recommendation-img" alt="" src="assets/recommend3.jpg">
                 <h3 class="product-recommendation-name">Leather and House Check Content For Three Lines</h3>
                 <h5 class="product-recommendation-price">120 000 руб.</h5>
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="product-recommendation">
-                <img class="product-recommendation-img" src="assets/recommend4.jpg">
+                <img class="product-recommendation-img" alt="" src="assets/recommend4.jpg">
                 <h3 class="product-recommendation-name">Leather Wingtip Check Content For Three Lines</h3>
                 <h5 class="product-recommendation-price">46 000 руб.</h5>
               </a>
@@ -161,15 +161,21 @@
               <div class="col-xs-12">
                 <h2 class="product-recommendations-title">More for you</h2>
               </div>
-              <a class="product-recommendations-link col-xs-12" href="#">Men's Black Trench Coats</a>
-              <a class="product-recommendations-link col-xs-12" href="#">Men's Short Trench Coats</a>
-              <a class="product-recommendations-link col-xs-12" href="#">Men's Long Trench Coats</a>
+              <div class="col-xs-12">
+                <a class="product-recommendations-link" href="#">Men's Black Trench Coats</a>
+              </div>
+              <div class="col-xs-12">
+                <a class="product-recommendations-link" href="#">Men's Short Trench Coats</a>
+              </div>
+              <div class="col-xs-12">
+                <a class="product-recommendations-link" href="#">Men's Long Trench Coats</a>
+              </div>
             </div>
           </div>
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container container-fluid">
         <nav class="footer-nav">
           <div class="row">
@@ -202,8 +208,8 @@
             </div>
           </div>
         </nav>
-        <button class="footer-button-text">Shipping country: Russian Federation</button>
-        <button class="footer-button-text">Language: English</button>
+        <button class="footer-button-text" type="button">Shipping country: Russian Federation</button>
+        <button class="footer-button-text" type="button">Language: English</button>
         <h3 class="footer-need-help">Need help?</h3>
         <a class="footer-link-contact" href="#">Find out more and contact us</a>
       </div>

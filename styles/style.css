@@ -1,4 +1,4 @@
-html {
+body {
   font-family: 'Lora', serif;
   font-size: 16px;
   color: #111111;
@@ -13,12 +13,12 @@ h6 {
   font-weight: 400;
 }
 
-header {
+.header {
   padding: 1rem;
   border-bottom: 1px solid #c6c6c6;
 }
 @media screen and (min-width: 48rem) {
-  header {
+  .header {
     padding: 1.5rem;
   }
 }
@@ -189,6 +189,7 @@ header {
 }
 
 .accordion {
+  position: relative;
   display: flex;
   padding: 2rem 1rem;
   flex-wrap: wrap;
@@ -225,7 +226,6 @@ header {
   justify-content: space-between;
   align-items: baseline;
   border: none;
-  outline: none;
   background: transparent;
 }
 
@@ -392,14 +392,14 @@ header {
   color: inherit;
 }
 
-footer {
+.footer {
   background: #f3f3f3;
   padding: 0;
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
 @media screen and (min-width: 48rem) {
-  footer {
+  .footer {
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
@@ -449,7 +449,6 @@ footer {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   background: transparent;
   border: none;
-  outline: none;
   color: #999;
 }
 @media screen and (min-width: 48rem) {
