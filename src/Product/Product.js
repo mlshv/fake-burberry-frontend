@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductShowcase from './ProductShowcase';
 import ProductProps from './ProductProps';
 import Accordion from '../common/Accordion';
+import DeliveryInfo from './DeliveryInfo';
 import Recommendations from './Recommendations';
 
 class Product extends Component {
@@ -40,40 +41,7 @@ class Product extends Component {
         </section>
         <section className="row">
           <Accordion title="Shipping & Returns" hideTitleMd noTopBorder>
-            <div className="row">
-              <div className="col-md-7">
-                <img className="img-shipping-box" alt="Gift packaging demo" src="img/shipping-box.jpg" />
-              </div>
-              <div className="col-md-5">
-                <h2 className="accordion-title product-delivery-title">
-                  Delivery
-                </h2>
-                <h3 className="product-delivery-subtitle">
-                  Free Next Day Delivery
-                </h3>
-                <p className="product-delivery-text">
-                  Order before 7pm Monday to Thursday for delivery the next day
-                </p>
-                <h3 className="product-delivery-subtitle">
-                  Collect-in-Store
-                </h3>
-                <p className="product-delivery-text">
-                  Order online today and pick up your items in store as early as tomorrow
-                </p>
-                <h3 className="product-delivery-subtitle">
-                  Free Returns
-                </h3>
-                <p className="product-delivery-text">
-                  Enjoy free returns on your order
-                </p>
-                <h3 className="product-delivery-subtitle">
-                  Free Gift Packaging
-                </h3>
-                <p className="product-delivery-text">
-                  Discover our gift packaging, a gold lined box tied with a coloured ribbon
-                </p>
-              </div>
-            </div>
+            <DeliveryInfo />
           </Accordion>
         </section>
         <section className="row">
