@@ -191,6 +191,7 @@ h6 {
 .accordion {
   position: relative;
   display: flex;
+  flex-basis: 100%;
   padding: 2rem 1rem;
   flex-wrap: wrap;
   border-top: 1px solid #c6c6c6;
@@ -272,8 +273,7 @@ h6 {
 
 .product-accordion-shipping {
   border-top: none;
-  margin-bottom: 1.9375rem;;
-  flex-basis: 100%;
+  margin-bottom: 1.9375rem;
 }
 @media screen and (min-width: 48rem) {
   .product-accordion-shipping {
