@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
-import Subheading from '../Subheading';
+import Subheading from '../common/Subheading';
 
 class Recommendations extends Component {
   render() {

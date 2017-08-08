@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '../common/Button';
+import SizeHelpButton from './SizeHelpButton';
 
 class ProductProps extends Component {
   render() {
@@ -23,9 +25,9 @@ class ProductProps extends Component {
         </div>
         <hr className="product-props-divider" />
         <div className="product-props-buttons">
-          <button className="btn btn-dark" type="button">Select a size</button>
-          <button className="btn btn-light" type="button">Find in store</button>
-          <button className="btn product-props-button-size-help" type="button">Need size help?</button>
+          <Button primary type="button">Select a size</Button>
+          <Button type="button">Find in store</Button>
+          <SizeHelpButton type="button">Need size help?</SizeHelpButton>
         </div>
       </section>
     );

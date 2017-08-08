@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProductShowcase from './ProductShowcase';
 import ProductProps from './ProductProps';
-import Accordion from '../Accordion';
+import Accordion from '../common/Accordion';
 import Recommendations from './Recommendations';
 
 class Product extends Component {
