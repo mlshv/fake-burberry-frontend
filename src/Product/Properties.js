@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import Button from "../common/Button"
-import ColorButton from "./ColorButton"
-import SizeHelpButton from "./SizeHelpButton"
+import React from 'react'
+import styled from 'styled-components'
+import Button from '../common/Button'
+import ColorButton from './ColorButton'
+import SizeHelpButton from './SizeHelpButton'
 
 const ProductPropsComponent = styled.section`
   margin-top: 1rem;

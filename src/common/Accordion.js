@@ -10,26 +10,32 @@ const AccordionContainer = styled.section`
   flex-wrap: wrap;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
-  ${(props) => props.noTopBorder ? `
+  ${props =>
+    props.noTopBorder
+      ? `
     border-top: none;
     margin-bottom: 1.9375rem;
-  ` : '' }
-  @media screen and (min-width: 48rem) {
+  `
+      : ''} @media screen and (min-width: 48rem) {
     border: none;
     border-top: 1px solid transparent;
     padding: 1.5rem .5rem;
-    ${(props) => props.noTopBorder ? `
+
+    ${props =>
+      props.noTopBorder
+        ? `
       margin-bottom: .5rem;
       padding-top: 0;
       padding-bottom: 0;
-    ` : '' }
+    `
+        : ''};
   }
 
   ::after {
     position: absolute;
     content: url(${triangleIcon});
     right: 1rem;
-    ${(props) => props.active ? 'transform: rotate(180deg);' : '' }
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
   }
   @media screen and (min-width: 48rem) {
     ::after {
@@ -57,14 +63,17 @@ const Title = styled.h2`
   line-height: 1.25rem;
   @media screen and (min-width: 48rem) {
     margin-bottom: 1rem;
-    ${(props) => props.hideMd ? `
+    ${props =>
+      props.hideMd
+        ? `
       display: none;
-    ` : '' }
+    `
+        : ''};
   }
 `
 
 const Content = styled.div`
-  display: ${(props) => props.active ? `block` : 'none' };
+  display: ${props => (props.active ? `block` : 'none')};
   margin-top: 2rem;
   font-size: .875rem;
   line-height: 1.5rem;
@@ -74,7 +83,9 @@ const Content = styled.div`
     margin-top: 0;
   }
 
-  p, ul, li {
+  p,
+  ul,
+  li {
     margin: 0;
     padding: 0;
     font-size: .875rem;
@@ -83,17 +94,32 @@ const Content = styled.div`
   }
 `
 
-
 class Accordion extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      active: props.active
+    }
+    this.toggleActive = this.toggleActive.bind(this)
+  }
+
+  toggleActive() {
+    this.setState({ active: !this.state.active })
+  }
+
   render() {
     return (
-      <AccordionContainer active={this.props.active}
-                          hideTitleMd={this.props.hideTitleMd}
-                          noTopBorder={this.props.noTopBorder}>
-        <ToggleButton type="button">
-          <Title hideMd={this.props.hideTitleMd}>{this.props.title}</Title>
+      <AccordionContainer
+        active={this.state.active}
+        hideTitleMd={this.props.hideTitleMd}
+        noTopBorder={this.props.noTopBorder}
+      >
+        <ToggleButton type="button" onClick={this.toggleActive}>
+          <Title hideMd={this.props.hideTitleMd}>
+            {this.props.title}
+          </Title>
         </ToggleButton>
-        <Content active={this.props.active}>
+        <Content active={this.state.active}>
           {this.props.children}
         </Content>
       </AccordionContainer>

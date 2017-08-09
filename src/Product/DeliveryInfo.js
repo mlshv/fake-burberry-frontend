@@ -34,6 +34,10 @@ const Text = styled.p`
 const Image = styled.img`
   display: block;
   width: 100%;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 0;
+  }
 `
 
 function DeliveryInfo() {
