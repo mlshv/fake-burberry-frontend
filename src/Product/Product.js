@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import Showcase from './Showcase'
 import Properties from './Properties'
@@ -25,6 +26,9 @@ const Title = styled.h1`
 function Product() {
   return (
     <main className="container">
+      <Helmet>
+        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+      </Helmet>
       <div className="row">
         <Title>Long Cotton Gabardine Car Coat</Title>
       </div>
