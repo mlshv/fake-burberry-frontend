@@ -7,18 +7,20 @@ const ColorButtonComponent = styled.button`
   height: 40px;
   font-size: 0;
   border-radius: 50%;
-  border: ${(props) => props.active ?
-    "solid 1px #232122" : "none"
-  };
-  background-color: ${(props) => props.color};
+  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
+  background-color: ${props => props.color};
 `
 
-class ColorButton extends Component {
-  render() {
-    return <ColorButtonComponent color={this.props.colorHex} active={this.props.active} type="button">
-      Select {this.props.colorName} color
+function ColorButton(props) {
+  return (
+    <ColorButtonComponent
+      color={props.colorHex}
+      active={props.active}
+      type="button"
+    >
+      Select {props.colorName} color
     </ColorButtonComponent>
-  }
+  )
 }
 
 export default ColorButton
