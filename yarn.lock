@@ -2545,6 +2545,12 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+flexboxgrid2@^7.0.0-alpha6:
+  version "7.0.0-alpha6"
+  resolved "https://registry.yarnpkg.com/flexboxgrid2/-/flexboxgrid2-7.0.0-alpha6.tgz#8a047bda277045733b367587c00316e3b323c9c2"
+  dependencies:
+    normalize.css "^7.0.0"
+
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -4197,6 +4203,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+normalize.css@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
 
 npmlog@^4.0.2:
   version "4.1.2"
