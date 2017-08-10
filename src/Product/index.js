@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import Showcase from './Showcase'
-import Properties from './Properties'
+import MainPanel from './MainPanel'
 import Accordion from '../common/Accordion'
+import ShippingAccordion from './ShippingAccordion'
 import DeliveryInfo from './DeliveryInfo'
 import Recommendations from './Recommendations'
 
@@ -37,7 +38,7 @@ function Product() {
           <Showcase />
         </div>
         <div className="col-xs-12 col-md-5">
-          <Properties />
+          <MainPanel />
         </div>
       </section>
       <section className="row">
@@ -69,9 +70,9 @@ function Product() {
         </Accordion>
       </section>
       <section className="row">
-        <Accordion title="Shipping & Returns" hideTitleMd noTopBorder>
+        <ShippingAccordion title="Shipping & Returns" hideTitleMd noTopBorder>
           <DeliveryInfo />
-        </Accordion>
+        </ShippingAccordion>
       </section>
       <section className="row">
         <Recommendations />

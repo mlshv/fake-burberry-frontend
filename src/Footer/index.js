@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
-const FooterComponent = styled.footer`
+const Footer = styled.footer`
   background: #f3f3f3;
   padding: 0 .5rem;
   padding-top: 1rem;
@@ -58,11 +58,14 @@ const CenteredLink = styled.a`
   text-decoration: none;
   text-align: center;
   color: inherit;
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
 `
 
-function Footer() {
+export default function() {
   return (
-    <FooterComponent>
+    <Footer>
       <div className="container">
         <Navigation />
         <TextButton>Shipping country: Russian Federation</TextButton>
@@ -70,8 +73,6 @@ function Footer() {
         <Subtitle>Need help?</Subtitle>
         <CenteredLink href="#">Find out more and contact us</CenteredLink>
       </div>
-    </FooterComponent>
+    </Footer>
   )
 }
-
-export default Footer

@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 import styled from 'styled-components'
 
-const HeaderComponent = styled.header`
+const Header = styled.header`
   padding: 1rem;
   border-bottom: 1px solid #c6c6c6;
 
@@ -18,14 +18,12 @@ const Logo = styled.img`
   height: 10px;
 `
 
-function Header() {
+export default function() {
   return (
-    <HeaderComponent>
+    <Header>
       <a href="#">
         <Logo alt="Logo" src={logo} />
       </a>
-    </HeaderComponent>
+    </Header>
   )
 }
-
-export default Header

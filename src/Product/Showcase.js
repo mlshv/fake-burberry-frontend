@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ShowcaseComponent = styled.div`
+const Showcase = styled.div`
   display: flex;
   overflow-x: scroll;
   margin: 0 -.5rem;
@@ -19,9 +19,9 @@ const ShowcaseImage = styled.img`
   }
 `
 
-function Showcase(props) {
+export default function(props) {
   return (
-    <ShowcaseComponent>
+    <Showcase>
       <ShowcaseImage
         src="img/product-showcase1.jpg"
         alt="Long Cotton Gabardine Car Coat"
@@ -38,8 +38,6 @@ function Showcase(props) {
         src="img/product-showcase4.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
-    </ShowcaseComponent>
+    </Showcase>
   )
 }
-
-export default Showcase

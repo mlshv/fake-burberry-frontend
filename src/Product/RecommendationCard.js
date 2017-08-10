@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const RecommendationCardComponent = styled.a`
+const RecommendationCard = styled.a`
   display: block;
   margin-bottom: 2rem;
 `
@@ -28,9 +28,9 @@ const Price = styled.h5`
   color: #999999;
 `
 
-function RecommendationCard(props) {
+export default function(props) {
   return (
-    <RecommendationCardComponent>
+    <RecommendationCard>
       <Image alt="" src={props.image} />
       <Name>
         {props.name}
@@ -38,8 +38,6 @@ function RecommendationCard(props) {
       <Price>
         {props.price}
       </Price>
-    </RecommendationCardComponent>
+    </RecommendationCard>
   )
 }
-
-export default RecommendationCard

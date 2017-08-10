@@ -4,7 +4,7 @@ import Button from '../common/Button'
 import ColorButton from './ColorButton'
 import SizeHelpButton from './SizeHelpButton'
 
-const ProductPropsComponent = styled.section`
+const MainPanel = styled.section`
   margin-top: 1rem;
   padding: 0 .5rem;
   padding-bottom: 3rem;
@@ -34,7 +34,7 @@ const Id = styled.p`
   line-height: .875rem;
 `
 
-const Color = styled.p`
+const ColorName = styled.p`
   margin: 1rem 0;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -52,17 +52,17 @@ const Divider = styled.hr`
   border-bottom: 1px solid #c6c6c6;
 `
 
-function Properties() {
+export default function() {
   return (
-    <ProductPropsComponent>
+    <MainPanel>
       <PriceAndIdWrapper>
         <Price>110 000 руб.</Price>
         <Id>Item 39428531</Id>
       </PriceAndIdWrapper>
-      <Color>Colour: Honey</Color>
+      <ColorName>Colour: Honey</ColorName>
       <ButtonContainer>
-        <ColorButton colorName="black" colorHex="#232122" />
-        <ColorButton colorName="honey" colorHex="#cfa880" active />
+        <ColorButton colorName="black" colorValue="#232122" />
+        <ColorButton colorName="honey" colorValue="#cfa880" active />
       </ButtonContainer>
       <Divider />
       <ButtonContainer>
@@ -72,8 +72,6 @@ function Properties() {
         <Button type="button">Find in store</Button>
         <SizeHelpButton type="button">Need size help?</SizeHelpButton>
       </ButtonContainer>
-    </ProductPropsComponent>
+    </MainPanel>
   )
 }
-
-export default Properties

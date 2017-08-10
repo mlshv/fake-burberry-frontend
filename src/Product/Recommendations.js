@@ -3,7 +3,7 @@ import RecommendationCard from './RecommendationCard'
 import Subheading from '../common/Subheading'
 import styled from 'styled-components'
 
-const RecommendationsComponent = styled.section`
+const Recommendations = styled.section`
   padding-top: 0;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -32,9 +32,9 @@ const Link = styled.a`
   color: inherit;
 `
 
-function Recommendations() {
+export default function() {
   return (
-    <RecommendationsComponent>
+    <Recommendations>
       <Subheading>We recommend</Subheading>
       <div className="row">
         <div className="col-xs-6 col-md-3">
@@ -84,8 +84,6 @@ function Recommendations() {
           </div>
         </div>
       </MoreForYouBlock>
-    </RecommendationsComponent>
+    </Recommendations>
   )
 }
-
-export default Recommendations

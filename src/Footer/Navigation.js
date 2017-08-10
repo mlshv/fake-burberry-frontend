@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const NavigationComponent = styled.div`
+const Navigation = styled.div`
   display: none;
 
   @media screen and (min-width: 48rem) {
@@ -32,9 +32,9 @@ const Title = styled.h3`
   text-transform: uppercase;
 `
 
-function Navigation() {
+export default function() {
   return (
-    <NavigationComponent>
+    <Navigation>
       <div className="row">
         <div className="col-md-3">
           <Title>Customer Service</Title>
@@ -70,8 +70,6 @@ function Navigation() {
           </nav>
         </div>
       </div>
-    </NavigationComponent>
+    </Navigation>
   )
 }
-
-export default Navigation

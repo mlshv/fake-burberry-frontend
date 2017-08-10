@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import triangleIcon from '../assets/triangle-down.svg'
 
-const AccordionContainer = styled.section`
+export const AccordionContainer = styled.section`
   position: relative;
   display: flex;
   flex-basis: 100%;
@@ -10,25 +10,10 @@ const AccordionContainer = styled.section`
   flex-wrap: wrap;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
-  ${props =>
-    props.noTopBorder
-      ? `
-    border-top: none;
-    margin-bottom: 1.9375rem;
-  `
-      : ''} @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 48rem) {
     border: none;
     border-top: 1px solid transparent;
     padding: 1.5rem .5rem;
-
-    ${props =>
-      props.noTopBorder
-        ? `
-      margin-bottom: .5rem;
-      padding-top: 0;
-      padding-bottom: 0;
-    `
-        : ''};
   }
 
   ::after {
@@ -44,7 +29,7 @@ const AccordionContainer = styled.section`
   }
 `
 
-const ToggleButton = styled.button`
+export const ToggleButton = styled.button`
   display: flex;
   flex-basis: 100%;
   padding: 0;
@@ -54,7 +39,7 @@ const ToggleButton = styled.button`
   background: transparent;
 `
 
-const Title = styled.h2`
+export const Title = styled.h2`
   margin: 0;
   text-transform: uppercase;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
@@ -63,16 +48,10 @@ const Title = styled.h2`
   line-height: 1.25rem;
   @media screen and (min-width: 48rem) {
     margin-bottom: 1rem;
-    ${props =>
-      props.hideMd
-        ? `
-      display: none;
-    `
-        : ''};
   }
 `
 
-const Content = styled.div`
+export const Content = styled.div`
   display: ${props => (props.active ? `block` : 'none')};
   margin-top: 2rem;
   font-size: .875rem;
@@ -98,24 +77,22 @@ class Accordion extends Component {
   constructor(props) {
     super()
     this.state = {
-      active: props.active
+      active: false
     }
-    this.toggleActive = this.toggleActive.bind(this)
+    this.toggle = this.toggle.bind(this)
   }
 
-  toggleActive() {
-    this.setState({ active: !this.state.active })
+  toggle() {
+    this.setState((state, props) => ({
+      active: !state.active
+    }))
   }
 
   render() {
     return (
-      <AccordionContainer
-        active={this.state.active}
-        hideTitleMd={this.props.hideTitleMd}
-        noTopBorder={this.props.noTopBorder}
-      >
-        <ToggleButton type="button" onClick={this.toggleActive}>
-          <Title hideMd={this.props.hideTitleMd}>
+      <AccordionContainer active={this.state.active}>
+        <ToggleButton type="button" onClick={this.toggle}>
+          <Title>
             {this.props.title}
           </Title>
         </ToggleButton>

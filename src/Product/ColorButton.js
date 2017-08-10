@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const ColorButtonComponent = styled.button`
+const ColorButton = styled.button`
   margin-right: 1rem;
   width: 40px;
   height: 40px;
@@ -11,16 +11,10 @@ const ColorButtonComponent = styled.button`
   background-color: ${props => props.color};
 `
 
-function ColorButton(props) {
+export default function(props) {
   return (
-    <ColorButtonComponent
-      color={props.colorHex}
-      active={props.active}
-      type="button"
-    >
+    <ColorButton color={props.colorValue} active={props.active} type="button">
       Select {props.colorName} color
-    </ColorButtonComponent>
+    </ColorButton>
   )
 }
-
-export default ColorButton
