@@ -61,8 +61,8 @@ export default function() {
       </PriceAndIdWrapper>
       <ColorName>Colour: Honey</ColorName>
       <ButtonContainer>
-        <ColorButton colorName="black" colorValue="#232122" />
-        <ColorButton colorName="honey" colorValue="#cfa880" active />
+        <ColorButton name="black" value="#232122" />
+        <ColorButton name="honey" value="#cfa880" active />
       </ButtonContainer>
       <Divider />
       <ButtonContainer>

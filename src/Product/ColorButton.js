@@ -8,13 +8,13 @@ const ColorButton = styled.button`
   font-size: 0;
   border-radius: 50%;
   border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
-  background-color: ${props => props.color};
+  background-color: ${props => props.value};
 `
 
 export default function(props) {
   return (
-    <ColorButton color={props.colorValue} active={props.active} type="button">
-      Select {props.colorName} color
+    <ColorButton value={props.value} active={props.active} type="button">
+      Select {props.name} color
     </ColorButton>
   )
 }
