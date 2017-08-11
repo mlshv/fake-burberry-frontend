@@ -2,19 +2,31 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Showcase = styled.div`
+  position: relative;
+  right: 50%;
+  left: 50%;
   display: flex;
   overflow-x: scroll;
-  margin: 0 -.5rem;
+  width: 100vw;
+  height: auto;
+  margin-right: -50vw;
+  margin-left: -50vw;
   @media screen and (min-width: 48rem) {
-    margin: 0;
+    position: inherit;
+    right: inherit;
+    left: inherit;
+    width: inherit;
+    margin-right: inherit;
+    margin-left: inherit;
   }
 `
 
-const ShowcaseImage = styled.img`
-  width: 300px;
-  height: 400px;
+const Image = styled.img`
+  width: 100%;
+  height: auto;
   @media screen and (min-width: 48rem) {
-    width: 432px;
+    flex-shrink: 0;
+    width: auto;
     height: 576px;
   }
 `
@@ -22,20 +34,24 @@ const ShowcaseImage = styled.img`
 export default function(props) {
   return (
     <Showcase>
-      <ShowcaseImage
-        src="img/product-showcase1.jpg"
+      <Image
+        src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
+        srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
         alt="Long Cotton Gabardine Car Coat"
       />
-      <ShowcaseImage
-        src="img/product-showcase2.jpg"
+      <Image
+        src="img/Long-Cotton-Gabardine-Car-Coat-2.jpg"
+        srcSet="img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg 3x"
         alt="Long Cotton Gabardine Car Coat"
       />
-      <ShowcaseImage
-        src="img/product-showcase3.jpg"
+      <Image
+        src="img/Long-Cotton-Gabardine-Car-Coat-3.jpg"
+        srcSet="img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg 3x"
         alt="Long Cotton Gabardine Car Coat"
       />
-      <ShowcaseImage
-        src="img/product-showcase4.jpg"
+      <Image
+        src="img/Long-Cotton-Gabardine-Car-Coat-4.jpg"
+        srcSet="img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg 3x"
         alt="Long Cotton Gabardine Car Coat"
       />
     </Showcase>
