@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import formatPrice from '../common/formatPrice'
 
 const RecommendationCard = styled.a`
   display: block;
@@ -29,6 +30,7 @@ const Price = styled.h5`
 `
 
 export default function(props) {
+  const price = formatPrice(props.price, props.currency)
   return (
     <RecommendationCard>
       <Image alt="" src={props.image} />
@@ -36,7 +38,7 @@ export default function(props) {
         {props.name}
       </Name>
       <Price>
-        {props.price}
+        {price}
       </Price>
     </RecommendationCard>
   )

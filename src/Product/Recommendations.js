@@ -41,28 +41,32 @@ export default function() {
           <RecommendationCard
             image="img/recommend1.jpg"
             name="Emroided Hooded Content For Three Lines"
-            price="27 000 руб."
+            price={27000}
+            currency="RUB"
           />
         </div>
         <div className="col-xs-6 col-md-3">
           <RecommendationCard
             image="img/recommend2.jpg"
             name="Relaxed Fit Stretch Jeans Content For Three Lines"
-            price="22 500 руб."
+            price={22500}
+            currency="RUB"
           />
         </div>
         <div className="col-xs-6 col-md-3">
           <RecommendationCard
             image="img/recommend3.jpg"
             name="Leather and House Check Content For Three Lines"
-            price="120 000 руб."
+            price={120000}
+            currency="RUB"
           />
         </div>
         <div className="col-xs-6 col-md-3">
           <RecommendationCard
             image="img/recommend4.jpg"
             name="Leather Wingtip Check Content For Three Lines"
-            price="46 000 руб."
+            price={46000}
+            currency="RUB"
           />
         </div>
       </div>
@@ -72,9 +76,7 @@ export default function() {
             <Subheading>More for you</Subheading>
           </div>
           <div className="col-xs-12">
-            <Link className="product-recommendations-link" href="#">
-              Men's Black Trench Coats
-            </Link>
+            <Link href="#">Men's Black Trench Coats</Link>
           </div>
           <div className="col-xs-12">
             <Link href="#">Men's Short Trench Coats</Link>
