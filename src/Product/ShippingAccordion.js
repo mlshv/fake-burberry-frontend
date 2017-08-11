@@ -1,41 +1,108 @@
-import React from 'react'
-import Accordion from '../common/Accordion'
-import {
-  AccordionContainer,
-  ToggleButton,
-  Title,
-  Content
-} from '../common/Accordion'
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import triangleIcon from '../assets/triangle-down.svg'
 
-const ShippingAccordionContainer = AccordionContainer.extend`
-  border-top: none;
-  margin-bottom: 1.9375rem;
+export const Container = styled.section`
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
-    margin-bottom: .5rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    border: none;
+    border-top: 1px solid transparent;
+    padding: 1.5rem .5rem;
+  }
+
+  ::after {
+    position: absolute;
+    content: url(${triangleIcon});
+    right: 1rem;
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
+  }
+  @media screen and (min-width: 48rem) {
+    ::after {
+      display: none;
+    }
   }
 `
 
-const ShippingAccordionTitle = Title.extend`
+export const ToggleButton = styled.button`
+  display: flex;
+  flex-basis: 100%;
+  padding: 0;
+  justify-content: space-between;
+  align-items: baseline;
+  border: none;
+  background: transparent;
+`
+
+export const Title = styled.h2`
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
   @media screen and (min-width: 48rem) {
     display: none;
   }
 `
 
-class ShippingAccordion extends Accordion {
+export const Content = styled.div`
+  display: ${props => (props.active ? `block` : 'none')};
+  margin-top: 2rem;
+  padding: .5rem;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  @media screen and (min-width: 48rem) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    list-style: none;
+  }
+`
+
+class ShippingAccordion extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      active: false
+    }
+    this.toggle = this.toggle.bind(this)
+  }
+
+  toggle() {
+    this.setState((state, props) => ({
+      active: !state.active
+    }))
+  }
+
   render() {
     return (
-      <ShippingAccordionContainer active={this.state.active}>
-        <ToggleButton type="button" onClick={this.toggleActive}>
-          <ShippingAccordionTitle>
+      <Container active={this.state.active}>
+        <ToggleButton type="button" onClick={this.toggle}>
+          <Title>
             {this.props.title}
-          </ShippingAccordionTitle>
+          </Title>
         </ToggleButton>
         <Content active={this.state.active}>
           {this.props.children}
         </Content>
-      </ShippingAccordionContainer>
+      </Container>
     )
   }
 }

@@ -68,9 +68,7 @@ function Product() {
             <li>Item 39428531</li>
           </ul>
         </Accordion>
-      </section>
-      <section className="row">
-        <ShippingAccordion title="Shipping & Returns" hideTitleMd noTopBorder>
+        <ShippingAccordion title="Shipping & Returns">
           <DeliveryInfo />
         </ShippingAccordion>
       </section>

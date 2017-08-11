@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import triangleIcon from '../assets/triangle-down.svg'
 
-export const AccordionContainer = styled.section`
+export const Container = styled.section`
   position: relative;
   display: flex;
   flex-basis: 100%;
   padding: 2rem 1rem;
   flex-wrap: wrap;
   border-top: 1px solid #c6c6c6;
-  border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     border: none;
     border-top: 1px solid transparent;
@@ -90,7 +89,7 @@ class Accordion extends Component {
 
   render() {
     return (
-      <AccordionContainer active={this.state.active}>
+      <Container active={this.state.active}>
         <ToggleButton type="button" onClick={this.toggle}>
           <Title>
             {this.props.title}
@@ -99,7 +98,7 @@ class Accordion extends Component {
         <Content active={this.state.active}>
           {this.props.children}
         </Content>
-      </AccordionContainer>
+      </Container>
     )
   }
 }
