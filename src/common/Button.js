@@ -10,8 +10,8 @@ const Button = styled.button`
   letter-spacing: normal;
   text-transform: uppercase;
   border-radius: 2px;
-  background: ${props => (props.primary ? '#171717' : '#fff')};
-  border: solid 1px ${props => (props.primary ? '#171717' : '#999')};
+  background: ${props => (props.primary ? '#171717' : 'transparent')};
+  border: solid 1px #171717;
   color: ${props => (props.primary ? '#fff' : '#171717')};
 `
 

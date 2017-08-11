@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
+import Accordion from '../common/Accordion'
+import { MobileTablet, Desktop } from '../common/responsive'
 import Showcase from './Showcase'
 import MainPanel from './MainPanel'
-import Accordion from '../common/Accordion'
 import ShippingAccordion from './ShippingAccordion'
 import DeliveryInfo from './DeliveryInfo'
 import Recommendations from './Recommendations'
@@ -22,6 +23,25 @@ const Title = styled.h1`
     margin-bottom: 1.5rem;
     margin-left: .5rem;
   }
+  @media screen and (min-width: 62rem) {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+`
+
+const Details = styled.section`
+  display: flex;
+  align-items: center;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  box-sizing: border-box;
+  background: #d4bdad;
+`
+
+const MainImage = styled.img`
+  display: block;
+  width: 100%;
 `
 
 function Product() {
@@ -31,16 +51,35 @@ function Product() {
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       </Helmet>
       <div className="row">
-        <Title>Long Cotton Gabardine Car Coat</Title>
+        <MobileTablet>
+          <Title>Long Cotton Gabardine Car Coat</Title>
+        </MobileTablet>
       </div>
-      <section className="row">
-        <div className="col-xs-12 col-md-7">
-          <Showcase />
-        </div>
-        <div className="col-xs-12 col-md-5">
-          <MainPanel />
-        </div>
-      </section>
+      <MobileTablet>
+        <section className="row">
+          <div className="col-xs-12 col-md-7">
+            <Showcase />
+          </div>
+          <div className="col-xs-12 col-md-5">
+            <MainPanel />
+          </div>
+        </section>
+      </MobileTablet>
+      <Desktop>
+        <Details>
+          <div className="col-lg-6">
+            <MainImage
+              src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
+              srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
+              alt="Long Cotton Gabardine Car Coat"
+            />
+          </div>
+          <div className="col-xs-12 col-md-5 col-lg-6">
+            <Title>Long Cotton Gabardine Car Coat</Title>
+            <MainPanel />
+          </div>
+        </Details>
+      </Desktop>
       <section className="row">
         <Accordion title="Description">
           <p>A refined car coat crafted in protective cotton gabardine.</p>
