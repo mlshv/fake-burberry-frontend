@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from '../common/Button'
 import ColorButton from './ColorButton'
 import SizeHelpButton from './SizeHelpButton'
+import { FormattedNumber } from 'react-intl'
 
 const MainPanel = styled.section`
   margin-top: 1rem;
@@ -56,7 +57,15 @@ export default function() {
   return (
     <MainPanel>
       <PriceAndIdWrapper>
-        <Price>110 000 руб.</Price>
+        <Price>
+          <FormattedNumber
+            value={100000}
+            style="currency"
+            currency="RUB"
+            currencyDisplay="symbol"
+            minimumFractionDigits="0"
+          />
+        </Price>
         <Id>Item 39428531</Id>
       </PriceAndIdWrapper>
       <ColorName>Colour: Honey</ColorName>
