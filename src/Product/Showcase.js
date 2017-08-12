@@ -35,7 +35,7 @@ const Image = styled.img`
   }
 `
 
-export default function(props) {
+export default props => {
   return (
     <Showcase>
       <Image

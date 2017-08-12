@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import RecommendationCard from './RecommendationCard'
 import Subheading from '../common/Subheading'
 import styled from 'styled-components'
@@ -32,7 +32,7 @@ const Link = styled.a`
   color: inherit;
 `
 
-export default function() {
+export default () => {
   return (
     <Recommendations>
       <Subheading>We recommend</Subheading>

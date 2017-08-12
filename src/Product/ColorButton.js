@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const ColorButton = styled.button`
@@ -11,7 +11,7 @@ const ColorButton = styled.button`
   background-color: ${props => props.value};
 `
 
-export default function(props) {
+export default props => {
   return (
     <ColorButton value={props.value} active={props.active} type="button">
       Select {props.name} color

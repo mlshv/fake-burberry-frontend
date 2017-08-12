@@ -24,7 +24,7 @@ const Logo = styled.img`
   }
 `
 
-export default function() {
+export default () => {
   return (
     <Header>
       <a href="#">

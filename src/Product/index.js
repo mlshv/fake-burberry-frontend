@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
@@ -36,22 +36,6 @@ const Title = styled.h1`
   }
 `
 
-const Details = styled.section`
-  width: 100%;
-  background: #d4bdad;
-`
-
-const MainPanelWrapper = styled.div`
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
-`
-
-const MainImage = styled.img`
-  display: block;
-  width: 100%;
-`
-
 const DescriptionMainImage = styled.img`
   display: none;
   width: 100%;
@@ -61,7 +45,7 @@ const DescriptionMainImage = styled.img`
   }
 `
 
-function Product() {
+export default () => {
   return (
     <main>
       <Helmet>
@@ -135,5 +119,3 @@ function Product() {
     </main>
   )
 }
-
-export default Product

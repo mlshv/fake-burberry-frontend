@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { FormattedNumber } from 'react-intl'
 
@@ -39,7 +39,7 @@ const Price = styled.h5`
   }
 `
 
-export default function(props) {
+export default props => {
   return (
     <RecommendationCard>
       <Image alt="" src={props.image} />

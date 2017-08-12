@@ -12,7 +12,7 @@ const SizeButton = styled.button`
   background: transparent;
 `
 
-export default function(props) {
+export default props => {
   return (
     <SizeButton type="button">
       {props.children}

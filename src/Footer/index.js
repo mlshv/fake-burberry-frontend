@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
@@ -67,7 +67,7 @@ const CenteredLink = styled.a`
   }
 `
 
-export default function() {
+export default () => {
   return (
     <Footer>
       <div className="container">

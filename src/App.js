@@ -9,7 +9,7 @@ import Footer from './Footer'
 
 addLocaleData(ruLocaleData)
 
-function App() {
+export default () => {
   return (
     <IntlProvider locale="ru">
       <div>
@@ -23,5 +23,3 @@ function App() {
     </IntlProvider>
   )
 }
-
-export default App

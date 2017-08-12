@@ -23,24 +23,27 @@ const Image = styled.img`
   width: 100%;
 `
 
-export default () =>
-  <Gallery>
-    <div className="col-lg-4">
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg"
-        alt="Long Cotton Gabardine Car Coat"
-      />
-    </div>
-    <div className="col-lg-4">
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg"
-        alt="Long Cotton Gabardine Car Coat"
-      />
-    </div>
-    <div className="col-lg-4">
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg"
-        alt="Long Cotton Gabardine Car Coat"
-      />
-    </div>
-  </Gallery>
+export default () => {
+  return (
+    <Gallery>
+      <div className="col-lg-4">
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </div>
+      <div className="col-lg-4">
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </div>
+      <div className="col-lg-4">
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </div>
+    </Gallery>
+  )
+}

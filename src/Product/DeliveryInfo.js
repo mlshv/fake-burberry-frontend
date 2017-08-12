@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Large } from '../common/responsive'
 
 const Container = styled.div`
   display: flex;
@@ -61,7 +60,7 @@ const Image = styled.img`
   }
 `
 
-function DeliveryInfo() {
+export default () => {
   return (
     <Container>
       <div className="col-md-7">
@@ -92,5 +91,3 @@ function DeliveryInfo() {
     </Container>
   )
 }
-
-export default DeliveryInfo
