@@ -24,6 +24,9 @@ const PriceAndIdWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   @media screen and (min-width: 48rem) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 62rem) {
     margin-bottom: 3rem;
   }
 `

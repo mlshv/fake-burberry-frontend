@@ -12,7 +12,7 @@ export const Container = styled.section`
   @media screen and (min-width: 48rem) {
     border: none;
     border-top: 1px solid transparent;
-    padding: 1.5rem .5rem;
+    padding: 1.5rem 0;
   }
 
   @media screen and (min-width: 62rem) {
@@ -63,6 +63,9 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 0;
+  }
+  @media screen and (min-width: 62rem) {
+    flex-wrap: wrap;
   }
 
   p,
