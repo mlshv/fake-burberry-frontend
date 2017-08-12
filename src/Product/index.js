@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
+import MediaQuery from 'react-responsive'
 import Accordion from '../common/Accordion'
-import { Large, Medium } from '../common/responsive'
+import breakpoints from '../common/breakpoints'
 import Showcase from './Showcase'
 import MainPanel from './MainPanel'
+import Gallery from './Gallery'
 import ShippingAccordion from './ShippingAccordion'
 import DeliveryInfo from './DeliveryInfo'
 import Recommendations from './Recommendations'
 
+const Background = styled.div`
+  @media screen and (min-width: 62rem) {
+    background-color: #d4bdad;
+  }
+`
+
 const Title = styled.h1`
-  margin-top: 1rem;
-  margin-right: 0;
-  margin-bottom: 1rem;
+  margin: 1rem 0.5rem;
   margin-left: .5rem;
   padding: 0;
   font-size: 1.25rem;
@@ -47,31 +53,12 @@ const MainImage = styled.img`
 `
 
 const DescriptionMainImage = styled.img`
-  display: block;
+  display: none;
   width: 100%;
   margin-top: 4rem;
-`
-
-const GalleryWrapper = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  & > *:nth-child(1) {
-    margin-top: 6rem;
+  @media screen and (min-width: 62rem) {
+    display: block;
   }
-  & > *:nth-child(2) {
-    margin-top: 10rem;
-  }
-  & > *:nth-child(3) {
-    margin-top: 4rem;
-  }
-`
-
-const DescriptionGalleryImage = styled.img`
-  display: block;
-  width: 100%;
 `
 
 function Product() {
@@ -80,50 +67,21 @@ function Product() {
       <Helmet>
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       </Helmet>
-      <Medium>
+      <Background>
         <section className="container">
-          <div className="row">
-            <div className="col-xs-12">
-              <Title>Long Cotton Gabardine Car Coat</Title>
-            </div>
-          </div>
-        </section>
-      </Medium>
-      <Medium>
-        <section className="container">
-          <div className="row">
-            <div className="col-xs-12 col-md-7">
+          <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+            <Title>Long Cotton Gabardine Car Coat</Title>
+          </MediaQuery>
+          <div className="row middle-lg">
+            <div className="col-xs-12 col-md-7 col-lg-6">
               <Showcase />
             </div>
-            <div className="col-xs-12 col-md-5">
+            <div className="col-xs-12 col-md-5 col-lg-6">
               <MainPanel />
             </div>
           </div>
         </section>
-      </Medium>
-      <Large>
-        <Details>
-          <div className="container">
-            <div className="row">
-              <MainPanelWrapper>
-                <div className="col-lg-6">
-                  <MainImage
-                    src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
-                    srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
-                    alt="Long Cotton Gabardine Car Coat"
-                  />
-                </div>
-                <div className="col-xs-12 col-md-5 col-lg-6">
-                  <Title>
-                    Long Cotton Gabardine Car Coat Coat Coat Coat Coat
-                  </Title>
-                  <MainPanel />
-                </div>
-              </MainPanelWrapper>
-            </div>
-          </div>
-        </Details>
-      </Large>
+      </Background>
       <section className="container">
         <div className="row">
           <div className="col-xs-12 col-lg-4">
@@ -155,39 +113,18 @@ function Product() {
               </ul>
             </Accordion>
           </div>
-          <Large>
-            <div className="col-lg-8">
-              <DescriptionMainImage
-                src="img/Long-Cotton-Gabardine-Car-Coat-5.jpg"
-                alt="Long Cotton Gabardine Car Coat"
-              />
-            </div>
-          </Large>
-        </div>
-        <Large>
-          <div className="row">
-            <GalleryWrapper>
-              <div className="col-lg-4">
-                <DescriptionGalleryImage
-                  src="img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg"
-                  alt="Long Cotton Gabardine Car Coat"
-                />
-              </div>
-              <div className="col-lg-4">
-                <DescriptionGalleryImage
-                  src="img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg"
-                  alt="Long Cotton Gabardine Car Coat"
-                />
-              </div>
-              <div className="col-lg-4">
-                <DescriptionGalleryImage
-                  src="img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg"
-                  alt="Long Cotton Gabardine Car Coat"
-                />
-              </div>
-            </GalleryWrapper>
+          <div className="col-lg-8">
+            <DescriptionMainImage
+              src="img/Long-Cotton-Gabardine-Car-Coat-5.jpg"
+              alt="Long Cotton Gabardine Car Coat"
+            />
           </div>
-        </Large>
+        </div>
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <div className="row">
+            <Gallery />
+          </div>
+        </MediaQuery>
         <ShippingAccordion title="Shipping & Returns">
           <DeliveryInfo />
         </ShippingAccordion>
