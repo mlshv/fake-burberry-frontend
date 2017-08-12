@@ -10,7 +10,7 @@ import { FormattedNumber } from 'react-intl'
 const MainPanel = styled.section`
   margin-top: 1rem;
   padding: 0 .5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   @media screen and (min-width: 48rem) {
     margin-top: 0;
@@ -115,7 +115,9 @@ export default function() {
           </Price>
           <Id>Item 39428531</Id>
         </PriceAndIdWrapper>
-        <ColorName>Colour: Honey</ColorName>
+        <ColorName>
+          Colour: <b>Honey</b>
+        </ColorName>
         <ButtonContainer>
           <ColorButton name="black" value="#232122" />
           <ColorButton name="honey" value="#cfa880" active />

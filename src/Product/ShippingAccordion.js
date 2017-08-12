@@ -6,22 +6,24 @@ export const Container = styled.section`
   position: relative;
   display: flex;
   flex-basis: 100%;
-  padding: 2rem 1rem;
   flex-wrap: wrap;
+  margin: 0 -.5rem;
   margin-bottom: 2rem;
+  padding: 2rem 1rem;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     border: none;
     border-top: 1px solid transparent;
     padding: 1.5rem .5rem;
+    margin-bottom: .5rem;
   }
 
   @media screen and (min-width: 62rem) {
     margin-bottom: 3rem;
-    padding-right: 0;
+    padding-right: .5rem;
     padding-bottom: 0;
-    padding-left: 0;
+    padding-left: .5rem;
   }
 
   ::after {
