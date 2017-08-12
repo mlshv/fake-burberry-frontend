@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Desktop } from '../common/responsive'
+import { Large } from '../common/responsive'
 
 const Container = styled.div`
   display: flex;
@@ -67,9 +67,9 @@ function DeliveryInfo() {
       <div className="col-md-7">
         <Image alt="Gift packaging demo" src="img/shipping-box.jpg" />
       </div>
-      <Desktop>
+      <Large>
         <div className="col-lg-1" />
-      </Desktop>
+      </Large>
       <div className="col-md-5 col-lg-4">
         <Title>Delivery</Title>
         <Subtitle>Free Next Day Delivery</Subtitle>

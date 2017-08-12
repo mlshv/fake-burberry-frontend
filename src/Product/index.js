@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import Accordion from '../common/Accordion'
-import { MobileTablet, Desktop } from '../common/responsive'
+import { Large, Medium } from '../common/responsive'
 import Showcase from './Showcase'
 import MainPanel from './MainPanel'
 import ShippingAccordion from './ShippingAccordion'
@@ -80,7 +80,7 @@ function Product() {
       <Helmet>
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       </Helmet>
-      <MobileTablet>
+      <Medium>
         <section className="container">
           <div className="row">
             <div className="col-xs-12">
@@ -88,8 +88,8 @@ function Product() {
             </div>
           </div>
         </section>
-      </MobileTablet>
-      <MobileTablet>
+      </Medium>
+      <Medium>
         <section className="container">
           <div className="row">
             <div className="col-xs-12 col-md-7">
@@ -100,8 +100,8 @@ function Product() {
             </div>
           </div>
         </section>
-      </MobileTablet>
-      <Desktop>
+      </Medium>
+      <Large>
         <Details>
           <div className="container">
             <div className="row">
@@ -123,7 +123,7 @@ function Product() {
             </div>
           </div>
         </Details>
-      </Desktop>
+      </Large>
       <section className="container">
         <div className="row">
           <div className="col-xs-12 col-lg-4">
@@ -155,16 +155,16 @@ function Product() {
               </ul>
             </Accordion>
           </div>
-          <Desktop>
+          <Large>
             <div className="col-lg-8">
               <DescriptionMainImage
                 src="img/Long-Cotton-Gabardine-Car-Coat-5.jpg"
                 alt="Long Cotton Gabardine Car Coat"
               />
             </div>
-          </Desktop>
+          </Large>
         </div>
-        <Desktop>
+        <Large>
           <div className="row">
             <GalleryWrapper>
               <div className="col-lg-4">
@@ -187,7 +187,7 @@ function Product() {
               </div>
             </GalleryWrapper>
           </div>
-        </Desktop>
+        </Large>
         <ShippingAccordion title="Shipping & Returns">
           <DeliveryInfo />
         </ShippingAccordion>

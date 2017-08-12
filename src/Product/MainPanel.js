@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../common/Button'
-import { MobileTablet, Desktop } from '../common/responsive'
+import { Medium, Large } from '../common/responsive'
 import ColorButton from './ColorButton'
 import SizeHelpButton from './SizeHelpButton'
 import SizeButton from './SizeButton'
@@ -102,7 +102,7 @@ const Divider = styled.hr`
 export default function() {
   return (
     <MainPanel>
-      <MobileTablet>
+      <Medium>
         <PriceAndIdWrapper>
           <Price>
             <FormattedNumber
@@ -130,8 +130,8 @@ export default function() {
           <Button type="button">Find in store</Button>
           <SizeHelpButton type="button">Need size help?</SizeHelpButton>
         </ButtonContainer>
-      </MobileTablet>
-      <Desktop>
+      </Medium>
+      <Large>
         <div className="row">
           <div className="col-lg-12">
             <Price>
@@ -188,7 +188,7 @@ export default function() {
             </DeliveryText>
           </div>
         </div>
-      </Desktop>
+      </Large>
     </MainPanel>
   )
 }
