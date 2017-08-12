@@ -18,10 +18,8 @@ const Header = styled.header`
 const Logo = styled.img`
   display: block;
   margin: auto;
-  width: 138px;
   height: 10px;
   @media screen and (min-width: 62rem) {
-    width: 221px;
     height: 16px;
   }
 `
