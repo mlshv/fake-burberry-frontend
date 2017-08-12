@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
 import styled from 'styled-components'
+import logo from './assets/logo.svg'
 
 const Header = styled.header`
   padding: 1rem;
