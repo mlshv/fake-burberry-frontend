@@ -67,10 +67,7 @@ function DeliveryInfo() {
       <div className="col-md-7">
         <Image alt="Gift packaging demo" src="img/shipping-box.jpg" />
       </div>
-      <Large>
-        <div className="col-lg-1" />
-      </Large>
-      <div className="col-md-5 col-lg-4">
+      <div className="col-md-5 col-lg-4 col-lg-offset-1">
         <Title>Delivery</Title>
         <Subtitle>Free Next Day Delivery</Subtitle>
         <Text>
