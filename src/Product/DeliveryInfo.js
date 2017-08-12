@@ -1,5 +1,20 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Desktop } from '../common/responsive'
+
+const Container = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  @media screen and (min-width: 62rem) {
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+`
 
 const Title = styled.h2`
   display: none;
@@ -29,6 +44,9 @@ const Text = styled.p`
   line-height: 1.35 !important;
   font-size: .75rem !important;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
 `
 
 const Image = styled.img`
@@ -38,15 +56,21 @@ const Image = styled.img`
   @media screen and (min-width: 48rem) {
     margin-bottom: 0;
   }
+  @media screen and (min-width: 48rem) {
+    width: 100%;
+  }
 `
 
 function DeliveryInfo() {
   return (
-    <div className="row">
+    <Container>
       <div className="col-md-7">
         <Image alt="Gift packaging demo" src="img/shipping-box.jpg" />
       </div>
-      <div className="col-md-5">
+      <Desktop>
+        <div className="col-lg-1" />
+      </Desktop>
+      <div className="col-md-5 col-lg-4">
         <Title>Delivery</Title>
         <Subtitle>Free Next Day Delivery</Subtitle>
         <Text>
@@ -68,7 +92,7 @@ function DeliveryInfo() {
           ribbon
         </Text>
       </div>
-    </div>
+    </Container>
   )
 }
 

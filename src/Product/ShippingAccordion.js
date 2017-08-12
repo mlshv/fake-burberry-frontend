@@ -17,6 +17,13 @@ export const Container = styled.section`
     padding: 1.5rem .5rem;
   }
 
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 3rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
   ::after {
     position: absolute;
     content: url(${triangleIcon});
