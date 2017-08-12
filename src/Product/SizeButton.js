@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 const SizeButton = styled.button`
   margin-right: .5rem;
-  width: 43px;
-  height: 32px;
+  padding: .5rem 1rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.33;

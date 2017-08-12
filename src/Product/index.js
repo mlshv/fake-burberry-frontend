@@ -31,17 +31,26 @@ const Title = styled.h1`
 `
 
 const Details = styled.section`
-  display: flex;
-  align-items: center;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  box-sizing: border-box;
+  position: relative;
+  right: 50%;
+  left: 50%;
+  width: 100vw;
+  height: auto;
+  margin-right: -50vw;
+  margin-left: -50vw;
   background: #d4bdad;
+`
+
+const MainPanelWrapper = styled.div`
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
 `
 
 const MainImage = styled.img`
   display: block;
-  width: 100%;
+  width: 488px;
+  height: 651px;
 `
 
 function Product() {
@@ -67,16 +76,24 @@ function Product() {
       </MobileTablet>
       <Desktop>
         <Details>
-          <div className="col-lg-6">
-            <MainImage
-              src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
-              srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
-              alt="Long Cotton Gabardine Car Coat"
-            />
-          </div>
-          <div className="col-xs-12 col-md-5 col-lg-6">
-            <Title>Long Cotton Gabardine Car Coat</Title>
-            <MainPanel />
+          <div className="container">
+            <div className="row">
+              <MainPanelWrapper>
+                <div className="col-lg-6">
+                  <MainImage
+                    src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
+                    srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
+                    alt="Long Cotton Gabardine Car Coat"
+                  />
+                </div>
+                <div className="col-xs-12 col-md-5 col-lg-6">
+                  <Title>
+                    Long Cotton Gabardine Car Coat Coat Coat Coat Coat
+                  </Title>
+                  <MainPanel />
+                </div>
+              </MainPanelWrapper>
+            </div>
           </div>
         </Details>
       </Desktop>

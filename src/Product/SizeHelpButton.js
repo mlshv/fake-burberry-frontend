@@ -9,6 +9,11 @@ const SizeHelpButton = Button.extend`
   border: none;
   background: transparent;
   color: #171717;
+  @media screen and (min-width: 62rem) {
+    flex-basis: 70%;
+    margin-top: 0;
+    text-align: right;
+  }
 `
 
 export default SizeHelpButton

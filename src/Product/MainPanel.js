@@ -28,12 +28,19 @@ const PriceAndIdWrapper = styled.div`
   }
 `
 
+const SizeWrapper = PriceAndIdWrapper.extend`
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 0;
+  }
+`
+
 const Price = styled.h2`
   margin: 0;
   font-size: 1rem;
   line-height: 1.1875rem;
   @media screen and (min-width: 62rem) {
     margin-bottom: 2rem;
+    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   }
 `
 
@@ -54,8 +61,17 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0;
+  @media screen and (min-width: 62rem) {
+    margin: 0;
+  }
 `
-const SizeButtonContainer = ButtonContainer.extend``
+
+const ActionButtonContainer = ButtonContainer.extend`
+  @media screen and (min-width: 62rem) {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+  }
+`
 
 const DeliveryTitle = styled.h3`
   margin: 0;
@@ -87,7 +103,7 @@ export default function() {
         <PriceAndIdWrapper>
           <Price>
             <FormattedNumber
-              value={100000}
+              value={110000}
               style="currency"
               currency="RUB"
               currencyDisplay="symbol"
@@ -115,7 +131,7 @@ export default function() {
           <div className="col-lg-12">
             <Price>
               <FormattedNumber
-                value={100000}
+                value={110000}
                 style="currency"
                 currency="RUB"
                 currencyDisplay="symbol"
@@ -133,29 +149,32 @@ export default function() {
             </ButtonContainer>
           </div>
           <div className="col-lg-6">
-            <Size>
-              Size: <b>XL</b>
-            </Size>
-            <SizeButtonContainer>
+            <SizeWrapper>
+              <Size>
+                Size: <b>XL</b>
+              </Size>
+              <SizeHelpButton type="button">Need size help?</SizeHelpButton>
+            </SizeWrapper>
+            <ButtonContainer>
               <SizeButton>S</SizeButton>
               <SizeButton>M</SizeButton>
               <SizeButton>L</SizeButton>
               <SizeButton>XL</SizeButton>
-            </SizeButtonContainer>
+            </ButtonContainer>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-6">
-            <ButtonContainer>
+            <ActionButtonContainer>
               <Button primary type="button">
                 Add to bag
               </Button>
-            </ButtonContainer>
+            </ActionButtonContainer>
           </div>
           <div className="col-lg-6">
-            <ButtonContainer>
+            <ActionButtonContainer>
               <Button type="button">Find in store</Button>
-            </ButtonContainer>
+            </ActionButtonContainer>
           </div>
           <div className="col-lg-12">
             <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
