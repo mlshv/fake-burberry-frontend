@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
+import breakpoints from '../common/breakpoints'
 
 const Showcase = styled.div`
   position: relative;
@@ -42,19 +43,19 @@ export default props => {
         src="img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
-      <MediaQuery maxDeviceWidth={991}>
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
         <Image
           src="img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg"
           alt="Long Cotton Gabardine Car Coat"
         />
       </MediaQuery>
-      <MediaQuery maxDeviceWidth={991}>
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
         <Image
           src="img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg"
           alt="Long Cotton Gabardine Car Coat"
         />
       </MediaQuery>
-      <MediaQuery maxDeviceWidth={991}>
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
         <Image
           src="img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg"
           alt="Long Cotton Gabardine Car Coat"
