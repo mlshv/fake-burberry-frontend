@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { FormattedNumber } from 'react-intl'
 
@@ -18,6 +18,13 @@ const Name = styled.h3`
   margin-bottom: .5rem;
   font-size: 1rem;
   line-height: 1.19;
+  @media screen and (min-width: 62rem) {
+    margin-top: 1rem;
+    line-height: 1.67;
+    font-size: .75rem;
+    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+    font-weight: 600;
+  }
 `
 
 const Price = styled.h5`
@@ -27,9 +34,12 @@ const Price = styled.h5`
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   text-align: left;
   color: #999999;
+  @media screen and (min-width: 62rem) {
+    line-height: 1.4;
+  }
 `
 
-export default function(props) {
+export default props => {
   return (
     <RecommendationCard>
       <Image alt="" src={props.image} />
@@ -42,7 +52,7 @@ export default function(props) {
           style="currency"
           currency={props.currency}
           currencyDisplay="symbol"
-          minimumFractionDigits="0"
+          minimumFractionDigits={0}
         />
       </Price>
     </RecommendationCard>

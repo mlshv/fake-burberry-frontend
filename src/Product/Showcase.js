@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import MediaQuery from 'react-responsive'
+import breakpoints from '../common/breakpoints'
 
 const Showcase = styled.div`
   position: relative;
@@ -19,41 +21,46 @@ const Showcase = styled.div`
     margin-right: inherit;
     margin-left: inherit;
   }
-`
-
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  @media screen and (min-width: 48rem) {
-    flex-shrink: 0;
-    width: auto;
-    height: 576px;
+  @media screen and (min-width: 62rem) {
+    overflow: hidden;
   }
 `
 
-export default function(props) {
+const Image = styled.img`
+  height: 400px;
+  @media screen and (min-width: 48rem) {
+    height: 576px;
+  }
+  @media screen and (min-width: 62rem) {
+    height: 651px;
+  }
+`
+
+export default props => {
   return (
     <Showcase>
       <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-1.jpg"
-        srcSet="img/Long-Cotton-Gabardine-Car-Coat-1@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg 3x"
+        src="img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-2.jpg"
-        srcSet="img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg 3x"
-        alt="Long Cotton Gabardine Car Coat"
-      />
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-3.jpg"
-        srcSet="img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg 3x"
-        alt="Long Cotton Gabardine Car Coat"
-      />
-      <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-4.jpg"
-        srcSet="img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg 2x, img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg 3x"
-        alt="Long Cotton Gabardine Car Coat"
-      />
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <Image
+          src="img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg"
+          alt="Long Cotton Gabardine Car Coat"
+        />
+      </MediaQuery>
     </Showcase>
   )
 }

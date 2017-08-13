@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const Navigation = styled.div`
@@ -32,7 +32,7 @@ const Title = styled.h3`
   text-transform: uppercase;
 `
 
-export default function() {
+export default () => {
   return (
     <Navigation>
       <div className="row">

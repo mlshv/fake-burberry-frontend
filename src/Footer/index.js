@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
@@ -14,6 +14,10 @@ const Footer = styled.footer`
     padding: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  @media screen and (min-width: 62rem) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 `
 
@@ -63,7 +67,7 @@ const CenteredLink = styled.a`
   }
 `
 
-export default function() {
+export default () => {
   return (
     <Footer>
       <div className="container">
