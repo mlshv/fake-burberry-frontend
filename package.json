@@ -18,7 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+<<<<<<< HEAD
     "test": "yarn run lint && react-scripts test --env=jsdom",
+=======
+    "test": "node_modules/.bin/eslint src",
+>>>>>>> feat: add travis config
     "eject": "react-scripts eject",
     "lint": "eslint --ext .jsx,.js src/",
     "precommit": "yarn run lint",
