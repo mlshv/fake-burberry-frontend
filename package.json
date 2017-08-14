@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node_modules/.bin/eslint src",
     "eject": "react-scripts eject",
     "precommit": "node_modules/.bin/eslint src",
     "prepush": "node_modules/.bin/eslint src"
