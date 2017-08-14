@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import triangleIcon from '../assets/triangle-down.svg'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import triangleIcon from '../assets/triangle-down.svg';
 
 export const Container = styled.section`
   position: relative;
@@ -8,17 +8,22 @@ export const Container = styled.section`
   flex-basis: 100%;
   flex-wrap: wrap;
   margin: 0 -.5rem;
+  margin-bottom: 2rem;
   padding: 2rem 1rem;
   border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     border: none;
-    margin: 0;
-    padding: 1.5rem 0;
     border-top: 1px solid transparent;
+    padding: 1.5rem .5rem;
+    margin-bottom: .5rem;
   }
 
   @media screen and (min-width: 62rem) {
-    padding-top: 4rem;
+    margin-bottom: 3rem;
+    padding-right: .5rem;
+    padding-bottom: 0;
+    padding-left: .5rem;
   }
 
   ::after {
@@ -32,7 +37,7 @@ export const Container = styled.section`
       display: none;
     }
   }
-`
+`;
 
 export const ToggleButton = styled.button`
   display: flex;
@@ -42,7 +47,7 @@ export const ToggleButton = styled.button`
   align-items: baseline;
   border: none;
   background: transparent;
-`
+`;
 
 export const Title = styled.h2`
   margin: 0;
@@ -52,22 +57,21 @@ export const Title = styled.h2`
   font-weight: 500;
   line-height: 1.25rem;
   @media screen and (min-width: 48rem) {
-    margin-bottom: 1rem;
+    display: none;
   }
-`
+`;
 
 export const Content = styled.div`
-  display: ${props => (props.active ? `block` : 'none')};
+  display: ${props => (props.active ? 'block' : 'none')};
   margin-top: 2rem;
+  padding: .5rem;
   font-size: .875rem;
   line-height: 1.5rem;
   @media screen and (min-width: 48rem) {
     display: flex;
     flex-direction: column;
     margin-top: 0;
-  }
-  @media screen and (min-width: 62rem) {
-    flex-wrap: wrap;
+    padding: 0;
   }
 
   p,
@@ -79,21 +83,21 @@ export const Content = styled.div`
     line-height: 1.5rem;
     list-style: none;
   }
-`
+`;
 
-class Accordion extends Component {
+class ShippingAccordion extends Component {
   constructor(props) {
-    super()
+    super();
     this.state = {
-      active: false
-    }
-    this.toggle = this.toggle.bind(this)
+      active: false,
+    };
+    this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
     this.setState((state, props) => ({
-      active: !state.active
-    }))
+      active: !state.active,
+    }));
   }
 
   render() {
@@ -108,8 +112,8 @@ class Accordion extends Component {
           {this.props.children}
         </Content>
       </Container>
-    )
+    );
   }
 }
 
-export default Accordion
+export default ShippingAccordion;

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const SizeButton = styled.button`
   margin-right: .5rem;
@@ -10,12 +10,10 @@ const SizeButton = styled.button`
   border-radius: 2px;
   border: solid 1px #171717;
   background: transparent;
-`
+`;
 
-export default props => {
-  return (
-    <SizeButton type="button">
-      {props.children}
-    </SizeButton>
-  )
-}
+export default props => (
+  <SizeButton type="button">
+    {props.children}
+  </SizeButton>
+);

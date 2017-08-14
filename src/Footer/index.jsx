@@ -1,6 +1,6 @@
-import React from 'react'
-import Navigation from './Navigation'
-import styled from 'styled-components'
+import React from 'react';
+import Navigation from './Navigation';
+import styled from 'styled-components';
 
 const Footer = styled.footer`
   background: #f3f3f3;
@@ -19,7 +19,7 @@ const Footer = styled.footer`
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-`
+`;
 
 const TextButton = styled.button`
   display: block;
@@ -37,7 +37,7 @@ const TextButton = styled.button`
     margin-top: 1.25rem;
     margin-right: 1.25rem;
   }
-`
+`;
 
 const Subtitle = styled.h3`
   margin-top: 1.5rem;
@@ -51,7 +51,7 @@ const Subtitle = styled.h3`
   @media screen and (min-width: 48rem) {
     display: none;
   }
-`
+`;
 
 const CenteredLink = styled.a`
   display: block;
@@ -65,18 +65,16 @@ const CenteredLink = styled.a`
   @media screen and (min-width: 48rem) {
     display: none;
   }
-`
+`;
 
-export default () => {
-  return (
-    <Footer>
-      <div className="container">
-        <Navigation />
-        <TextButton>Shipping country: Russian Federation</TextButton>
-        <TextButton>Language: English</TextButton>
-        <Subtitle>Need help?</Subtitle>
-        <CenteredLink href="#">Find out more and contact us</CenteredLink>
-      </div>
-    </Footer>
-  )
-}
+export default () => (
+  <Footer>
+    <div className="container">
+      <Navigation />
+      <TextButton>Shipping country: Russian Federation</TextButton>
+      <TextButton>Language: English</TextButton>
+      <Subtitle>Need help?</Subtitle>
+      <CenteredLink href="#">Find out more and contact us</CenteredLink>
+    </div>
+  </Footer>
+);
