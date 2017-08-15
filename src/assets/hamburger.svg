@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>535E5C55-60DE-4229-8A3F-8733C03183B4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header-/-Mobile" transform="translate(-8.000000, -19.000000)" fill-rule="nonzero" fill="#010101">
+            <g id="Header">
+                <g id="hamburger" transform="translate(8.000000, 19.000000)">
+                    <polyline id="Shape" points="0.0262295082 0.646875 15.7639344 0.646875 15.7639344 0.084375 0.0262295082 0.084375"></polyline>
+                    <polyline id="Shape" points="0.0262295082 4.725 15.7639344 4.725 15.7639344 4.1625 0.0262295082 4.1625"></polyline>
+                    <polyline id="Shape" points="0.0262295082 8.803125 15.7639344 8.803125 15.7639344 8.240625 0.0262295082 8.240625"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
