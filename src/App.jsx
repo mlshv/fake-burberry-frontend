@@ -16,13 +16,13 @@ export default () =>
       <Helmet>
         <title>Burberry</title>
       </Helmet>
-      <Header />
       <BrowserRouter>
         <div>
+          <Header />
           <Route exact path="/" component={Catalog} />
           <Route path="/product" component={Product} />
+          <Footer />
         </div>
       </BrowserRouter>
-      <Footer />
     </div>
   </IntlProvider>);
