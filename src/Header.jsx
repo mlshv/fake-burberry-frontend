@@ -24,10 +24,9 @@ const Logo = styled.img`
   }
 `;
 
-export default () => (
-  <Header>
-    <a href="#">
+export default () =>
+  (<Header>
+    <a href="/">
       <Logo alt="Logo" src={logo} />
     </a>
-  </Header>
-);
+  </Header>);

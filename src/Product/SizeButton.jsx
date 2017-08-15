@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const SizeButton = styled.button`
+const SizeButtonStyled = styled.button`
   margin-right: .5rem;
   padding: .5rem 1rem;
   font-size: .75rem;
@@ -12,8 +13,13 @@ const SizeButton = styled.button`
   background: transparent;
 `;
 
-export default props => (
-  <SizeButton type="button">
+const SizeButton = props =>
+  (<SizeButtonStyled type="button">
     {props.children}
-  </SizeButton>
-);
+  </SizeButtonStyled>);
+
+SizeButton.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default SizeButton;

@@ -36,12 +36,9 @@ const Image = styled.img`
   }
 `;
 
-export default props => (
-  <Showcase>
-    <Image
-      src="img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg"
-      alt="Long Cotton Gabardine Car Coat"
-    />
+export default () =>
+  (<Showcase>
+    <Image src="img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg" alt="Long Cotton Gabardine Car Coat" />
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
         src="img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg"
@@ -60,5 +57,4 @@ export default props => (
         alt="Long Cotton Gabardine Car Coat"
       />
     </MediaQuery>
-  </Showcase>
-);
+  </Showcase>);

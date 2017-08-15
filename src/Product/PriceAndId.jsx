@@ -35,17 +35,16 @@ const Id = styled.p`
   }
 `;
 
-export default props => (
-  <Container>
+export default () =>
+  (<Container>
     <Price>
       <FormattedNumber
         value={110000}
-        style="currency"
+        style="currency" // eslint-disable-line
         currency="RUB"
         currencyDisplay="symbol"
         minimumFractionDigits={0}
       />
     </Price>
     <Id>Item 39428531</Id>
-  </Container>
-);
+  </Container>);

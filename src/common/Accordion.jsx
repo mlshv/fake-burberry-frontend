@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import triangleIcon from '../assets/triangle-down.svg';
 
@@ -82,7 +83,7 @@ export const Content = styled.div`
 `;
 
 class Accordion extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       active: false,
@@ -91,7 +92,7 @@ class Accordion extends Component {
   }
 
   toggle() {
-    this.setState((state, props) => ({
+    this.setState(state => ({
       active: !state.active,
     }));
   }
@@ -111,5 +112,10 @@ class Accordion extends Component {
     );
   }
 }
+
+Accordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default Accordion;

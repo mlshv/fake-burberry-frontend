@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ColorButton = styled.button`
+const ColorButtonStyled = styled.button`
   margin-right: 1rem;
   width: 40px;
   height: 40px;
@@ -11,8 +12,19 @@ const ColorButton = styled.button`
   background-color: ${props => props.value};
 `;
 
-export default props => (
-  <ColorButton value={props.value} active={props.active} type="button">
-      Select {props.name} color
-  </ColorButton>
-);
+const ColorButton = props =>
+  (<ColorButtonStyled value={props.value} active={props.active} type="button">
+    Select {props.name} color
+  </ColorButtonStyled>);
+
+ColorButton.propTypes = {
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  active: PropTypes.boolean,
+};
+
+ColorButton.defaultProps = {
+  active: false,
+};
+
+export default ColorButton;
