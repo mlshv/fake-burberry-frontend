@@ -16,11 +16,15 @@ const Title = styled.h1`
 `;
 
 const Text = styled.p`
+  padding: 0 .5rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.67;
   opacity: 0.87;
   color: #171717;
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+  }
 `;
 
 export default () =>
