@@ -4,9 +4,8 @@ import Filters from './Filters';
 
 const Jumbotron = styled.div`
   padding-top: 2rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
   background: #f3f3f3;
+  margin-bottom: 1rem;
 `;
 
 const Title = styled.h1`
@@ -26,10 +25,17 @@ const Text = styled.p`
 
 export default () =>
   (<Jumbotron>
-    <Title>Men’s clothing</Title>
-    <Text>
-      Explore our menswear collection for the season. Sculptural knitwear, sweatshirts, artist
-      overalls and oversized cabans feature alongside our signature trench coat in both heritage.
-    </Text>
-    <Filters />
+    <div className="container">
+      <Title>Men’s clothing</Title>
+      <div className="row">
+        <div className="col-md-9 col-lg-7">
+          <Text>
+            Explore our menswear collection for the season. Sculptural knitwear, sweatshirts, artist
+            overalls and oversized cabans feature alongside our signature trench coat in both
+            heritage.
+          </Text>
+        </div>
+      </div>
+      <Filters />
+    </div>
   </Jumbotron>);
