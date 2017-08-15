@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation';
 import styled from 'styled-components';
+import Navigation from './Navigation';
 
 const Footer = styled.footer`
   background: #f3f3f3;
@@ -67,8 +67,8 @@ const CenteredLink = styled.a`
   }
 `;
 
-export default () => (
-  <Footer>
+export default () =>
+  (<Footer>
     <div className="container">
       <Navigation />
       <TextButton>Shipping country: Russian Federation</TextButton>
@@ -76,5 +76,4 @@ export default () => (
       <Subtitle>Need help?</Subtitle>
       <CenteredLink href="#">Find out more and contact us</CenteredLink>
     </div>
-  </Footer>
-);
+  </Footer>);

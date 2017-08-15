@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
-const RecommendationCard = styled.a`
+const RecommendationCardStyled = styled.a`
   display: block;
   margin-bottom: 2rem;
 `;
@@ -39,8 +40,8 @@ const Price = styled.h5`
   }
 `;
 
-export default props => (
-  <RecommendationCard>
+const RecommendationCard = props =>
+  (<RecommendationCardStyled>
     <Image alt="" src={props.image} />
     <Name>
       {props.name}
@@ -48,11 +49,19 @@ export default props => (
     <Price>
       <FormattedNumber
         value={props.price}
-        style="currency"
+        style="currency" // eslint-disable-line
         currency={props.currency}
         currencyDisplay="symbol"
         minimumFractionDigits={0}
       />
     </Price>
-  </RecommendationCard>
-);
+  </RecommendationCardStyled>);
+
+RecommendationCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};
+
+export default RecommendationCard;

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import RecommendationCard from './RecommendationCard';
 import Subheading from '../common/Subheading';
-import styled from 'styled-components';
 
 const Recommendations = styled.section`
   padding-top: 0;
@@ -16,13 +17,9 @@ const Recommendations = styled.section`
   }
 `;
 
-const MoreForYouBlock = styled.div`
-  @media screen and (min-width: 48rem) {
-    display: none;
-  }
-`;
+const MoreForYouBlock = styled.div`@media screen and (min-width: 48rem) {display: none;}`;
 
-const Link = styled.a`
+const LinkStyled = styled(Link)`
   display: block;
   margin-bottom: 1rem;
   line-height: 1.0625rem;
@@ -32,8 +29,8 @@ const Link = styled.a`
   color: inherit;
 `;
 
-export default () => (
-  <Recommendations>
+export default () =>
+  (<Recommendations>
     <Subheading>We recommend</Subheading>
     <div className="row">
       <div className="col-xs-6 col-md-3">
@@ -75,15 +72,14 @@ export default () => (
           <Subheading>More for you</Subheading>
         </div>
         <div className="col-xs-12">
-          <Link href="#">Men's Black Trench Coats</Link>
+          <LinkStyled to="/">Men&apos;s Black Trench Coats</LinkStyled>
         </div>
         <div className="col-xs-12">
-          <Link href="#">Men's Short Trench Coats</Link>
+          <LinkStyled to="/">Men&apos;s Short Trench Coats</LinkStyled>
         </div>
         <div className="col-xs-12">
-          <Link href="#">Men's Long Trench Coats</Link>
+          <LinkStyled to="/">Men&apos;s Long Trench Coats</LinkStyled>
         </div>
       </div>
     </MoreForYouBlock>
-  </Recommendations>
-);
+  </Recommendations>);
