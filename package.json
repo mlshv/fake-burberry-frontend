@@ -24,7 +24,11 @@
     "test": "node_modules/.bin/eslint src",
 >>>>>>> feat: add travis config
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "lint": "eslint --ext .jsx,.js src/",
+=======
+    "lint": "eslint src",
+>>>>>>> fix: edit scripts
     "precommit": "yarn run lint",
     "prepush": "yarn run lint"
   },
