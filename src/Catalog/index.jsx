@@ -1,3 +1,4 @@
 import React from 'react';
+import Jumbotron from './Jumbotron';
 
-export default () => <h1>Hello World</h1>;
+export default () => <Jumbotron />;
