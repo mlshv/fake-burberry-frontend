@@ -4,13 +4,6 @@ import styled from 'styled-components';
 import logo from '../assets/logo.svg';
 import Navigation from './Navigation';
 
-const Header = styled.header`
-  border-bottom: 1px solid #c6c6c6;
-  @media screen and (min-width: 62rem) {
-    border-bottom: none;
-  }
-`;
-
 const Logo = styled.img`
   display: block;
   height: 12px;
@@ -25,10 +18,10 @@ const Logo = styled.img`
 
 export default () =>
   (<div>
-    <Header>
+    <header>
       <Link to="/">
         <Logo alt="Logo" src={logo} />
       </Link>
       <Navigation />
-    </Header>
+    </header>
   </div>);
