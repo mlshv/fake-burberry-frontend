@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Subheading = styled.h2`
   margin-top: 1rem;
@@ -17,6 +17,6 @@ const Subheading = styled.h2`
     padding-bottom: 0;
     text-align: center;
   }
-`
+`;
 
-export default Subheading
+export default Subheading;

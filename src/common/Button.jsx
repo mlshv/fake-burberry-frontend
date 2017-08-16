@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Button = styled.button`
   flex-basis: 100%;
@@ -13,6 +13,6 @@ const Button = styled.button`
   background: ${props => (props.primary ? '#171717' : 'transparent')};
   border: solid 1px #171717;
   color: ${props => (props.primary ? '#fff' : '#171717')};
-`
+`;
 
-export default Button
+export default Button;

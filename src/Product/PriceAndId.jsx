@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FormattedNumber } from 'react-intl'
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const Container = styled.div`
   @media screen and (min-width: 62rem) {
     margin-bottom: 3rem;
   }
-`
+`;
 
 const Price = styled.h2`
   margin: 0;
@@ -23,7 +23,7 @@ const Price = styled.h2`
   @media screen and (min-width: 62rem) {
     font-weight: 500;
   }
-`
+`;
 
 const Id = styled.p`
   margin: 0;
@@ -33,21 +33,18 @@ const Id = styled.p`
   @media screen and (min-width: 62rem) {
     display: none;
   }
-`
+`;
 
-export default props => {
-  return (
-    <Container>
-      <Price>
-        <FormattedNumber
-          value={110000}
-          style="currency"
-          currency="RUB"
-          currencyDisplay="symbol"
-          minimumFractionDigits={0}
-        />
-      </Price>
-      <Id>Item 39428531</Id>
-    </Container>
-  )
-}
+export default () =>
+  (<Container>
+    <Price>
+      <FormattedNumber
+        value={110000}
+        style="currency" // eslint-disable-line
+        currency="RUB"
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </Price>
+    <Id>Item 39428531</Id>
+  </Container>);
