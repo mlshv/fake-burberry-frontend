@@ -17,7 +17,7 @@ export default () =>
       <CategoryTitle>Heritage Trench Coats</CategoryTitle>
       <div className="row">
         {products.map(product =>
-          (<div className="col-xs-6">
+          (<div className="col-xs-6 col-md-3">
             <Card
               image={product.photo}
               name={product.name}
