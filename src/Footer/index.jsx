@@ -4,17 +4,16 @@ import Navigation from './Navigation';
 
 const Footer = styled.footer`
   background: #f3f3f3;
-  padding: 0 .5rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
 
   @media screen and (min-width: 48rem) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
   @media screen and (min-width: 62rem) {
     padding-top: 4rem;
     padding-bottom: 4rem;

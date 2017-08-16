@@ -5,9 +5,7 @@ import RecommendationCard from './RecommendationCard';
 import Subheading from '../common/Subheading';
 
 const Recommendations = styled.section`
-  padding-top: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0 .5rem;
   padding-bottom: 3rem;
 
   @media screen and (min-width: 48rem) {
