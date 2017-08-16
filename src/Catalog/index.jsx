@@ -10,14 +10,22 @@ const CategoryTitle = styled.h2`
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 1.2;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.1;
+  }
 `;
 
 const Divider = styled.hr`
   margin: 3rem 0;
   border: none;
   border-bottom: 1px solid #c6c6c6;
-  @media screen and (min-width: 62rem) {
-    display: none;
+  @media screen and (min-width: 48rem) {
+    margin-top: .8125rem;
+    margin-bottom: 3.125rem;
+    font-size: 1.25rem;
+    line-height: 1.1;
   }
 `;
 

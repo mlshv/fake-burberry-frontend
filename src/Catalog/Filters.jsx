@@ -8,6 +8,9 @@ const Filters = styled.div`
   margin-top: .5rem;
   overflow-y: auto;
   white-space: nowrap;
+  @media screen and (min-width: 48rem) {
+    margin-top: 1rem;
+  }
 `;
 
 const Hint = styled.div`
@@ -18,6 +21,7 @@ const Hint = styled.div`
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: .66;
   color: #171717;
+
   @media screen and (min-width: 48rem) {
     display: none;
   }
@@ -32,6 +36,16 @@ const Button = styled.button`
   line-height: 1.33;
   border: none;
   background: transparent;
+
+  @media screen and (min-width: 48rem) {
+    margin-right: 3rem;
+    line-height: 1.44;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   ::after {
     display: inline-block;
     width: 12px;

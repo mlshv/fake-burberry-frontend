@@ -30,6 +30,7 @@ const Link = styled.a`
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 1.33;
   color: #999999;
   ${props =>
     props.active &&
