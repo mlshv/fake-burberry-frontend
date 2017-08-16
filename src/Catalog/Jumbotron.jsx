@@ -5,7 +5,7 @@ import Filters from './Filters';
 const Jumbotron = styled.div`
   padding-top: 2rem;
   background: #f3f3f3;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h1`
