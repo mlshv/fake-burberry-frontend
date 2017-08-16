@@ -9,7 +9,7 @@ export const Container = styled.section`
   flex-basis: 100%;
   flex-wrap: wrap;
   margin: 0 -.5rem;
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   border-top: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     border: none;
@@ -25,7 +25,7 @@ export const Container = styled.section`
   ::after {
     position: absolute;
     content: url(${triangleIcon});
-    right: 1rem;
+    right: .5rem;
     ${props => (props.active ? 'transform: rotate(180deg);' : '')};
   }
   @media screen and (min-width: 48rem) {

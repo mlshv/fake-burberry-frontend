@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   @media screen and (min-width: 48rem) {
     margin-bottom: 1rem;
   }
