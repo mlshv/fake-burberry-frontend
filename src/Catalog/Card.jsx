@@ -22,6 +22,9 @@ const Tag = styled.p`
   margin: .5rem 0;
   font-size: .75rem;
   line-height: 1.44;
+  @media screen and (min-width: 48rem) {
+    line-height: 1.4;
+  }
 `;
 
 const Like = styled.button`
@@ -41,6 +44,11 @@ const Name = styled.h3`
   font-size: .75rem;
   font-weight: 600;
   line-height: 1.33;
+
+  @media screen and (min-width: 48rem) {
+    font-size: .875rem;
+    line-height: 1.44;
+  }
 `;
 
 const Colors = styled.p`
@@ -48,6 +56,9 @@ const Colors = styled.p`
   margin: 0;
   margin-top: .5rem;
   line-height: 1.67;
+  @media screen and (min-width: 48rem) {
+    line-height: 1.4;
+  }
 `;
 
 const Underline = styled.span`border-bottom: 1px solid #171717;`;
@@ -56,6 +67,9 @@ const Price = styled.p`
   font-size: .75rem;
   margin: 0;
   margin-top: .25rem;
+  @media screen and (min-width: 48rem) {
+    line-height: 1.4;
+  }
 `;
 
 const Card = props =>
