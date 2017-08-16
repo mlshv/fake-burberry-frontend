@@ -10,12 +10,12 @@ const Jumbotron = styled.div`
 
 const Title = styled.h1`
   margin-top: 0;
-  margin-bottom: 1rem;
   font-size: 1.625rem;
   line-height: 1.33;
 `;
 
 const Text = styled.p`
+  margin: 0;
   padding: 0 .5rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -30,7 +30,7 @@ const Text = styled.p`
 export default () =>
   (<Jumbotron>
     <div className="container">
-      <Title>Men’s clothing</Title>
+      <Title>Men’s Clothing</Title>
       <div className="row">
         <div className="col-md-9 col-lg-7">
           <Text>

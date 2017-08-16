@@ -5,6 +5,7 @@ import arrowIcon from '../assets/arrow.svg';
 const Filters = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: .5rem;
   overflow-y: auto;
   white-space: nowrap;
 `;
@@ -28,7 +29,7 @@ const Button = styled.button`
   padding: 1.5rem 0;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: .66;
+  line-height: 1.33;
   border: none;
   background: transparent;
   ::after {
