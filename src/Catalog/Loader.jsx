@@ -6,12 +6,19 @@ const Loader = styled.div`
   margin-top: 2rem;
   margin-bottom: 5rem;
   text-align: center;
+  @media screen and (min-width: 48rem) {
+    margin-top: 3rem;
+  }
 `;
 
 const Title = styled.h4`
   margin: 0;
   margin-bottom: 1rem;
   font-size: 1rem;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+  }
 `;
 
 const Button = GenericButton.extend`
