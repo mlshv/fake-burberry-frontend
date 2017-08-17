@@ -32,12 +32,7 @@ const HamburgerButton = styled.button`
   }
 `;
 
-const LocationSelector = DropdownButton.extend`
-  margin: 0;
-  @media screen and (min-width: 48rem) {
-    margin: 0;
-  }
-`;
+const LocationSelector = DropdownButton.extend`@media screen and (min-width: 48rem) {margin: 0;}`;
 
 export default () =>
   (<div className="container">
