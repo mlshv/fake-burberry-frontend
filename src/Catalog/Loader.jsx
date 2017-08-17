@@ -9,6 +9,9 @@ const Loader = styled.div`
   @media screen and (min-width: 48rem) {
     margin-top: 3rem;
   }
+  @media screen and (min-width: 62rem) {
+    margin-top: 4.5rem;
+  }
 `;
 
 const Title = styled.h4`

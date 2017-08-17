@@ -15,6 +15,9 @@ const CategoryTitle = styled.h2`
     font-size: 1.25rem;
     line-height: 1.1;
   }
+  @media screen and (min-width: 62rem) {
+    line-height: 1.15;
+  }
 `;
 
 const Divider = styled.hr`
@@ -26,6 +29,10 @@ const Divider = styled.hr`
     margin-bottom: 3.125rem;
     font-size: 1.25rem;
     line-height: 1.1;
+  }
+  @media screen and (min-width: 62rem) {
+    margin-top: 3.25rem;
+    margin-bottom: 4.0625rem;
   }
 `;
 
