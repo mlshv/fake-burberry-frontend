@@ -29,7 +29,7 @@ const Hint = styled.div`
 
 const Button = styled.button`
   display: inline-block;
-  margin-right: 1rem;
+  margin-left: 1rem;
   padding: 1.5rem 0;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -42,8 +42,8 @@ const Button = styled.button`
     line-height: 1.44;
   }
 
-  &:last-child {
-    margin-right: 0;
+  &:first-child {
+    margin-left: 0;
   }
 
   ::after {
