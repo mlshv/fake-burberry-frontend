@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 language: node_js
 node_js:
   - "6"
 script:
   - npm run test
-=======
-language: node_js
-node_js:
-  - "6"
-script:
-  - npm run test
->>>>>>> feat: add travis config
