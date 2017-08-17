@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
-import heartIcon from '../../assets/heart.svg';
+import heartIcon from '../assets/heart.svg';
 
 const CardStyled = styled.div`
   display: flex;
@@ -109,6 +109,11 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   colors: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
+};
+
+Card.defaultProps = {
+  tag: 'New in',
+  colors: 3,
 };
 
 export default Card;
