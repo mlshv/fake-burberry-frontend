@@ -49,6 +49,11 @@ const Name = styled.h3`
     font-size: .875rem;
     line-height: 1.44;
   }
+
+  @media screen and (min-width: 62rem) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 `;
 
 const Colors = styled.p`
