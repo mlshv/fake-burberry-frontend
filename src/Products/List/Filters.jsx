@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import arrowIcon from '../../assets/arrow.svg';
+import styled from 'styled-components';
+import Button from '../../common/DropdownButton';
 
 const Filters = styled.div`
   display: flex;
@@ -27,49 +27,15 @@ const Hint = styled.div`
   }
 `;
 
-const Button = styled.button`
-  display: inline-block;
-  margin-left: 1rem;
-  padding: 1.5rem 0;
-  font-size: .75rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.33;
-  border: none;
-  background: transparent;
-
-  @media screen and (min-width: 48rem) {
-    margin-right: 3rem;
-    line-height: 1.44;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  ::after {
-    display: inline-block;
-    width: 12px;
-    height: 6px;
-    margin-left: .5rem;
-    background: url(${arrowIcon});
-    background-size: cover;
-    content: " ";
-  }
-  align-self: flex-start;
-  ${props =>
-    props.right &&
-    css`
-    align-self: flex-end;
-  `};
-`;
-
 export default () =>
   (<Filters>
     <div>
       <Hint>Refine by</Hint>
-      <Button>Category</Button>
-      <Button>Colour</Button>
-      <Button>Size</Button>
+      <span>
+        <Button>Category</Button>
+        <Button>Colour</Button>
+        <Button>Size</Button>
+      </span>
     </div>
-    <Button right>Sort by price</Button>
+    <Button>Sort by price</Button>
   </Filters>);
