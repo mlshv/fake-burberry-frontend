@@ -10,7 +10,7 @@ const Navigation = styled.nav`
   }
 `;
 
-const Button = styled.button`
+const HamburgerButton = styled.button`
   position: absolute;
   top: 1rem;
   left: .5rem;
@@ -42,7 +42,7 @@ const Link = styled.a`
 
 export default () =>
   (<div>
-    <Button />
+    <HamburgerButton />
     <Navigation>
       <Link href="#">Women</Link>
       <Link active href="#">
