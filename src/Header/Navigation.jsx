@@ -1,25 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import hamburgerIcon from '../assets/hamburger.svg';
 
 const Navigation = styled.nav`
   display: none;
   justify-content: center;
   @media screen and (min-width: 48rem) {
     display: flex;
-  }
-`;
-
-const HamburgerButton = styled.button`
-  position: absolute;
-  top: 1rem;
-  left: .5rem;
-  height: 1rem;
-  width: 1rem;
-  border: none;
-  background: url(${hamburgerIcon}) no-repeat;
-  @media screen and (min-width: 48rem) {
-    display: none;
+    margin: 0 auto;
   }
 `;
 
@@ -41,15 +28,12 @@ const Link = styled.a`
 `;
 
 export default () =>
-  (<div>
-    <HamburgerButton />
-    <Navigation>
-      <Link href="#">Women</Link>
-      <Link active href="#">
-        Men
-      </Link>
-      <Link href="#">Children</Link>
-      <Link href="#">Beauty</Link>
-      <Link href="#">Experience</Link>
-    </Navigation>
-  </div>);
+  (<Navigation>
+    <Link href="#">Women</Link>
+    <Link active href="#">
+      Men
+    </Link>
+    <Link href="#">Children</Link>
+    <Link href="#">Beauty</Link>
+    <Link href="#">Experience</Link>
+  </Navigation>);
