@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
+import breakpoints from '../common/breakpoints';
 
 const Navigation = styled.div`
   display: none;
@@ -22,6 +24,20 @@ const Link = styled.a`
   color: #999999;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  margin-bottom: 1rem;
+`;
+
+const UnderlinedLink = styled.a`
+  font-size: .75rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-weight: 600;
+  line-height: 1.33;
+  border-bottom: 1px solid #171717;
+  color: #171717;
+`;
+
 const Title = styled.h3`
   margin-top: 0;
   margin-bottom: 1rem;
@@ -32,8 +48,8 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-export default () => (
-  <Navigation>
+export default () =>
+  (<Navigation>
     <div className="row">
       <div className="col-md-3">
         <Title>Customer Service</Title>
@@ -68,6 +84,14 @@ export default () => (
           <Link href="#">Japan Only - SCTL indications</Link>
         </nav>
       </div>
+      <div className="col-md-3">
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <Image
+            src="http://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg?$BBY_V2_BASIC$&wid=474"
+            alt="Store"
+          />
+          <UnderlinedLink>Find a store</UnderlinedLink>
+        </MediaQuery>
+      </div>
     </div>
-  </Navigation>
-);
+  </Navigation>);
