@@ -86,7 +86,7 @@ const Divider = styled.hr`
 export default () =>
   (<MainPanel>
     <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-      <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+      <Title>Long Cotton Gabardine Car Coat</Title>
     </MediaQuery>
     <PriceAndId />
     <div className="row">
