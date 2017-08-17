@@ -1,9 +1,11 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header';
-import Product from './Product';
+import ProductsList from './Products/List';
+import Product from './Products/Show';
 import Footer from './Footer';
 
 addLocaleData(ruLocaleData);
@@ -14,8 +16,13 @@ export default () =>
       <Helmet>
         <title>Burberry</title>
       </Helmet>
-      <Header />
-      <Product />
-      <Footer />
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact path="/" component={ProductsList} />
+          <Route path="/product" component={Product} />
+          <Footer />
+        </div>
+      </BrowserRouter>
     </div>
   </IntlProvider>);

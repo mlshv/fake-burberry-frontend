@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
-import breakpoints from '../common/breakpoints';
+import breakpoints from '../../common/breakpoints';
 import PriceAndId from './PriceAndId';
 import ActionButtons from './ActionButtons';
 import ColorButton from './ColorButton';
@@ -10,11 +10,9 @@ import SizeButton from './SizeButton';
 
 const MainPanel = styled.section`
   margin-top: 1rem;
-  padding: 0 .5rem;
   padding-bottom: 3rem;
   @media screen and (min-width: 48rem) {
     margin-top: 0;
-    padding: 0;
   }
 `;
 
@@ -85,16 +83,16 @@ const Divider = styled.hr`
   }
 `;
 
-export default () => (
-  <MainPanel>
+export default () =>
+  (<MainPanel>
     <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-      <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+      <Title>Long Cotton Gabardine Car Coat</Title>
     </MediaQuery>
     <PriceAndId />
     <div className="row">
       <div className="col-lg-6">
         <ColorName>
-            Colour: <b>Honey</b>
+          Colour: <b>Honey</b>
         </ColorName>
       </div>
       <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
@@ -123,9 +121,6 @@ export default () => (
     <ActionButtons />
     <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
       <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
-      <DeliveryText>
-          Order before 7pm Monday to Thursday for delivery the next Day
-      </DeliveryText>
+      <DeliveryText>Order before 7pm Monday to Thursday for delivery the next Day</DeliveryText>
     </MediaQuery>
-  </MainPanel>
-);
+  </MainPanel>);
