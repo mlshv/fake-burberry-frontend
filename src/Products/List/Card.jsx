@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
-import heartIcon from '../assets/heart.svg';
+import heartIcon from '../../assets/heart.svg';
 
 const CardStyled = styled.div`
   display: flex;

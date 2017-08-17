@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; // eslint-disable-line
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
-import breakpoints from '../common/breakpoints';
+import breakpoints from '../../common/breakpoints';
 import Jumbotron from './Jumbotron';
 import Card from './Card';
 import Loader from './Loader';

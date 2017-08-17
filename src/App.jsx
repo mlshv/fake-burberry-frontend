@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header';
-import Product from './Product';
-import Catalog from './Catalog';
+import ProductsList from './Products/List';
+import Product from './Products/Show';
 import Footer from './Footer';
 
 addLocaleData(ruLocaleData);
@@ -19,7 +19,7 @@ export default () =>
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path="/" component={Catalog} />
+          <Route exact path="/" component={ProductsList} />
           <Route path="/product" component={Product} />
           <Footer />
         </div>

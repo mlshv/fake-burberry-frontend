@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
-import Button from '../common/Button';
-import breakpoints from '../common/breakpoints';
+import Button from '../../common/Button';
+import breakpoints from '../../common/breakpoints';
 
 const Container = styled.div`
   display: flex;
@@ -33,12 +33,12 @@ const TextButton = Button.extend`
   }
 `;
 
-export default () => (
-  <div>
+export default () =>
+  (<div>
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Container>
         <Button primary type="button">
-            Select a size
+          Select a size
         </Button>
         <Button type="button">Find in store</Button>
       </Container>
@@ -48,7 +48,7 @@ export default () => (
         <div className="col-lg-6">
           <Container>
             <Button primary type="button">
-                Add to bag
+              Add to bag
             </Button>
           </Container>
         </div>
@@ -62,5 +62,4 @@ export default () => (
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <TextButton type="button">Need size help?</TextButton>
     </MediaQuery>
-  </div>
-);
+  </div>);
