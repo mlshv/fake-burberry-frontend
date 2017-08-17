@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import triangleIcon from '../assets/triangle-down.svg';
+import triangleIcon from '../../assets/triangle-down.svg';
 
 export const Container = styled.section`
   position: relative;

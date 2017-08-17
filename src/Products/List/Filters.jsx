@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import arrowIcon from '../assets/arrow.svg';
+import arrowIcon from '../../assets/arrow.svg';
 
 const Filters = styled.div`
   display: flex;
