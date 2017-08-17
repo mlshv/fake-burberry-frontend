@@ -16,7 +16,6 @@ export default () =>
       <Helmet>
         <title>Burberry</title>
       </Helmet>
-      <Header />
       <BrowserRouter>
         <div>
           <Header />
