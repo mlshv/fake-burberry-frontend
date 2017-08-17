@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
-const RecommendationCardStyled = styled.a`
+const RecommendationCardStyled = styled(Link)`
   display: block;
   margin-bottom: 2rem;
+  text-decoration: none;
+  color: inherit;
 `;
 
 const Image = styled.img`
@@ -41,7 +44,7 @@ const Price = styled.h5`
 `;
 
 const RecommendationCard = props =>
-  (<RecommendationCardStyled>
+  (<RecommendationCardStyled to="/">
     <Image alt="" src={props.image} />
     <Name>
       {props.name}

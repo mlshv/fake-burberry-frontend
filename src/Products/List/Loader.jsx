@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import GenericButton from '../common/Button';
+import GenericButton from '../../common/Button';
 
 const Loader = styled.div`
   margin-top: 2rem;
