@@ -20,7 +20,7 @@ const ColorButton = props =>
 ColorButton.propTypes = {
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  active: PropTypes.boolean,
+  active: PropTypes.bool,
 };
 
 ColorButton.defaultProps = {

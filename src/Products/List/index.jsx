@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import breakpoints from '../../common/breakpoints';
 import Jumbotron from './Jumbotron';
-import Card from './Card';
+import Card from '../Card';
 import Loader from './Loader';
 
 const CategoryTitle = styled.h2`
