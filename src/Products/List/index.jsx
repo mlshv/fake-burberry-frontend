@@ -22,6 +22,7 @@ const CategoryTitle = styled.h2`
 
 const Divider = styled.hr`
   margin: 3rem 0;
+  margin-top: .9375rem;
   border: none;
   border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
