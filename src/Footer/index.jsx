@@ -34,7 +34,12 @@ const TextButton = styled.button`
   @media screen and (min-width: 48rem) {
     display: inline-block;
     margin-top: 1.25rem;
-    margin-right: 1.25rem;
+    margin-right: 1.5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 2.25rem;
+    margin-right: 3rem;
   }
 `;
 

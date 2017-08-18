@@ -10,7 +10,7 @@ const Loader = styled.div`
     margin-top: 3rem;
   }
   @media screen and (min-width: 62rem) {
-    margin-top: 4.5rem;
+    margin-top: 3.0625rem;
   }
 `;
 
@@ -21,6 +21,7 @@ const Title = styled.h4`
   @media screen and (min-width: 48rem) {
     margin-bottom: 2rem;
     font-size: 1.25rem;
+    line-height: 1.2;
   }
 `;
 

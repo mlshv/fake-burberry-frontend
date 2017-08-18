@@ -32,7 +32,18 @@ const HamburgerButton = styled.button`
   }
 `;
 
-const LocationSelector = DropdownButton.extend`@media screen and (min-width: 48rem) {margin: 0;}`;
+const LocationSelector = DropdownButton.extend`
+  @media screen and (min-width: 48rem) {
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #999;
+  }
+  @media screen and (min-width: 62rem) {
+    padding: 2rem 0;
+  }
+`;
 
 export default () =>
   (<div className="container">
@@ -48,7 +59,8 @@ export default () =>
           <Logo alt="Logo" src={logo} />
         </Link>
       </div>
-
-      <Navigation />
+      <div className="col-xs-12">
+        <Navigation />
+      </div>
     </header>
   </div>);

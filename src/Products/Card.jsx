@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
+import Underline from '../common/Underline';
 import heartIcon from '../assets/heart.svg';
 
 const CardStyled = styled.div`
@@ -21,7 +22,7 @@ const Image = styled.img`
 const Tag = styled.p`
   margin: .5rem 0;
   font-size: .75rem;
-  line-height: 1.44;
+  line-height: 1.4;
   @media screen and (min-width: 48rem) {
     line-height: 1.4;
   }
@@ -43,7 +44,7 @@ const Name = styled.h3`
   margin: 0;
   font-size: .75rem;
   font-weight: 600;
-  line-height: 1.33;
+  line-height: 1.4;
 
   @media screen and (min-width: 48rem) {
     font-size: .875rem;
@@ -52,7 +53,7 @@ const Name = styled.h3`
 
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.37;
   }
 `;
 
@@ -60,20 +61,22 @@ const Colors = styled.p`
   font-size: .75rem;
   margin: 0;
   margin-top: .5rem;
-  line-height: 1.67;
+  line-height: 1.44;
   @media screen and (min-width: 48rem) {
     line-height: 1.4;
   }
+  @media screen and (min-width: 62rem) {
+    line-height: 1.1;
+  }
 `;
-
-const Underline = styled.span`border-bottom: 1px solid #171717;`;
 
 const Price = styled.p`
   font-size: .75rem;
   margin: 0;
   margin-top: .25rem;
-  @media screen and (min-width: 48rem) {
-    line-height: 1.4;
+  line-height: 1.4;
+  @media screen and (min-width: 62rem) {
+    line-height: 1.5;
   }
 `;
 

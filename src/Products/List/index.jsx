@@ -27,12 +27,12 @@ const Divider = styled.hr`
   border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     margin-top: .8125rem;
-    margin-bottom: 3.125rem;
+    margin-bottom: 3.0625rem;
     font-size: 1.25rem;
     line-height: 1.1;
   }
   @media screen and (min-width: 62rem) {
-    margin-top: 3.25rem;
+    margin-top: 2.0625rem;
     margin-bottom: 4.0625rem;
   }
 `;

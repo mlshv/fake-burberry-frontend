@@ -26,10 +26,11 @@ const Link = styled.a`
 
 const Image = styled.img`
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: .8125rem;
 `;
 
 const UnderlinedLink = styled.a`
+  padding-bottom: .0625rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-weight: 600;

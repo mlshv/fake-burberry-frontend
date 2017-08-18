@@ -17,7 +17,8 @@ const Title = styled.h1`
   font-size: 1.625rem;
   line-height: 1.33;
   @media screen and (min-width: 48rem) {
-    line-height: 1.2;
+    line-height: 1.25;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -31,6 +32,11 @@ const Text = styled.p`
   color: #171717;
   @media screen and (min-width: 48rem) {
     padding: 0;
+    line-height: 1.7;
+  }
+  u {
+    text-decoration: none;
+    border-bottom: 1px solid #171717;
   }
 `;
 
@@ -41,8 +47,8 @@ export default () =>
       <div className="row">
         <div className="col-md-9 col-lg-7">
           <Text>
-            Explore our menswear collection for the season. Sculptural knitwear, sweatshirts, artist
-            overalls and oversized cabans feature alongside our signature trench coat in both
+            Explore our menswear collection for the season. Sculptural knitwear, <u>sweatshirts</u>,
+            artist overalls and oversized cabans feature alongside our signature trench coat in both
             heritage.
           </Text>
         </div>

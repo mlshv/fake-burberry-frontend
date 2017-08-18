@@ -3,10 +3,9 @@ import styled, { css } from 'styled-components';
 
 const Navigation = styled.nav`
   display: none;
-  justify-content: center;
   @media screen and (min-width: 48rem) {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
   }
 `;
 
@@ -17,11 +16,13 @@ const Link = styled.a`
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 1.33;
+  line-height: 1.34;
+  letter-spacing: 1.5px;
   color: #999999;
   ${props =>
     props.active &&
     css`
+    padding-bottom: 1px;
     color: #171717;
     border-bottom: 1px solid #171717;
   `};
