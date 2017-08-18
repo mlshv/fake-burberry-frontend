@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link as RouteLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 import Underline from '../common/Underline';
@@ -11,6 +12,11 @@ const CardStyled = styled.div`
   flex-direction: column;
   margin-bottom: 2rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+`;
+
+const Link = styled(RouteLink)`
+  text-decoration: none;
+  color: #171717;
 `;
 
 const Image = styled.img`
@@ -82,16 +88,20 @@ const Price = styled.p`
 
 const Card = props =>
   (<CardStyled>
-    <Image src={props.image} />
+    <Link to={props.link}>
+      <Image src={props.image} />
+    </Link>
     <TagLikeWrapper>
       <Tag>
         {props.tag}
       </Tag>
       <Like />
     </TagLikeWrapper>
-    <Name>
-      {props.name}
-    </Name>
+    <Link to={props.link}>
+      <Name>
+        {props.name}
+      </Name>
+    </Link>
     <Colors>
       Available in <Underline>{props.colors} colours</Underline>
     </Colors>
@@ -107,6 +117,7 @@ const Card = props =>
   </CardStyled>);
 
 Card.propTypes = {
+  link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

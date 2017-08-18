@@ -33,6 +33,7 @@ export default () =>
     <div className="row">
       <div className="col-xs-6 col-md-3">
         <Card
+          link="/men/trench-coats/sample"
           image="/img/recommend1.jpg"
           name="Emroided Hooded Content For Three Lines"
           price={27000}
@@ -41,6 +42,7 @@ export default () =>
       </div>
       <div className="col-xs-6 col-md-3">
         <Card
+          link="/men/trench-coats/sample"
           image="/img/recommend2.jpg"
           name="Relaxed Fit Stretch Jeans Content For Three Lines"
           price={22500}
@@ -49,6 +51,7 @@ export default () =>
       </div>
       <div className="col-xs-6 col-md-3">
         <Card
+          link="/men/trench-coats/sample"
           image="/img/recommend3.jpg"
           name="Leather and House Check Content For Three Lines"
           price={120000}
@@ -57,6 +60,7 @@ export default () =>
       </div>
       <div className="col-xs-6 col-md-3">
         <Card
+          link="/men/trench-coats/sample"
           image="/img/recommend4.jpg"
           name="Leather Wingtip Check Content For Three Lines"
           price={46000}
