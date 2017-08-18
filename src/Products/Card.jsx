@@ -8,7 +8,6 @@ import heartIcon from '../assets/heart.svg';
 
 const CardStyled = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   margin-bottom: 2rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -23,6 +22,9 @@ const Image = styled.img`
   width: 100%;
   height: auto;
   margin-bottom: .5rem;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: .25rem;
+  }
 `;
 
 const Tag = styled.p`
