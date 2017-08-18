@@ -39,7 +39,12 @@ const Divider = styled.hr`
 
 export default () =>
   (<div>
-    <Jumbotron />
+    <Jumbotron
+      title="Men’s Clothing"
+      text={
+        'Explore our menswear collection for the season. Sculptural knitwear, <u>sweatshirts</u>, artist overalls and oversized cabans feature alongside our signature trench coat in both heritage and seasonal.'
+      }
+    />
     <div className="container">
       <CategoryTitle>Heritage Trench Coats</CategoryTitle>
       <div className="row">
