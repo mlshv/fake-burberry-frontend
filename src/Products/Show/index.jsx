@@ -91,7 +91,7 @@ export default () =>
         </div>
         <div className="col-lg-8">
           <DescriptionMainImage
-            src="img/Long-Cotton-Gabardine-Car-Coat-5.jpg"
+            src="/img/Long-Cotton-Gabardine-Car-Coat-5.jpg"
             alt="Long Cotton Gabardine Car Coat"
           />
         </div>

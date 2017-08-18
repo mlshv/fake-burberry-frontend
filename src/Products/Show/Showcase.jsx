@@ -38,22 +38,25 @@ const Image = styled.img`
 
 export default () =>
   (<Showcase>
-    <Image src="img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg" alt="Long Cotton Gabardine Car Coat" />
+    <Image
+      src="/img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg"
+      alt="Long Cotton Gabardine Car Coat"
+    />
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg"
+        src="/img/Long-Cotton-Gabardine-Car-Coat-2@3x.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg"
+        src="/img/Long-Cotton-Gabardine-Car-Coat-3@3x.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src="img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg"
+        src="/img/Long-Cotton-Gabardine-Car-Coat-4@3x.jpg"
         alt="Long Cotton Gabardine Car Coat"
       />
     </MediaQuery>

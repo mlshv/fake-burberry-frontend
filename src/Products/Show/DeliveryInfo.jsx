@@ -60,32 +60,23 @@ const Image = styled.img`
   }
 `;
 
-export default () => (
-  <Container>
+export default () =>
+  (<Container>
     <div className="col-md-7">
-      <Image alt="Gift packaging demo" src="img/shipping-box.jpg" />
+      <Image alt="Gift packaging demo" src="/img/shipping-box.jpg" />
     </div>
     <div className="col-md-5 col-lg-4 col-lg-offset-1">
       <Title>Delivery</Title>
       <Subtitle>Free Next Day Delivery</Subtitle>
-      <Text>
-          Order before 7pm Monday to Thursday for delivery the next day
-      </Text>
+      <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
 
       <Subtitle>Collect-in-Store</Subtitle>
-      <Text>
-          Order online today and pick up your items in store as early as
-          tomorrow
-      </Text>
+      <Text>Order online today and pick up your items in store as early as tomorrow</Text>
 
       <Subtitle>Free Returns</Subtitle>
       <Text>Enjoy free returns on your order</Text>
 
       <Subtitle>Free Gift Packaging</Subtitle>
-      <Text>
-          Discover our gift packaging, a gold lined box tied with a coloured
-          ribbon
-      </Text>
+      <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
     </div>
-  </Container>
-);
+  </Container>);

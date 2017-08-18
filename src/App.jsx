@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
@@ -19,10 +19,14 @@ export default () =>
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path="/" component={ProductsList} />
-          <Route path="/product" component={Product} />
+          <Switch>
+            <Route exact path="/:section/" component={ProductsList} />
+            <Route exact path="/:section/:category" component={ProductsList} />
+            <Route path="/:section/:category/:id" component={Product} />
+            <Redirect from="/" to="/men/trench-coats" />
+          </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
-      <Footer />
     </div>
   </IntlProvider>);
