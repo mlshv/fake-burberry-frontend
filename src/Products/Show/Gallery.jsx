@@ -27,19 +27,19 @@ export default () =>
   (<Gallery>
     <div className="col-lg-4">
       <Image
-        src="/img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg"
+        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg`}
         alt="Long Cotton Gabardine Car Coat"
       />
     </div>
     <div className="col-lg-4">
       <Image
-        src="/img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg"
+        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg`}
         alt="Long Cotton Gabardine Car Coat"
       />
     </div>
     <div className="col-lg-4">
       <Image
-        src="/img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg"
+        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg`}
         alt="Long Cotton Gabardine Car Coat"
       />
     </div>

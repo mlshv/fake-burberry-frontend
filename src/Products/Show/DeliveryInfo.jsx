@@ -63,7 +63,7 @@ const Image = styled.img`
 export default () =>
   (<Container>
     <div className="col-md-7">
-      <Image alt="Gift packaging demo" src="/img/shipping-box.jpg" />
+      <Image alt="Gift packaging demo" src={`${process.env.PUBLIC_URL}/img/shipping-box.jpg`} />
     </div>
     <div className="col-md-5 col-lg-4 col-lg-offset-1">
       <Title>Delivery</Title>
