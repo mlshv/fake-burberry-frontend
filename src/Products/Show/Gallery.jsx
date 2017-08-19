@@ -27,20 +27,20 @@ export default () =>
   (<Gallery>
     <div className="col-lg-4">
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/e3abd115ccddc731b5af5730c1373ad5447699da.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </div>
     <div className="col-lg-4">
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/8867271963e0182f9f0bee68acc0efc17a17c52b.jpg?$BBY_V2_ML_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </div>
     <div className="col-lg-4">
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/33af7736ba997e135c63a29789079798f137f7be.jpg?$BBY_V2_ML_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </div>
   </Gallery>);

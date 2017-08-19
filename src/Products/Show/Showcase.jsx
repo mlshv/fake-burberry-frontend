@@ -39,25 +39,25 @@ const Image = styled.img`
 export default () =>
   (<Showcase>
     <Image
-      src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-1@3x.jpg`}
-      alt="Long Cotton Gabardine Car Coat"
+      src="https://assets.burberry.com/is/image/Burberryltd/315fc4b4f839fab1922251a93b95e04ad6055598.jpg?$BBY_V2_ML_3X4$&hei=800&wid=600"
+      alt="Lightweight Grainy Nubuck Trench Coat"
     />
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-2@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/320347e75c92dab46a0322f371ca96e1e7a9b5f1.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-3@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/e3abd115ccddc731b5af5730c1373ad5447699da.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </MediaQuery>
     <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
       <Image
-        src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-4@2x.jpg`}
-        alt="Long Cotton Gabardine Car Coat"
+        src="https://assets.burberry.com/is/image/Burberryltd/8867271963e0182f9f0bee68acc0efc17a17c52b.jpg?$BBY_V2_ML_3X4$&hei=800&wid=600"
+        alt="Lightweight Grainy Nubuck Trench Coat"
       />
     </MediaQuery>
   </Showcase>);

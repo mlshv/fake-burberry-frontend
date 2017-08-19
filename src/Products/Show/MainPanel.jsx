@@ -86,13 +86,13 @@ const Divider = styled.hr`
 export default () =>
   (<MainPanel>
     <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-      <Title>Long Cotton Gabardine Car Coat</Title>
+      <Title>Lightweight Grainy Nubuck Trench Coat</Title>
     </MediaQuery>
     <PriceAndId />
     <div className="row">
       <div className="col-lg-6">
         <ColorName>
-          Colour: <b>Honey</b>
+          Colour: <b>Bright Navy</b>
         </ColorName>
       </div>
       <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
@@ -105,7 +105,7 @@ export default () =>
       <div className="col-xs-12 col-lg-6">
         <ColorButtons>
           <ColorButton name="black" value="#232122" />
-          <ColorButton name="honey" value="#cfa880" active />
+          <ColorButton name="khaki green" value="#746F59" active />
         </ColorButtons>
         <Divider />
       </div>

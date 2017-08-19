@@ -43,12 +43,12 @@ const DescriptionMainImage = styled.img`
 export default () =>
   (<main>
     <Helmet>
-      <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+      <title>Lightweight Grainy Nubuck Trench Coat | Men - Burberry</title>
     </Helmet>
     <Background>
       <section className="container">
         <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
-          <Title>Long Cotton Gabardine Car Coat</Title>
+          <Title>Lightweight Grainy Nubuck Trench Coat</Title>
         </MediaQuery>
         <div className="row middle-lg">
           <div className="col-xs-12 col-md-7 col-lg-6">
@@ -64,35 +64,38 @@ export default () =>
       <div className="row">
         <div className="col-xs-12 col-lg-4">
           <Accordion title="Description">
-            <p>A refined car coat crafted in protective cotton gabardine.</p>
             <p>
-              Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and
-              breathable fabric that protects against wind and rain.
+              A trench coat made in Italy from ultra-light nubuck, buffed on the grain side for a
+              velvety-soft and supple feel.
             </p>
-            <p>
-              Raglan sleeves and a concealed button closure complement the clean tailored lines.
-            </p>
-            <p>The piece is finished with a distinctive check undercollar.</p>
+            <p>The classically cut design is refined with neat painted edges.</p>
             <br />
             <ul>
               <li>
-                Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+                Coat length: 100cm/39.4in. This is based on a size IT 48 as proportions change
                 slightly according to size.
               </li>
-              <li>Outer: 100% cotton</li>
-              <li>Check lining: 100% cotton</li>
+              <li>Model’s height: 191cm/6ft 3in</li>
+              <li>Outer: 100% calf suede</li>
+              <li>Lining: 51% viscose, 49% acetate</li>
               <li>Sleeve lining: 100% viscose</li>
-              <li>Buttons: buffalo horn</li>
-              <li>Specialist dry clean</li>
-              <li>Made in Europe</li>
+              <li>Buckle: 100% calf suede</li>
+              <li>Double-breasted button closure</li>
+              <li>Button-through pockets</li>
+              <li>
+                Signature details: epaulettes, hook-and-eye collar closure, gun flap, belted cuffs,
+                D-ring belt, storm shield
+              </li>
+              <li>Specialist leather clean</li>
+              <li>Made in Italy</li>
               <li>Item 39428531</li>
             </ul>
           </Accordion>
         </div>
         <div className="col-lg-8">
           <DescriptionMainImage
-            src={`${process.env.PUBLIC_URL}/img/Long-Cotton-Gabardine-Car-Coat-5.jpg`}
-            alt="Long Cotton Gabardine Car Coat"
+            src="https://assets.burberry.com/is/image/Burberryltd/320347e75c92dab46a0322f371ca96e1e7a9b5f1.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
+            alt="Lightweight Grainy Nubuck Trench Coat"
           />
         </div>
       </div>
