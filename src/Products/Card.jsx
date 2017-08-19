@@ -90,7 +90,7 @@ const Price = styled.p`
 
 const Card = props =>
   (<CardStyled>
-    <Link to={props.link}>
+    <Link to={props.to}>
       <Image src={props.image} />
     </Link>
     <TagLikeWrapper>
@@ -99,14 +99,14 @@ const Card = props =>
       </Tag>
       <Like />
     </TagLikeWrapper>
-    <Link to={props.link}>
+    <Link to={props.to}>
       <Name>
         {props.name}
       </Name>
     </Link>
     <Colors>
       Available in {' '}
-      <Link to={props.link}>
+      <Link to={props.to}>
         <Underline>
           {props.colors} colours
         </Underline>
@@ -124,7 +124,7 @@ const Card = props =>
   </CardStyled>);
 
 Card.propTypes = {
-  link: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
