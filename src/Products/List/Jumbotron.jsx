@@ -55,10 +55,11 @@ const ExpandTextButton = styled.button`
   cursor: pointer;
 `;
 
+const maxShowedTextLength = 194;
+
 class Jumbotron extends Component {
   constructor(props) {
     super(props);
-    this.maxShowedTextLength = 194;
     this.state = {
       ellipsizeText: true,
     };
@@ -72,10 +73,13 @@ class Jumbotron extends Component {
   }
 
   render() {
-    let text = { __html: this.props.text };
-    if (this.props.text.length > this.maxShowedTextLength && this.state.ellipsizeText) {
-      text = { __html: `${this.props.text.slice(0, this.maxShowedTextLength)}...` };
-    }
+    const ellipsizeTextIfNecessary = (text) => {
+      if (text.length > maxShowedTextLength && this.state.ellipsizeText) {
+        return { __html: `${text.slice(0, maxShowedTextLength)}...` };
+      }
+      return { __html: text };
+    };
+
     return (
       <JumbotronStyled>
         <div className="container">
@@ -85,8 +89,8 @@ class Jumbotron extends Component {
           <div className="row">
             <div className="col-md-9 col-lg-7">
               <Text>
-                <span dangerouslySetInnerHTML={text} />
-                {this.props.text.length > this.maxShowedTextLength &&
+                <span dangerouslySetInnerHTML={ellipsizeTextIfNecessary(this.props.text)} />
+                {this.props.text.length > maxShowedTextLength &&
                   this.state.ellipsizeText &&
                   <ExpandTextButton onClick={this.expandText}>More</ExpandTextButton>}
               </Text>
