@@ -43,6 +43,8 @@ const TextButton = styled.button`
   }
 `;
 
+const DarkText = styled.span`color: #171717;`;
+
 const Subtitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -75,8 +77,12 @@ export default () =>
   (<Footer>
     <div className="container">
       <Navigation />
-      <TextButton>Shipping country: Russian Federation</TextButton>
-      <TextButton>Language: English</TextButton>
+      <TextButton>
+        Shipping country: <DarkText>Russian Federation</DarkText>
+      </TextButton>
+      <TextButton>
+        Language: <DarkText>English</DarkText>
+      </TextButton>
       <Subtitle>Need help?</Subtitle>
       <CenteredLink href="#">Find out more and contact us</CenteredLink>
     </div>

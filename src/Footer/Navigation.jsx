@@ -18,7 +18,6 @@ const Link = styled.a`
   margin-bottom: .75rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-weight: 600;
   line-height: 1.4;
   text-decoration: none;
   color: #999999;
@@ -44,7 +43,7 @@ const Title = styled.h3`
   margin-bottom: 1rem;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-weight: bold;
+  font-weight: 600;
   line-height: .875rem;
   text-transform: uppercase;
 `;
