@@ -24,7 +24,7 @@ const Button = GenericButton.extend`
   padding: 1.0625rem 2rem;
   text-transform: none;
   @media screen and (min-width: 48rem) {
-    padding: 1.0625rem 2rem;
+    padding: 1rem 2rem;
   }
 `;
 
