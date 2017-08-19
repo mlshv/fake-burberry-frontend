@@ -3,7 +3,7 @@ import arrowIcon from '../assets/arrow.svg';
 
 const DropdownButton = styled.button`
   display: inline-block;
-  margin-left: 1rem;
+  margin-left: 1.0625rem;
   padding: 1.5rem 0;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -16,7 +16,7 @@ const DropdownButton = styled.button`
   }
 
   @media screen and (min-width: 48rem) {
-    margin-left: 3rem;
+    margin-left: 3.0625rem;
     line-height: 1.44;
     &:first-child {
       margin-left: 0;

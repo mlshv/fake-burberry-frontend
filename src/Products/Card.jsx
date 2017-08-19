@@ -21,10 +21,7 @@ const Link = styled(RouteLink)`
 const Image = styled.img`
   width: 100%;
   height: auto;
-  margin-bottom: .5rem;
-  @media screen and (min-width: 48rem) {
-    margin-bottom: .25rem;
-  }
+  margin-bottom: .25rem;
 `;
 
 const Tag = styled.p`
@@ -40,7 +37,10 @@ const Like = styled.button`
   padding: 1rem .4375rem;
   content: " ";
   border: none;
-  background: url(${heartIcon}) no-repeat center;
+  background: url(${heartIcon}) no-repeat center .5625rem;
+  @media screen and (min-width: 62rem) {
+    background-position: center .5rem;
+  }
 `;
 
 const TagLikeWrapper = styled.div`

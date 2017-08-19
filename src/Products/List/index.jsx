@@ -22,17 +22,17 @@ const CategoryTitle = styled.h2`
 
 const Divider = styled.hr`
   margin: 3rem 0;
-  margin-top: .9375rem;
+  margin-top: 1rem;
   border: none;
   border-bottom: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
-    margin-top: .8125rem;
-    margin-bottom: 3.0625rem;
+    margin-top: 2.0625rem;
+    margin-bottom: 4.0625rem;
     font-size: 1.25rem;
     line-height: 1.1;
   }
   @media screen and (min-width: 62rem) {
-    margin-top: 2.0625rem;
+    margin-top: 2rem;
     margin-bottom: 4.0625rem;
   }
 `;

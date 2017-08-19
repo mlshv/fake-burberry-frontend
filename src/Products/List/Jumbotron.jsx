@@ -17,7 +17,8 @@ const JumbotronStyled = styled.div`
 const Title = styled.h1`
   margin-top: 0;
   font-size: 1.625rem;
-  line-height: 1.33;
+  line-height: 1.4;
+  margin-bottom: .875rem;
   @media screen and (min-width: 48rem) {
     line-height: 1.25;
     margin-bottom: 1rem;
