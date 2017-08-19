@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header';
-import ProductsList from './Products/List';
+import Products from './Products/List';
 import Product from './Products/Show';
 import Footer from './Footer';
 
@@ -20,8 +20,8 @@ export default () =>
         <div>
           <Header />
           <Switch>
-            <Route exact path="/:section/" component={ProductsList} />
-            <Route exact path="/:section/:category" component={ProductsList} />
+            <Route exact path="/:section/" component={Products} />
+            <Route exact path="/:section/:category" component={Products} />
             <Route path="/:section/:category/:id" component={Product} />
             <Redirect from="/" to="/men/trench-coats" />
           </Switch>
