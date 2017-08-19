@@ -105,7 +105,12 @@ const Card = props =>
       </Name>
     </Link>
     <Colors>
-      Available in <Underline>{props.colors} colours</Underline>
+      Available in {' '}
+      <Link to={props.link}>
+        <Underline>
+          {props.colors} colours
+        </Underline>
+      </Link>
     </Colors>
     <Price>
       <FormattedNumber
