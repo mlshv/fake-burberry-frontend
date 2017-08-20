@@ -4,20 +4,19 @@ import Navigation from './Navigation';
 
 const Footer = styled.footer`
   background: #f3f3f3;
-  padding: 0 .5rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
 
   @media screen and (min-width: 48rem) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
   @media screen and (min-width: 62rem) {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -35,9 +34,16 @@ const TextButton = styled.button`
   @media screen and (min-width: 48rem) {
     display: inline-block;
     margin-top: 1.25rem;
-    margin-right: 1.25rem;
+    margin-right: 1.5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 2.25rem;
+    margin-right: 3rem;
   }
 `;
+
+const DarkText = styled.span`color: #171717;`;
 
 const Subtitle = styled.h3`
   margin-top: 1.5rem;
@@ -71,8 +77,12 @@ export default () =>
   (<Footer>
     <div className="container">
       <Navigation />
-      <TextButton>Shipping country: Russian Federation</TextButton>
-      <TextButton>Language: English</TextButton>
+      <TextButton>
+        Shipping country: <DarkText>Russian Federation</DarkText>
+      </TextButton>
+      <TextButton>
+        Language: <DarkText>English</DarkText>
+      </TextButton>
       <Subtitle>Need help?</Subtitle>
       <CenteredLink href="#">Find out more and contact us</CenteredLink>
     </div>
