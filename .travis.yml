@@ -14,7 +14,9 @@ deploy:
     script: now alias $(now build -t=$NOW_SH_TOKEN --public) $URL_DEV -t=$NOW_SH_TOKEN
     on:
       branch: develop
+    skip_cleanup: true
   - provider: script
     script: now alias $(now build -t=$NOW_SH_TOKEN --public) $URL_PROD -t=$NOW_SH_TOKEN
     on:
       branch: master
+    skip_cleanup: true
