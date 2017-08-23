@@ -2,4 +2,21 @@ language: node_js
 node_js:
   - "6"
 script:
-  - npm run test
+  - yarn run test
+cache:
+  yarn: true
+  directories:
+    - node_modules
+before_deploy:
+  - yarn run build
+deploy:
+  - provider: script
+    script: now alias $(now build -t=$NOW_SH_TOKEN --public) $URL_DEV -t=$NOW_SH_TOKEN
+    on:
+      branch: develop
+    skip_cleanup: true
+  - provider: script
+    script: now alias $(now build -t=$NOW_SH_TOKEN --public) $URL_PROD -t=$NOW_SH_TOKEN
+    on:
+      branch: master
+    skip_cleanup: true
