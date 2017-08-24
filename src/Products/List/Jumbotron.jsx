@@ -60,11 +60,12 @@ const maxShowedTextLength = 194;
 class Jumbotron extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      ellipsizeText: true,
-    };
     this.expandText = this.expandText.bind(this);
   }
+
+  state = {
+    ellipsizeText: true,
+  };
 
   expandText() {
     this.setState(() => ({

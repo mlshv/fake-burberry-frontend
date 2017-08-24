@@ -89,11 +89,12 @@ export const Content = styled.div`
 class ShippingAccordion extends Component {
   constructor() {
     super();
-    this.state = {
-      active: false,
-    };
     this.toggle = this.toggle.bind(this);
   }
+
+  state = {
+    active: false,
+  };
 
   toggle() {
     this.setState(state => ({
