@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import arrowIcon from '../../assets/arrow.svg';
 
 const FilterStyled = styled.div`
+  position: relative;
   display: inline-block;
   margin-left: 1.0625rem;
   &:first-child {
@@ -26,6 +27,12 @@ const Button = styled.button`
   line-height: 1.33;
   border: none;
   background: transparent;
+
+  ${props =>
+    props.dimmed &&
+    css`
+    opacity: 0.5;
+  `};
 
   @media screen and (min-width: 48rem) {
     line-height: 1.44;
@@ -50,7 +57,8 @@ const Button = styled.button`
 const Content = styled.div`
   position: absolute;
   display: block;
-  margin-left: -1.5rem;
+  top: 100%;
+  ${props => (props.rightSideAlign ? 'right: -1.5rem;' : 'left: -1.5rem;')};
   padding: 1.5rem;
   padding-top: .875rem;
   box-sizing: border-box;
@@ -60,22 +68,70 @@ const Content = styled.div`
   background: #f3f3f3;
 `;
 
-const Filter = props =>
-  (<FilterStyled>
-    <Button active={props.active} onClick={props.handleClick}>
-      {props.title}
-    </Button>
-    {props.active &&
-      <Content>
-        {props.children}
-      </Content>}
-  </FilterStyled>);
+class Filter extends Component {
+  constructor() {
+    super();
+    this.toggle = this.toggle.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+  }
+
+  state = {
+    active: false,
+  };
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleOutsideClick, true);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick, true);
+  }
+
+  handleOutsideClick(e) {
+    if (this.node && !this.node.contains(e.target)) {
+      this.toggle(false);
+    }
+  }
+
+  toggle(on = true) {
+    if (on === false && on === this.state.active) return;
+    this.setState(
+      () => ({ active: !this.state.active }),
+      () => this.props.onToggle(this.state.active),
+    );
+  }
+
+  render() {
+    return (
+      <FilterStyled>
+        <div
+          ref={(node) => {
+            this.node = node;
+          }}
+        >
+          <Button active={this.state.active} dimmed={this.props.dimmed} onClick={this.toggle}>
+            {this.props.title}
+          </Button>
+          {this.state.active &&
+            <Content rightSideAlign={this.props.rightSideAlign}>
+              {this.props.children}
+            </Content>}
+        </div>
+      </FilterStyled>
+    );
+  }
+}
 
 Filter.propTypes = {
   title: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-  handleClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  dimmed: PropTypes.bool.isRequired,
+  rightSideAlign: PropTypes.bool,
+};
+
+Filter.defaultProps = {
+  rightSideAlign: false,
 };
 
 export default Filter;

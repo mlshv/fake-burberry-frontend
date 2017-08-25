@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Filter from './Filter';
-import Button from '../../common/SmallButton';
 
 const FiltersStyled = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: .5625rem;
-  overflow-y: auto;
   white-space: nowrap;
   @media screen and (min-width: 48rem) {
     margin-top: 1rem;
@@ -30,27 +28,22 @@ const Hint = styled.div`
 
 const FilterContent = styled.p`margin: 0;`;
 
-const Buttons = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2rem;
-`;
-
 class Filters extends Component {
   constructor(props) {
     super(props);
-    this.handleFilterClick = this.handleFilterClick.bind(this);
+    this.handleFilterToggle = this.handleFilterToggle.bind(this);
   }
 
   state = {
     activeFilter: -1,
+    dimInactiveFilters: false,
   };
 
-  handleFilterClick(filterId) {
-    if (filterId === this.state.activeFilter) {
-      this.setState({ activeFilter: -1 });
+  handleFilterToggle(filterId, toggledOn) {
+    if (toggledOn) {
+      this.setState({ activeFilter: filterId, dimInactiveFilters: true });
     } else {
-      this.setState({ activeFilter: filterId });
+      this.setState({ activeFilter: -1, dimInactiveFilters: false });
     }
   }
 
@@ -63,10 +56,8 @@ class Filters extends Component {
             {['Category', 'Colour', 'Size'].map((category, index) =>
               (<Filter
                 title={category}
-                handleClick={() => {
-                  this.handleFilterClick(index);
-                }}
-                active={this.state.activeFilter === index}
+                onToggle={toggledOn => this.handleFilterToggle(index, toggledOn)}
+                dimmed={this.state.activeFilter !== index && this.state.dimInactiveFilters}
               >
                 <FilterContent>
                   Content content content content content content content<br />
@@ -76,10 +67,6 @@ class Filters extends Component {
                   content content content content content content content<br />
                   content content content content content content content
                 </FilterContent>
-                <Buttons>
-                  <Button>Clear</Button>
-                  <Button primary>Show results</Button>
-                </Buttons>
               </Filter>),
             )}
           </span>
@@ -87,10 +74,8 @@ class Filters extends Component {
         <Filter
           title="Sort by price"
           rightSideAlign
-          handleClick={() => {
-            this.handleFilterClick(3);
-          }}
-          active={this.state.activeFilter === 3}
+          onToggle={toggledOn => this.handleFilterToggle(3, toggledOn)}
+          dimmed={this.state.activeFilter !== 3 && this.state.dimInactiveFilters}
         >
           <FilterContent>
             high or<br />
@@ -103,5 +88,4 @@ class Filters extends Component {
     );
   }
 }
-
 export default Filters;
