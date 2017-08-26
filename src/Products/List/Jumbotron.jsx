@@ -2,14 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Filters from './Filters';
 
 const JumbotronStyled = styled.div`
   padding-top: 2rem;
   background: #f3f3f3;
-  margin-bottom: 2rem;
   @media screen and (min-width: 48rem) {
-    margin-bottom: 4rem;
     padding-top: 4rem;
   }
 `;
@@ -97,7 +94,6 @@ class Jumbotron extends Component {
               </Text>
             </div>
           </div>
-          <Filters />
         </div>
       </JumbotronStyled>
     );

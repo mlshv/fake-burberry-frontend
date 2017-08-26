@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import arrowIcon from '../../assets/arrow.svg';
 
 const FilterStyled = styled.div`
-  position: relative;
   display: inline-block;
   margin-left: 1.0625rem;
   &:first-child {
@@ -12,6 +11,7 @@ const FilterStyled = styled.div`
   }
 
   @media screen and (min-width: 48rem) {
+    position: relative;
     margin-left: 3.0625rem;
     &:first-child {
       margin-left: 0;
@@ -56,16 +56,25 @@ const Button = styled.button`
 
 const Content = styled.div`
   position: absolute;
-  display: block;
   top: 100%;
-  ${props => (props.rightSideAlign ? 'right: -1.5rem;' : 'left: -1.5rem;')};
+  left: -.5rem;
+  right: -.5rem;
+  z-index: 1;
+  display: block;
   padding: 1.5rem;
   padding-top: .875rem;
   box-sizing: border-box;
   line-height: 1rem;
+  white-space: initial;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
   font-size: .75rem;
   background: #f3f3f3;
+  @media screen and (min-width: 48rem) {
+    left: inherit;
+    right: inherit;
+    ${props => (props.rightSideAlign ? 'right: -1.5rem;' : 'left: -1.5rem;')};
+    width: 23.5625rem;
+  }
 `;
 
 class Filter extends Component {

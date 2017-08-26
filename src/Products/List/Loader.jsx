@@ -4,7 +4,6 @@ import GenericButton from '../../common/Button';
 
 const Loader = styled.div`
   margin-top: 3.0625rem;
-  margin-bottom: 5rem;
   text-align: center;
 `;
 
