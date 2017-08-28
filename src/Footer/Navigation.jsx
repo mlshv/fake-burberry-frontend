@@ -15,12 +15,16 @@ const Navigation = styled.div`
 
 const Link = styled.a`
   display: block;
-  margin-bottom: .75rem;
+  text-decoration: none;
   font-size: .75rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.4;
-  text-decoration: none;
-  color: #999999;
+  color: #999;
+  transition: 0.3s;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: .75rem;
+    line-height: 1.4;
+  }
 `;
 
 const Image = styled.img`
