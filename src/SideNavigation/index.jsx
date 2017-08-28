@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from './assets/logo.svg';
-import arrowIcon from './assets/arrow.svg';
+import logo from '../assets/logo.svg';
+import arrowIcon from '../assets/arrow.svg';
+import ButtonSelect from './ButtonSelect';
 
 const SideNavigationStyled = styled.section`
   position: absolute;
@@ -23,7 +24,11 @@ const Logo = styled.img`
   margin: 1rem auto;
 `;
 
-const Block = styled.div`margin: 2rem 0;`;
+const Block = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+`;
 
 const Subtitle = styled.h3`
   margin: 0;
@@ -48,15 +53,18 @@ const Link = styled(NavLink)`
 const SectionLink = Link.extend`
   :: after {
     position: absolute;
-    right: 0;
+    right: 3px;
     width: 12px;
     height: 16px;
     content: '';
     transform: rotate(-90deg);
     background: url(${arrowIcon}) no-repeat;
     background-size: contain;
+    background-position: 0 3px;
   }
 `;
+
+const Buttons = Block.extend`margin-top: -.25rem;`;
 
 const SideNavigation = props =>
   (<SideNavigationStyled active={props.active}>
@@ -91,6 +99,12 @@ const SideNavigation = props =>
         <Link to="/site-map">Site Map</Link>
       </nav>
     </Block>
+    <Buttons>
+      <ButtonSelect
+        options={['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)']}
+      />
+      <ButtonSelect options={['English', 'Russian', 'Español']} />
+    </Buttons>
   </SideNavigationStyled>);
 
 SideNavigation.propTypes = {
