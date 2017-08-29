@@ -9,6 +9,7 @@ const SizeButton = styled.button`
   border-radius: 2px;
   border: solid 1px #171717;
   background: transparent;
+  cursor: pointer;
 `;
 
 export default SizeButton;

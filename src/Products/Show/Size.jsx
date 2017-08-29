@@ -24,6 +24,7 @@ const TextButton = styled.button`
   border: 0;
   background-color: inherit;
   color: #171717;
+  cursor: pointer;
 `;
 
 const Size = props =>

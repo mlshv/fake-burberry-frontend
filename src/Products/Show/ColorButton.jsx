@@ -10,6 +10,7 @@ const ColorButtonStyled = styled.button`
   border-radius: 50%;
   border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
   background-color: ${props => props.value};
+  cursor: pointer;
 `;
 
 const ColorButton = props =>

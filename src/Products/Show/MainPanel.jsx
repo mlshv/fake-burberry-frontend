@@ -80,8 +80,10 @@ const TextButton = Button.extend`
   padding-top: 1px;
   text-align: left;
   border: none;
-  background: transparent;
   color: #171717;
+  background: transparent;
+  cursor: pointer;
+
   @media screen and (min-width: 62rem) {
     flex-basis: 70%;
     margin-top: 0;
