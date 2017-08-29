@@ -27,6 +27,7 @@ const Button = styled.button`
   line-height: 1.33;
   border: none;
   background: transparent;
+  cursor: pointer;
 
   ${props =>
     props.dimmed &&
