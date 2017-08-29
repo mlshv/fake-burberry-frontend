@@ -55,31 +55,25 @@ const Overlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: .3;
+    background: #000;
     ${props =>
-    props.dimmed &&
+    props.visible &&
       css`
       content: '';
     `};
-    opacity: .3;
-    background: #000;
   }
 `;
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-    this.handleListDim = this.handleListDim.bind(this);
-  }
-
   state = {
-    dimmed: false,
+    overlayVisible: false,
   };
 
-  handleListDim(toggledOn) {
-    this.setState({ dimmed: toggledOn });
-  }
-
   render() {
+    const setOverlayVisible = (overlayVisible) => {
+      this.setState({ overlayVisible });
+    };
     return (
       <ListStyled>
         <Jumbotron
@@ -88,8 +82,8 @@ class List extends Component {
             'Explore our menswear collection for the season. Sculptural knitwear, <u>sweatshirts</u>, artist overalls and oversized cabans feature alongside our signature trench coat in both heritage and seasonal.'
           }
         />
-        <Filters onDimToggle={this.handleListDim} />
-        <Overlay dimmed={this.state.dimmed}>
+        <Filters onToggle={setOverlayVisible} />
+        <Overlay visible={this.state.overlayVisible}>
           <div className="container">
             <CategoryTitle>Heritage Trench Coats</CategoryTitle>
             <div className="row">

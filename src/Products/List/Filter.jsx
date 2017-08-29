@@ -135,12 +135,13 @@ Filter.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   onToggle: PropTypes.func.isRequired,
-  dimmed: PropTypes.bool.isRequired,
+  dimmed: PropTypes.bool,
   rightSideAlign: PropTypes.bool,
 };
 
 Filter.defaultProps = {
   rightSideAlign: false,
+  dimmed: false,
 };
 
 export default Filter;

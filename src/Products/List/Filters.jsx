@@ -35,12 +35,11 @@ class Filters extends Component {
 
   handleFilterToggle(filterId, toggledOn) {
     if (toggledOn) {
-      this.setState({ activeFilter: filterId, dimInactiveFilters: true });
-      this.props.onDimToggle(true);
+      this.setState({ activeFilter: filterId });
     } else {
-      this.setState({ activeFilter: -1, dimInactiveFilters: false });
-      this.props.onDimToggle(false);
+      this.setState({ activeFilter: undefined });
     }
+    this.props.onToggle(toggledOn);
   }
 
   render() {
@@ -53,7 +52,9 @@ class Filters extends Component {
                 (<Filter
                   title={category}
                   onToggle={toggledOn => this.handleFilterToggle(index, toggledOn)}
-                  dimmed={this.state.activeFilter !== index && this.state.dimInactiveFilters}
+                  dimmed={
+                    this.state.activeFilter !== undefined && this.state.activeFilter !== index
+                  }
                 >
                   <FilterContent>
                     Content content content content content content content<br />
@@ -70,7 +71,7 @@ class Filters extends Component {
               title="Sort by price"
               rightSideAlign
               onToggle={toggledOn => this.handleFilterToggle(3, toggledOn)}
-              dimmed={this.state.activeFilter !== 3 && this.state.dimInactiveFilters}
+              dimmed={this.state.activeFilter !== undefined && this.state.activeFilter !== 3}
             >
               <FilterContent>
                 high or<br />
@@ -87,7 +88,7 @@ class Filters extends Component {
 }
 
 Filters.propTypes = {
-  onDimToggle: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default Filters;
