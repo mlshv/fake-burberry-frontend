@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navigation = styled.nav`
+  display: none;
   @media screen and (min-width: 48rem) {
     display: flex;
     justify-content: center;

@@ -1,84 +1,90 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import arrowIcon from '../assets/arrow.svg';
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: baseline;
+const LocationSelectorStyled = styled.div`
+  display: none;
+  @media screen and (min-width: 48rem) {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+  }
 `;
 
-const LocationSelectorStyled = styled.select`
-  display: inline-block;
-  padding: 1.5rem 0;
-  font-size: .75rem;
+const Button = styled.div`
+  position: absolute;
+  z-index: 0;
+  top: 1.25rem;
+  left: 0;
+  width: 100%;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.33;
-  border: none;
+  font-size: .75rem;
+  font-weight: 500;
+  line-height: 1.4;
   color: #999;
-  background: transparent;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-  ::-ms-expand {
-    display: none;
-  }
-
-  @media screen and (min-width: 48rem) {
-    margin: 0;
-    font-size: .75rem;
-    font-weight: 500;
-    line-height: 1.4;
+  :: after {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    margin-left: .6875rem;
+    background: url(${arrowIcon}) no-repeat;
+    background-size: contain;
+    background-position: 0 9px;
+    content: '';
   }
 
   @media screen and (min-width: 62rem) {
-    padding: 2rem 0;
+    top: 1.75rem;
   }
 `;
 
-const ArrowIcon = styled.span`
-  width: 12px;
-  height: 6px;
-  margin-top: 1.5rem;
-  margin-left: .5rem;
-  background: url(${arrowIcon});
-  background-size: cover;
-  content: " ";
+const Select = styled.select`
+  flex-basis: 100%;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: .75rem;
+  opacity: 0;
+  cursor: pointer;
+
+  @media screen and (min-width: 48rem) {
+    margin-top: 1rem;
+    padding-top: .5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 1.75rem;
+  }
 `;
 
 class LocationSelector extends Component {
   state = {
-    locations: [
-      {
-        name: 'United Kingdom',
-        currency: '£',
-      },
-      {
-        name: 'United States',
-        currency: '$',
-      },
-      {
-        name: 'Russian Federation',
-        currency: '₽',
-      },
-    ],
+    seletetedLocation: 0,
   };
 
   render() {
+    const handleSelectChange = (event) => {
+      this.setState({ seletetedLocation: event.target.selectedIndex });
+    };
     return (
-      <Wrapper>
-        <LocationSelectorStyled active={this.state.active} onClick={this.toggle}>
-          {this.state.locations.map(l =>
+      <LocationSelectorStyled>
+        <Button>
+          Shopping in: {this.props.locations[this.state.seletetedLocation]}
+        </Button>
+        <Select onChange={handleSelectChange}>
+          {this.props.locations.map(location =>
             (<option>
-              Shopping in: {l.name} ({l.currency}){' '}
+              {location}
             </option>),
           )}
-        </LocationSelectorStyled>
-        <ArrowIcon />
-      </Wrapper>
+        </Select>
+      </LocationSelectorStyled>
     );
   }
 }
+
+LocationSelector.propTypes = {
+  locations: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default LocationSelector;

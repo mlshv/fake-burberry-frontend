@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
-import breakpoints from '../common/breakpoints';
 import logo from '../assets/logo.svg';
 import hamburgerIcon from '../assets/hamburger.svg';
 import Navigation from './Navigation';
@@ -40,9 +38,9 @@ const Header = props =>
       <header className="row">
         <div className="col-xs-2 col-md-4">
           <HamburgerButton onClick={props.onHamburgerClick} />
-          <MediaQuery minDeviceWidth={breakpoints.md}>
-            <LocationSelector />
-          </MediaQuery>
+          <LocationSelector
+            locations={['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)']}
+          />
         </div>
         <div className="col-xs-8 col-md-4">
           <Link to="/">
@@ -50,9 +48,7 @@ const Header = props =>
           </Link>
         </div>
         <div className="col-xs-12">
-          <MediaQuery minDeviceWidth={breakpoints.md}>
-            <Navigation />
-          </MediaQuery>
+          <Navigation />
         </div>
       </header>
     </div>
