@@ -7,6 +7,7 @@ import PriceAndId from './PriceAndId';
 import Button from '../../common/Button';
 import ColorButton from './ColorButton';
 import Size from './Size';
+import SizeSelector from './SizeSelector';
 import SizeButton from './SizeButton';
 
 const MainPanelStyled = styled.section`
@@ -174,9 +175,7 @@ class MainPanel extends Component {
         </div>
         <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
           <ButtonWrapper>
-            <Button primary type="button">
-              Select a size
-            </Button>
+            <SizeSelector sizes={this.props.sizes} />
             <Button type="button">Find in store</Button>
           </ButtonWrapper>
         </MediaQuery>
