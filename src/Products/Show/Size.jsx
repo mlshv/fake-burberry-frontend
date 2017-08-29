@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -7,7 +8,7 @@ const Container = styled.div`
   margin-bottom: 1rem;
 `;
 
-const Size = styled.p`
+const SizeStyled = styled.p`
   margin: 0;
   font-size: 0.75rem;
   font-family: 'Raleway';
@@ -25,11 +26,16 @@ const TextButton = styled.button`
   color: #171717;
 `;
 
-export default () => (
-  <Container>
-    <Size>
-        Size: <b>XL</b>
-    </Size>
+const Size = props =>
+  (<Container>
+    <SizeStyled>
+      Size: <b>{props.children}</b>
+    </SizeStyled>
     <TextButton>Need size help?</TextButton>
-  </Container>
-);
+  </Container>);
+
+Size.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Size;

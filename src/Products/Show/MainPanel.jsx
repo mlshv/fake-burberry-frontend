@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import breakpoints from '../../common/breakpoints';
 import PriceAndId from './PriceAndId';
-import ActionButtons from './ActionButtons';
+import Button from '../../common/Button';
 import ColorButton from './ColorButton';
 import Size from './Size';
 import SizeButton from './SizeButton';
 
-const MainPanel = styled.section`
+const MainPanelStyled = styled.section`
   margin-top: 1rem;
   padding-bottom: 3rem;
   @media screen and (min-width: 48rem) {
@@ -58,6 +59,35 @@ const ColorButtons = styled.div`
   }
 `;
 
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  @media screen and (min-width: 48rem) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  @media screen and (min-width: 62rem) {
+    margin-top: 0;
+  }
+`;
+
+const TextButton = Button.extend`
+  margin-top: 1.5rem;
+  margin-bottom: 1px;
+  padding: 0;
+  padding-top: 1px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: #171717;
+  @media screen and (min-width: 62rem) {
+    flex-basis: 70%;
+    margin-top: 0;
+    text-align: right;
+  }
+`;
+
 const DeliveryTitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: .25rem;
@@ -83,44 +113,109 @@ const Divider = styled.hr`
   }
 `;
 
-export default () =>
-  (<MainPanel>
-    <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-      <Title>Lightweight Grainy Nubuck Trench Coat</Title>
-    </MediaQuery>
-    <PriceAndId />
-    <div className="row">
-      <div className="col-lg-6">
-        <ColorName>
-          Colour: <b>Bright Navy</b>
-        </ColorName>
-      </div>
-      <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-        <div className="col-lg-6">
-          <Size />
+class MainPanel extends Component {
+  state = {
+    selectedSize: 0,
+    selectedColor: 0,
+  };
+
+  render() {
+    const selectColor = (selectedColor) => {
+      this.setState({ selectedColor });
+    };
+    const selectSize = (selectedSize) => {
+      this.setState({ selectedSize });
+    };
+    return (
+      <MainPanelStyled>
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <Title>Lightweight Grainy Nubuck Trench Coat</Title>
+        </MediaQuery>
+        <PriceAndId />
+        <div className="row">
+          <div className="col-lg-6">
+            <ColorName>
+              Colour: <b>{this.props.colors[this.state.selectedColor].name}</b>
+            </ColorName>
+          </div>
+          <MediaQuery minDeviceWidth={breakpoints.lg}>
+            <div className="col-lg-6">
+              <Size>
+                {this.props.sizes[this.state.selectedSize]}
+              </Size>
+            </div>
+          </MediaQuery>
         </div>
-      </MediaQuery>
-    </div>
-    <div className="row">
-      <div className="col-xs-12 col-lg-6">
-        <ColorButtons>
-          <ColorButton name="black" value="#232122" />
-          <ColorButton name="khaki green" value="#746F59" active />
-        </ColorButtons>
-        <Divider />
-      </div>
-      <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-        <div className="col-lg-6">
-          <SizeButton>S</SizeButton>
-          <SizeButton>M</SizeButton>
-          <SizeButton>L</SizeButton>
-          <SizeButton>XL</SizeButton>
+        <div className="row">
+          <div className="col-xs-12 col-lg-6">
+            <ColorButtons>
+              {this.props.colors.map((color, index) =>
+                (<ColorButton
+                  name={color.name}
+                  value={color.value}
+                  onClick={() => {
+                    selectColor(index);
+                  }}
+                  active={this.state.selectedColor === index}
+                />),
+              )}
+            </ColorButtons>
+            <Divider />
+          </div>
+          <MediaQuery minDeviceWidth={breakpoints.lg}>
+            <div className="col-lg-6">
+              {this.props.sizes.map((size, index) =>
+                (<SizeButton onClick={() => selectSize(index)}>
+                  {size}
+                </SizeButton>),
+              )}
+            </div>
+          </MediaQuery>
         </div>
-      </MediaQuery>
-    </div>
-    <ActionButtons />
-    <MediaQuery minDeviceWidth={breakpoints.lg - 1}>
-      <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
-      <DeliveryText>Order before 7pm Monday to Thursday for delivery the next Day</DeliveryText>
-    </MediaQuery>
-  </MainPanel>);
+        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+          <ButtonWrapper>
+            <Button primary type="button">
+              Select a size
+            </Button>
+            <Button type="button">Find in store</Button>
+          </ButtonWrapper>
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <div className="row">
+            <div className="col-lg-6">
+              <ButtonWrapper>
+                <Button primary type="button">
+                  Add to bag
+                </Button>
+              </ButtonWrapper>
+            </div>
+            <div className="col-lg-6">
+              <ButtonWrapper>
+                <Button type="button">Find in store</Button>
+              </ButtonWrapper>
+            </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+          <TextButton type="button">Need size help?</TextButton>
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
+          <DeliveryText>Order before 7pm Monday to Thursday for delivery the next Day</DeliveryText>
+        </MediaQuery>
+      </MainPanelStyled>
+    );
+  }
+}
+
+MainPanel.propTypes = {
+  colors: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      value: PropTypes.string,
+    }),
+  ).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default MainPanel;

@@ -13,13 +13,19 @@ const ColorButtonStyled = styled.button`
 `;
 
 const ColorButton = props =>
-  (<ColorButtonStyled value={props.value} active={props.active} type="button">
+  (<ColorButtonStyled
+    value={props.value}
+    active={props.active}
+    type="button"
+    onClick={props.onClick}
+  >
     Select {props.name} color
   </ColorButtonStyled>);
 
 ColorButton.propTypes = {
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
   active: PropTypes.bool,
 };
 

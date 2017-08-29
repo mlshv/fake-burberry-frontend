@@ -40,75 +40,83 @@ const DescriptionMainImage = styled.img`
   }
 `;
 
-export default () =>
-  (<main>
-    <Helmet>
-      <title>Lightweight Grainy Nubuck Trench Coat | Men - Burberry</title>
-    </Helmet>
-    <Background>
+export default () => {
+  const sampleColors = [
+    { name: 'Khaki Green', value: '#746F59' },
+    { name: 'Black', value: '#232122' },
+  ];
+  const sampleSizes = ['S', 'M', 'L', 'XL'];
+  return (
+    <main>
+      <Helmet>
+        <title>Lightweight Grainy Nubuck Trench Coat | Men - Burberry</title>
+      </Helmet>
+      <Background>
+        <section className="container">
+          <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+            <Title>Lightweight Grainy Nubuck Trench Coat</Title>
+          </MediaQuery>
+          <div className="row middle-lg">
+            <div className="col-xs-12 col-md-7 col-lg-6">
+              <Showcase />
+            </div>
+            <div className="col-xs-12 col-md-5 col-lg-6">
+              <MainPanel colors={sampleColors} sizes={sampleSizes} />
+            </div>
+          </div>
+        </section>
+      </Background>
       <section className="container">
-        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
-          <Title>Lightweight Grainy Nubuck Trench Coat</Title>
-        </MediaQuery>
-        <div className="row middle-lg">
-          <div className="col-xs-12 col-md-7 col-lg-6">
-            <Showcase />
-          </div>
-          <div className="col-xs-12 col-md-5 col-lg-6">
-            <MainPanel />
-          </div>
-        </div>
-      </section>
-    </Background>
-    <section className="container">
-      <div className="row">
-        <div className="col-xs-12 col-lg-4">
-          <Accordion title="Description">
-            <p>
-              A trench coat made in Italy from ultra-light nubuck, buffed on the grain side for a
-              velvety-soft and supple feel.
-            </p>
-            <p>The classically cut design is refined with neat painted edges.</p>
-            <br />
-            <ul>
-              <li>
-                Coat length: 100cm/39.4in. This is based on a size IT 48 as proportions change
-                slightly according to size.
-              </li>
-              <li>Model’s height: 191cm/6ft 3in</li>
-              <li>Outer: 100% calf suede</li>
-              <li>Lining: 51% viscose, 49% acetate</li>
-              <li>Sleeve lining: 100% viscose</li>
-              <li>Buckle: 100% calf suede</li>
-              <li>Double-breasted button closure</li>
-              <li>Button-through pockets</li>
-              <li>
-                Signature details: epaulettes, hook-and-eye collar closure, gun flap, belted cuffs,
-                D-ring belt, storm shield
-              </li>
-              <li>Specialist leather clean</li>
-              <li>Made in Italy</li>
-              <li>Item 39428531</li>
-            </ul>
-          </Accordion>
-        </div>
-        <div className="col-lg-8">
-          <DescriptionMainImage
-            src="https://assets.burberry.com/is/image/Burberryltd/320347e75c92dab46a0322f371ca96e1e7a9b5f1.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
-            alt="Lightweight Grainy Nubuck Trench Coat"
-          />
-        </div>
-      </div>
-      <MediaQuery minDeviceWidth={breakpoints.lg}>
         <div className="row">
-          <Gallery />
+          <div className="col-xs-12 col-lg-4">
+            <Accordion title="Description">
+              <p>
+                A trench coat made in Italy from ultra-light nubuck, buffed on the grain side for a
+                velvety-soft and supple feel.
+              </p>
+              <p>The classically cut design is refined with neat painted edges.</p>
+              <br />
+              <ul>
+                <li>
+                  Coat length: 100cm/39.4in. This is based on a size IT 48 as proportions change
+                  slightly according to size.
+                </li>
+                <li>Model’s height: 191cm/6ft 3in</li>
+                <li>Outer: 100% calf suede</li>
+                <li>Lining: 51% viscose, 49% acetate</li>
+                <li>Sleeve lining: 100% viscose</li>
+                <li>Buckle: 100% calf suede</li>
+                <li>Double-breasted button closure</li>
+                <li>Button-through pockets</li>
+                <li>
+                  Signature details: epaulettes, hook-and-eye collar closure, gun flap, belted
+                  cuffs, D-ring belt, storm shield
+                </li>
+                <li>Specialist leather clean</li>
+                <li>Made in Italy</li>
+                <li>Item 39428531</li>
+              </ul>
+            </Accordion>
+          </div>
+          <div className="col-lg-8">
+            <DescriptionMainImage
+              src="https://assets.burberry.com/is/image/Burberryltd/320347e75c92dab46a0322f371ca96e1e7a9b5f1.jpg?$BBY_V2_SL_3X4$&hei=800&wid=600"
+              alt="Lightweight Grainy Nubuck Trench Coat"
+            />
+          </div>
         </div>
-      </MediaQuery>
-      <ShippingAccordion title="Shipping & Returns">
-        <DeliveryInfo />
-      </ShippingAccordion>
-      <section className="row">
-        <Recommendations />
+        <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <div className="row">
+            <Gallery />
+          </div>
+        </MediaQuery>
+        <ShippingAccordion title="Shipping & Returns">
+          <DeliveryInfo />
+        </ShippingAccordion>
+        <section className="row">
+          <Recommendations />
+        </section>
       </section>
-    </section>
-  </main>);
+    </main>
+  );
+};
