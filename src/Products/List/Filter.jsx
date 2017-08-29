@@ -73,7 +73,6 @@ const Content = styled.div`
     left: inherit;
     right: inherit;
     ${props => (props.rightSideAlign ? 'right: -1.5rem;' : 'left: -1.5rem;')};
-    width: 23.5625rem;
   }
 `;
 

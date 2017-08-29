@@ -17,7 +17,10 @@ const FiltersStyled = styled.div`
   }
 `;
 
-const FilterContent = styled.p`margin: 0;`;
+const FilterContent = styled.p`
+  margin: 0;
+  white-space: nowrap;
+`;
 
 class Filters extends Component {
   constructor(props) {
@@ -53,11 +56,12 @@ class Filters extends Component {
                   dimmed={this.state.activeFilter !== index && this.state.dimInactiveFilters}
                 >
                   <FilterContent>
-                    Content content content content content content content content content content
-                    content content content content content content content content content content
-                    content content content content content content content content content content
-                    content content content content content content content content content content
-                    content content
+                    Content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content
                   </FilterContent>
                 </Filter>),
               )}
