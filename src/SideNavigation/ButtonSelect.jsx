@@ -31,20 +31,19 @@ const Button = styled.div`
 
 class ButtonSelect extends Component {
   state = {
-    selectedValue: undefined,
+    selectedValue: 0,
   };
 
   render() {
+    const handleSelectChange = (event) => {
+      this.setState({ selectedValue: event.target.selectedIndex });
+    };
     return (
       <ButtonSelectStyled>
         <Button>
-          {this.state.selectedValue || this.props.options[0]}
+          {this.props.options[this.state.selectedValue]}
         </Button>
-        <Select
-          onChange={(select) => {
-            this.setState({ value: select.value });
-          }}
-        >
+        <Select onChange={handleSelectChange}>
           {this.props.options.map(option =>
             (<option>
               {option}
