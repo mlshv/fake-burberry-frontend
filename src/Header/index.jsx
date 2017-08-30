@@ -32,15 +32,15 @@ const HamburgerButton = styled.button`
   }
 `;
 
+const sampleLocations = ['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)'];
+
 const Header = props =>
   (<div>
     <div className="container">
       <header className="row">
         <div className="col-xs-2 col-md-4">
           <HamburgerButton onClick={props.onHamburgerClick} />
-          <LocationSelector
-            locations={['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)']}
-          />
+          <LocationSelector locations={sampleLocations} />
         </div>
         <div className="col-xs-8 col-md-4">
           <Link to="/">
