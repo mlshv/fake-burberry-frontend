@@ -12,19 +12,19 @@ const LikeButtonStyled = styled.button`
 
 class LikeButton extends Component {
   state = {
-    active: false,
+    isActive: false,
   };
 
   toggle = () => {
-    this.setState(state => ({
-      active: !state.active,
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
     }));
   };
 
   render() {
     return (
       <LikeButtonStyled onClick={this.toggle}>
-        <HeartIcon {...(this.state.active ? { fill: '#171717' } : '')} />
+        <HeartIcon {...(this.state.isActive ? { fill: '#171717' } : '')} />
       </LikeButtonStyled>
     );
   }

@@ -30,7 +30,7 @@ const Button = styled.button`
   cursor: pointer;
 
   ${props =>
-    props.dimmed &&
+    props.isInactive &&
     css`
     opacity: 0.5;
   `};
@@ -97,11 +97,12 @@ class Filter extends Component {
   };
 
   toggle = (on = true) => {
-    if (on === false && on === this.state.active) return;
-    this.setState(
-      () => ({ active: !this.state.active }),
-      () => this.props.onToggle(this.state.active),
-    );
+    if (on || on !== this.state.active) {
+      this.setState(
+        prevState => ({ active: !prevState.active }),
+        () => this.props.onToggle(this.state.active),
+      );
+    }
   };
 
   render() {
@@ -112,7 +113,11 @@ class Filter extends Component {
             this.node = node;
           }}
         >
-          <Button active={this.state.active} inactive={this.props.inactive} onClick={this.toggle}>
+          <Button
+            active={this.state.active}
+            isInactive={this.props.isInactive}
+            onClick={this.toggle}
+          >
             {this.props.title}
           </Button>
           {this.state.active &&
@@ -129,13 +134,13 @@ Filter.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   onToggle: PropTypes.func.isRequired,
-  inactive: PropTypes.bool,
+  isInactive: PropTypes.bool,
   rightSideAlign: PropTypes.bool,
 };
 
 Filter.defaultProps = {
   rightSideAlign: false,
-  inactive: false,
+  isInactive: false,
 };
 
 export default Filter;

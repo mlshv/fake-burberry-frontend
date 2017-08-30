@@ -67,7 +67,7 @@ const SectionLink = Link.extend`
 const Buttons = Block.extend`margin-top: -.25rem;`;
 
 const SideNavigation = props =>
-  (<SideNavigationStyled active={props.active}>
+  (<SideNavigationStyled isActive={props.isActive}>
     <Logo alt="Logo" src={logo} />
     <Block>
       <nav>
@@ -108,7 +108,7 @@ const SideNavigation = props =>
   </SideNavigationStyled>);
 
 SideNavigation.propTypes = {
-  active: PropTypes.bool.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default SideNavigation;

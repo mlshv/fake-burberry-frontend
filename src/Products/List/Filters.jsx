@@ -46,7 +46,7 @@ class Filters extends Component {
                 (<Filter
                   title={filterName}
                   onToggle={toggledOn => this.handleFilterToggle(filterName, toggledOn)}
-                  inactive={
+                  isInactive={
                     this.state.activeFilter !== undefined && this.state.activeFilter !== filterName
                   }
                 >
@@ -65,7 +65,7 @@ class Filters extends Component {
               title="Sort by price"
               rightSideAlign
               onToggle={toggledOn => this.handleFilterToggle('Sort by price', toggledOn)}
-              inactive={
+              isInactive={
                 this.state.activeFilter !== undefined && this.state.activeFilter !== 'Sort by price'
               }
             >

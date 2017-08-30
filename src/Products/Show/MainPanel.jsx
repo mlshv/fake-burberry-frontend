@@ -161,7 +161,7 @@ class MainPanel extends Component {
                   onClick={() => {
                     this.selectColor(index);
                   }}
-                  active={this.state.selectedColor === index}
+                  isActive={this.state.selectedColor === index}
                 />),
               )}
             </ColorButtons>

@@ -47,12 +47,12 @@ const PageOverlay = styled.button`
 
 class App extends Component {
   state = {
-    sideNavOpened: false,
+    isisSideNavOpened: false,
   };
 
   toggleSideNav = () => {
     this.setState(prevState => ({
-      sideNavOpened: !prevState.sideNavOpened,
+      isSideNavOpened: !prevState.isSideNavOpened,
     }));
   };
 
@@ -65,9 +65,9 @@ class App extends Component {
           </Helmet>
           <BrowserRouter>
             <PageWrapper>
-              <SideNavigation active={this.state.sideNavOpened} />
-              <Page sideNavActive={this.state.sideNavOpened}>
-                {this.state.sideNavOpened && <PageOverlay onClick={this.toggleSideNav} />}
+              <SideNavigation active={this.state.isSideNavOpened} />
+              <Page sideNavActive={this.state.isSideNavOpened}>
+                {this.state.isSideNavOpened && <PageOverlay onClick={this.toggleSideNav} />}
                 <Header onHamburgerClick={this.toggleSideNav} />
                 <Switch>
                   <Route exact path="/:section/" component={Products} />
