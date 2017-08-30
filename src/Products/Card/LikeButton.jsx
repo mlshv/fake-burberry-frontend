@@ -24,7 +24,7 @@ class LikeButton extends Component {
   render() {
     return (
       <LikeButtonStyled onClick={this.toggle}>
-        <HeartIcon {...(this.state.active ? { fillColor: '#171717' } : '')} />
+        <HeartIcon {...(this.state.active ? { fill: '#171717' } : '')} />
       </LikeButtonStyled>
     );
   }

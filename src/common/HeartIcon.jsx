@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HeartIcon = props => (
-  <svg
+const HeartIcon = props =>
+  (<svg
     width="16px"
     height="15px"
     viewBox="0 0 16 15"
@@ -21,24 +21,17 @@ const HeartIcon = props => (
         <mask id="mask-2" fill="white">
           <use xlinkHref="#path-1" />
         </mask>
-        <use
-          id="Shape"
-          stroke="#171717"
-          fillRule="nonzero"
-          xlinkHref="#path-1"
-          fill={props.fillColor}
-        />
+        <use id="Shape" stroke="#171717" fillRule="nonzero" xlinkHref="#path-1" fill={props.fill} />
       </g>
     </g>
-  </svg>
-);
+  </svg>);
 
 HeartIcon.propTypes = {
-  fillColor: PropTypes.string,
+  fill: PropTypes.string,
 };
 
 HeartIcon.defaultProps = {
-  fillColor: '#fff',
+  fill: '#fff',
 };
 
 export default HeartIcon;
