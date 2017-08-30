@@ -170,7 +170,10 @@ class MainPanel extends Component {
           <MediaQuery minDeviceWidth={breakpoints.lg}>
             <div className="col-lg-6">
               {this.props.sizes.map((size, index) =>
-                (<SizeButton onClick={() => this.selectSize(index)}>
+                (<SizeButton
+                  isActive={index === this.state.selectedSize}
+                  onClick={() => this.selectSize(index)}
+                >
                   {size}
                 </SizeButton>),
               )}
