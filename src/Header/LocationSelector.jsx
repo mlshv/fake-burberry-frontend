@@ -41,7 +41,6 @@ const Button = styled.div`
 `;
 
 const Select = styled.select`
-  flex-basis: 100%;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: .75rem;
   opacity: 0;
@@ -74,7 +73,7 @@ class LocationSelector extends Component {
         <Select onChange={handleSelectChange}>
           {this.props.locations.map(location =>
             (<option>
-              {location}
+              Shopping in: {location}
             </option>),
           )}
         </Select>
