@@ -33,16 +33,17 @@ class SizeSelector extends Component {
     selectedSize: 0,
   };
 
+  handleSelectChange = (event) => {
+    this.setState({ selectedSize: event.target.selectedIndex });
+  };
+
   render() {
-    const handleSelectChange = (event) => {
-      this.setState({ selectedSize: event.target.selectedIndex });
-    };
     return (
       <SizeSelectorStyled>
         <Button primary type="button">
           Select a size
         </Button>
-        <Select onChange={handleSelectChange}>
+        <Select onChange={this.handleSelectChange}>
           {this.props.sizes.map(size =>
             (<option>
               {size}

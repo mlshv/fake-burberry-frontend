@@ -122,13 +122,15 @@ class MainPanel extends Component {
     selectedColor: 0,
   };
 
+  selectColor = (selectedColor) => {
+    this.setState({ selectedColor });
+  };
+
+  selectSize = (selectedSize) => {
+    this.setState({ selectedSize });
+  };
+
   render() {
-    const selectColor = (selectedColor) => {
-      this.setState({ selectedColor });
-    };
-    const selectSize = (selectedSize) => {
-      this.setState({ selectedSize });
-    };
     return (
       <MainPanelStyled>
         <MediaQuery minDeviceWidth={breakpoints.lg}>
@@ -157,7 +159,7 @@ class MainPanel extends Component {
                   name={color.name}
                   value={color.value}
                   onClick={() => {
-                    selectColor(index);
+                    this.selectColor(index);
                   }}
                   active={this.state.selectedColor === index}
                 />),
@@ -168,7 +170,7 @@ class MainPanel extends Component {
           <MediaQuery minDeviceWidth={breakpoints.lg}>
             <div className="col-lg-6">
               {this.props.sizes.map((size, index) =>
-                (<SizeButton onClick={() => selectSize(index)}>
+                (<SizeButton onClick={() => this.selectSize(index)}>
                   {size}
                 </SizeButton>),
               )}

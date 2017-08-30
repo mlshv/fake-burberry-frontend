@@ -23,24 +23,18 @@ const FilterContent = styled.p`
 `;
 
 class Filters extends Component {
-  constructor(props) {
-    super(props);
-    this.handleFilterToggle = this.handleFilterToggle.bind(this);
-  }
-
   state = {
     activeFilter: undefined,
-    dimInactiveFilters: false,
   };
 
-  handleFilterToggle(filterId, toggledOn) {
+  handleFilterToggle = (filterName, toggledOn) => {
     if (toggledOn) {
-      this.setState({ activeFilter: filterId });
+      this.setState({ activeFilter: filterName });
     } else {
       this.setState({ activeFilter: undefined });
     }
     this.props.onToggle(toggledOn);
-  }
+  };
 
   render() {
     return (
@@ -48,12 +42,12 @@ class Filters extends Component {
         <div className="container">
           <FiltersStyled>
             <div>
-              {['Category', 'Colour', 'Size'].map((category, index) =>
+              {['Category', 'Colour', 'Size'].map(filterName =>
                 (<Filter
-                  title={category}
-                  onToggle={toggledOn => this.handleFilterToggle(index, toggledOn)}
-                  dimmed={
-                    this.state.activeFilter !== undefined && this.state.activeFilter !== index
+                  title={filterName}
+                  onToggle={toggledOn => this.handleFilterToggle(filterName, toggledOn)}
+                  inactive={
+                    this.state.activeFilter !== undefined && this.state.activeFilter !== filterName
                   }
                 >
                   <FilterContent>
@@ -70,8 +64,10 @@ class Filters extends Component {
             <Filter
               title="Sort by price"
               rightSideAlign
-              onToggle={toggledOn => this.handleFilterToggle(3, toggledOn)}
-              dimmed={this.state.activeFilter !== undefined && this.state.activeFilter !== 3}
+              onToggle={toggledOn => this.handleFilterToggle('Sort by price', toggledOn)}
+              inactive={
+                this.state.activeFilter !== undefined && this.state.activeFilter !== 'Sort by price'
+              }
             >
               <FilterContent>
                 high or<br />

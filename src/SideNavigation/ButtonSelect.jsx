@@ -34,16 +34,17 @@ class ButtonSelect extends Component {
     selectedValue: 0,
   };
 
+  handleSelectChange = (event) => {
+    this.setState({ selectedValue: event.target.selectedIndex });
+  };
+
   render() {
-    const handleSelectChange = (event) => {
-      this.setState({ selectedValue: event.target.selectedIndex });
-    };
     return (
       <ButtonSelectStyled>
         <Button>
           {this.props.options[this.state.selectedValue]}
         </Button>
-        <Select onChange={handleSelectChange}>
+        <Select onChange={this.handleSelectChange}>
           {this.props.options.map(option =>
             (<option>
               {option}

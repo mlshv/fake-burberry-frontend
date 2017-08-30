@@ -11,20 +11,15 @@ const LikeButtonStyled = styled.button`
 `;
 
 class LikeButton extends Component {
-  constructor() {
-    super();
-    this.toggle = this.toggle.bind(this);
-  }
-
   state = {
     active: false,
   };
 
-  toggle() {
+  toggle = () => {
     this.setState(state => ({
       active: !state.active,
     }));
-  }
+  };
 
   render() {
     return (

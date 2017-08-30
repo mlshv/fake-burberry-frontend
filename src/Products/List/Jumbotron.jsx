@@ -55,20 +55,15 @@ const ExpandTextButton = styled.button`
 const maxShowedTextLength = 194;
 
 class Jumbotron extends Component {
-  constructor(props) {
-    super(props);
-    this.expandText = this.expandText.bind(this);
-  }
-
   state = {
     ellipsizeText: true,
   };
 
-  expandText() {
+  expandText = () => {
     this.setState(() => ({
       ellipsizeText: false,
     }));
-  }
+  };
 
   render() {
     const ellipsizeTextIfNecessary = (text) => {

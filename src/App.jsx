@@ -50,12 +50,13 @@ class App extends Component {
     sideNavOpened: false,
   };
 
+  toggleSideNav = () => {
+    this.setState(prevState => ({
+      sideNavOpened: !prevState.sideNavOpened,
+    }));
+  };
+
   render() {
-    const toggleSideNav = () => {
-      this.setState(prevState => ({
-        sideNavOpened: !prevState.sideNavOpened,
-      }));
-    };
     return (
       <IntlProvider locale="ru">
         <div>
@@ -66,8 +67,8 @@ class App extends Component {
             <PageWrapper>
               <SideNavigation active={this.state.sideNavOpened} />
               <Page sideNavActive={this.state.sideNavOpened}>
-                {this.state.sideNavOpened && <PageOverlay onClick={toggleSideNav} />}
-                <Header onHamburgerClick={toggleSideNav} />
+                {this.state.sideNavOpened && <PageOverlay onClick={this.toggleSideNav} />}
+                <Header onHamburgerClick={this.toggleSideNav} />
                 <Switch>
                   <Route exact path="/:section/" component={Products} />
                   <Route exact path="/:section/:category" component={Products} />

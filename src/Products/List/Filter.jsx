@@ -78,12 +78,6 @@ const Content = styled.div`
 `;
 
 class Filter extends Component {
-  constructor() {
-    super();
-    this.toggle = this.toggle.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
-  }
-
   state = {
     active: false,
   };
@@ -96,19 +90,19 @@ class Filter extends Component {
     document.removeEventListener('click', this.handleOutsideClick, true);
   }
 
-  handleOutsideClick(e) {
+  handleOutsideClick = (e) => {
     if (this.node && !this.node.contains(e.target)) {
       this.toggle(false);
     }
-  }
+  };
 
-  toggle(on = true) {
+  toggle = (on = true) => {
     if (on === false && on === this.state.active) return;
     this.setState(
       () => ({ active: !this.state.active }),
       () => this.props.onToggle(this.state.active),
     );
-  }
+  };
 
   render() {
     return (
@@ -118,7 +112,7 @@ class Filter extends Component {
             this.node = node;
           }}
         >
-          <Button active={this.state.active} dimmed={this.props.dimmed} onClick={this.toggle}>
+          <Button active={this.state.active} inactive={this.props.inactive} onClick={this.toggle}>
             {this.props.title}
           </Button>
           {this.state.active &&
@@ -135,13 +129,13 @@ Filter.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   onToggle: PropTypes.func.isRequired,
-  dimmed: PropTypes.bool,
+  inactive: PropTypes.bool,
   rightSideAlign: PropTypes.bool,
 };
 
 Filter.defaultProps = {
   rightSideAlign: false,
-  dimmed: false,
+  inactive: false,
 };
 
 export default Filter;
