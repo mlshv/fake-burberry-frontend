@@ -73,7 +73,7 @@ class App extends Component {
                   <Route exact path="/:section/" component={Products} />
                   <Route exact path="/:section/:category" component={Products} />
                   <Route path="/:section/:category/:id" component={Product} />
-                  <Redirect from="/" to="/men/trench-coats" />
+                  <Redirect from="/" to="/men/clothing" />
                 </Switch>
                 <Footer />
               </Page>
