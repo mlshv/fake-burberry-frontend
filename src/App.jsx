@@ -47,7 +47,7 @@ const PageOverlay = styled.button`
 
 class App extends Component {
   state = {
-    isSideNavOpened: true,
+    isSideNavOpened: false,
   };
 
   toggleSideNav = () => {
@@ -65,7 +65,7 @@ class App extends Component {
           </Helmet>
           <BrowserRouter>
             <PageWrapper>
-              <SideNavigation isActive={this.state.isSideNavOpened} />
+              <SideNavigation isActive={this.state.isSideNavOpened} toggle={this.toggleSideNav} />
               <Page isSideNavOpened={this.state.isSideNavOpened}>
                 {this.state.isSideNavOpened && <PageOverlay onClick={this.toggleSideNav} />}
                 <Header onHamburgerClick={this.toggleSideNav} />

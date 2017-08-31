@@ -54,7 +54,7 @@ const Header = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   height: 169px;
-  background: url("https://assets.burberry.com/is/image/Burberryltd/d68dce82ea0a299febf5a35de882c78f0d70ad7d.jpg?$BBY_V2_BASIC$&wid=390")
+  background: url(${props => props.image});
     no-repeat;
   background-position: left center;
   background-size: cover;
@@ -94,27 +94,37 @@ const Link = styled(NavLink)`
 
 const SubNavigation = props =>
   (<SubNavigationStyled isOpened={props.isOpened}>
-    <BackButton type="button" onClick={props.toggle}>
+    <BackButton type="button" onClick={props.close}>
       Home
     </BackButton>
-    <Header>
-      <Title>Men</Title>
+    <Header image={props.navigation.image}>
+      <Title>
+        {props.navigation.title}
+      </Title>
     </Header>
     <Links>
-      <Link to="/men/new-arrivals">New Arrivals</Link>
-      <Link to="/men/clothing">Clothing</Link>
-      <Link to="/men/scarves">Scarves</Link>
-      <Link to="/men/accessories">Accessories</Link>
-      <Link to="/men/shoes">Shoes</Link>
-      <Link to="/men/fragnance">Fragnance</Link>
-      <Link to="/men/gifts">Gifts</Link>
-      <Link to="/men/runway">Runway</Link>
+      {props.navigation.links.map(link =>
+        (<Link to={link.url} onClick={props.toggleSideNav}>
+          {link.title}
+        </Link>),
+      )}
     </Links>
   </SubNavigationStyled>);
 
 SubNavigation.propTypes = {
+  navigation: PropTypes.shape({
+    title: PropTypes.string,
+    image: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string,
+      }),
+    ),
+  }).isRequired,
   isOpened: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
+  close: PropTypes.func.isRequired,
+  toggleSideNav: PropTypes.func.isRequired,
 };
 
 export default SubNavigation;
