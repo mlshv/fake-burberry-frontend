@@ -30,7 +30,7 @@ const Button = styled.button`
   cursor: pointer;
 
   ${props =>
-    props.isInactive &&
+    props.isActive &&
     css`
     opacity: 0.5;
   `};
@@ -48,7 +48,7 @@ const Button = styled.button`
     background-size: cover;
     content: " ";
     ${props =>
-    props.active &&
+    props.isOpened &&
       css`
       transform: rotate(180deg);
     `};
@@ -79,7 +79,7 @@ const Content = styled.div`
 
 class Filter extends Component {
   state = {
-    active: false,
+    isOpened: false,
   };
 
   componentDidMount() {
@@ -97,10 +97,10 @@ class Filter extends Component {
   };
 
   toggle = (on = true) => {
-    if (on || on !== this.state.active) {
+    if (on || on !== this.state.isOpened) {
       this.setState(
-        prevState => ({ active: !prevState.active }),
-        () => this.props.onToggle(this.state.active),
+        prevState => ({ isOpened: !prevState.isOpened }),
+        () => this.props.onToggle(this.state.isOpened),
       );
     }
   };
@@ -114,13 +114,13 @@ class Filter extends Component {
           }}
         >
           <Button
-            active={this.state.active}
-            isInactive={this.props.isInactive}
+            isOpened={this.state.isOpened}
+            isActive={this.props.isActive}
             onClick={this.toggle}
           >
             {this.props.title}
           </Button>
-          {this.state.active &&
+          {this.state.isOpened &&
             <Content rightSideAlign={this.props.rightSideAlign}>
               {this.props.children}
             </Content>}
@@ -134,13 +134,13 @@ Filter.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   onToggle: PropTypes.func.isRequired,
-  isInactive: PropTypes.bool,
+  isActive: PropTypes.bool,
   rightSideAlign: PropTypes.bool,
 };
 
 Filter.defaultProps = {
   rightSideAlign: false,
-  isInactive: false,
+  isActive: true,
 };
 
 export default Filter;
