@@ -61,16 +61,17 @@ class LocationSelector extends Component {
     seletetedLocation: 0,
   };
 
+  handleSelectChange = (event) => {
+    this.setState({ seletetedLocation: event.target.selectedIndex });
+  };
+
   render() {
-    const handleSelectChange = (event) => {
-      this.setState({ seletetedLocation: event.target.selectedIndex });
-    };
     return (
       <LocationSelectorStyled>
         <Button>
           Shopping in: {this.props.locations[this.state.seletetedLocation]}
         </Button>
-        <Select onChange={handleSelectChange}>
+        <Select onChange={this.handleSelectChange}>
           {this.props.locations.map(location =>
             (<option>
               Shopping in: {location}
