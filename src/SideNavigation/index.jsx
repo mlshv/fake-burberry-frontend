@@ -66,6 +66,9 @@ const SectionLink = Link.extend`
 
 const Buttons = Block.extend`margin-top: -.25rem;`;
 
+const sampleLocations = ['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)'];
+const sampleLanguages = ['English', 'Russian', 'Español'];
+
 const SideNavigation = props =>
   (<SideNavigationStyled isActive={props.isActive}>
     <Logo alt="Logo" src={logo} />
@@ -100,10 +103,8 @@ const SideNavigation = props =>
       </nav>
     </Block>
     <Buttons>
-      <ButtonSelect
-        options={['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)']}
-      />
-      <ButtonSelect options={['English', 'Russian', 'Español']} />
+      <ButtonSelect options={sampleLocations} />
+      <ButtonSelect options={sampleLanguages} />
     </Buttons>
   </SideNavigationStyled>);
 
