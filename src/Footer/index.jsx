@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navigation from './Navigation';
+import LocationSelector from './LocationSelector';
+import LanguageSelector from './LanguageSelector';
 
 const Footer = styled.footer`
   background: #f3f3f3;
@@ -19,31 +21,6 @@ const Footer = styled.footer`
     padding-bottom: 3rem;
   }
 `;
-
-const TextButton = styled.button`
-  display: block;
-  margin-top: 1rem;
-  padding: 0;
-  line-height: 1rem;
-  font-size: .75rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  background: transparent;
-  border: none;
-  color: #999;
-
-  @media screen and (min-width: 48rem) {
-    display: inline-block;
-    margin-top: 1.25rem;
-    margin-right: 1.5rem;
-  }
-
-  @media screen and (min-width: 62rem) {
-    margin-top: 2.25rem;
-    margin-right: 3rem;
-  }
-`;
-
-const DarkText = styled.span`color: #171717;`;
 
 const Subtitle = styled.h3`
   margin-top: 1.5rem;
@@ -73,16 +50,15 @@ const CenteredLink = styled.a`
   }
 `;
 
+const sampleLocations = ['Russian Federation', 'United Kingdom', 'United States'];
+const sampleLanguages = ['English', 'Russian', 'Español'];
+
 export default () =>
   (<Footer>
     <div className="container">
       <Navigation />
-      <TextButton>
-        Shipping country: <DarkText>Russian Federation</DarkText>
-      </TextButton>
-      <TextButton>
-        Language: <DarkText>English</DarkText>
-      </TextButton>
+      <LocationSelector locations={sampleLocations} />
+      <LanguageSelector languages={sampleLanguages} />
       <Subtitle>Need help?</Subtitle>
       <CenteredLink href="#">Find out more and contact us</CenteredLink>
     </div>
