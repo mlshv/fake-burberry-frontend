@@ -47,7 +47,7 @@ const PageOverlay = styled.button`
 
 class App extends Component {
   state = {
-    isSideNavOpened: false,
+    isSideNavOpened: true,
   };
 
   toggleSideNav = () => {
