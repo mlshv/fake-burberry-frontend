@@ -5,7 +5,6 @@ import HeartIcon from '../../common/HeartIcon';
 const LikeButtonStyled = styled.button`
   padding: 0;
   border: 0;
-  outline: none;
   background: none;
   cursor: pointer;
 `;
