@@ -28,7 +28,7 @@ const Page = styled.section`
   overflow: auto;
   transition: .25s cubic-bezier(0.165, 0.84, 0.44, 1);
   ${props =>
-    props.sideNavActive &&
+    props.isSideNavOpened &&
     css`
     transform: translate3d(274px, 0, 0);
   `};
@@ -47,7 +47,7 @@ const PageOverlay = styled.button`
 
 class App extends Component {
   state = {
-    isisSideNavOpened: false,
+    isSideNavOpened: false,
   };
 
   toggleSideNav = () => {
@@ -65,8 +65,8 @@ class App extends Component {
           </Helmet>
           <BrowserRouter>
             <PageWrapper>
-              <SideNavigation active={this.state.isSideNavOpened} />
-              <Page sideNavActive={this.state.isSideNavOpened}>
+              <SideNavigation isActive={this.state.isSideNavOpened} />
+              <Page isSideNavOpened={this.state.isSideNavOpened}>
                 {this.state.isSideNavOpened && <PageOverlay onClick={this.toggleSideNav} />}
                 <Header onHamburgerClick={this.toggleSideNav} />
                 <Switch>
