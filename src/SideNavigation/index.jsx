@@ -9,13 +9,13 @@ import SubNavigation from './SubNavigation';
 
 const SideNavigationStyled = styled.section`
   position: absolute;
-  width: 0;
   top: 0;
   bottom: 0;
   left: 0;
   height: 100%;
   width: 274px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   @media screen and (min-width: 62rem) {
     display: none;
   }
@@ -27,6 +27,7 @@ const MainNavigation = styled.div`
     props.isShiftedLeft &&
     css`
     transform: translate3d(-274px, 0, 0);
+    height: 90%;
   `};
 `;
 
