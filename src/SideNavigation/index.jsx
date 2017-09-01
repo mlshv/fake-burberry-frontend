@@ -143,8 +143,8 @@ const subNavigation = [
       'https://assets.burberry.com/is/image/Burberryltd/dcdefeb4e3c9da75bda644c8b8873cc22da50449.jpg?$BBY_V2_BASIC$',
     links: [
       { title: 'Make-up', url: '/beauty/make-up' },
-      { title: 'Women′s Fragrance', url: '/beauty/womens-fragrance' },
-      { title: 'Men′s Fragrance', url: '/beauty/mens-fragrance' },
+      { title: 'Women′s Fragrance', url: '/women/fragnance' },
+      { title: 'Men′s Fragrance', url: '/men/fragnance' },
       { title: 'Beauty Gifts', url: '/beauty/beauty-gifts' },
     ],
   },
