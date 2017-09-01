@@ -16,6 +16,9 @@ const SideNavigationStyled = styled.section`
   height: 100%;
   width: 274px;
   overflow: auto;
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `;
 
 const MainNavigation = styled.div`

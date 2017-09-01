@@ -31,6 +31,9 @@ const Page = styled.section`
     props.isSideNavOpened &&
     css`
     transform: translate3d(274px, 0, 0);
+    @media screen and (min-width: 48rem) {
+      transform: none;
+    }
   `};
   background: #fff;
 `;
