@@ -2,14 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Filters from './Filters';
 
 const JumbotronStyled = styled.div`
   padding-top: 2rem;
   background: #f3f3f3;
-  margin-bottom: 2rem;
   @media screen and (min-width: 48rem) {
-    margin-bottom: 4rem;
     padding-top: 4rem;
   }
 `;
@@ -58,19 +55,15 @@ const ExpandTextButton = styled.button`
 const maxShowedTextLength = 194;
 
 class Jumbotron extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ellipsizeText: true,
-    };
-    this.expandText = this.expandText.bind(this);
-  }
+  state = {
+    ellipsizeText: true,
+  };
 
-  expandText() {
+  expandText = () => {
     this.setState(() => ({
       ellipsizeText: false,
     }));
-  }
+  };
 
   render() {
     const ellipsizeTextIfNecessary = (text) => {
@@ -96,7 +89,6 @@ class Jumbotron extends Component {
               </Text>
             </div>
           </div>
-          <Filters />
         </div>
       </JumbotronStyled>
     );

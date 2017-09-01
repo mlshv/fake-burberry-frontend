@@ -8,23 +8,30 @@ const ColorButtonStyled = styled.button`
   height: 40px;
   font-size: 0;
   border-radius: 50%;
-  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
+  border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
   background-color: ${props => props.value};
+  cursor: pointer;
 `;
 
 const ColorButton = props =>
-  (<ColorButtonStyled value={props.value} active={props.active} type="button">
+  (<ColorButtonStyled
+    value={props.value}
+    isActive={props.isActive}
+    type="button"
+    onClick={props.onClick}
+  >
     Select {props.name} color
   </ColorButtonStyled>);
 
 ColorButton.propTypes = {
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  active: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool,
 };
 
 ColorButton.defaultProps = {
-  active: false,
+  isActive: false,
 };
 
 export default ColorButton;

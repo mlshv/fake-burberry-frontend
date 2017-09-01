@@ -1,41 +1,90 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from '../../common/DropdownButton';
+import Filter from './Filter';
 
-const Filters = styled.div`
+const Background = styled.div`background: #f3f3f3;`;
+
+const FiltersStyled = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: .5625rem;
-  overflow-y: auto;
+  padding-top: .5625rem;
   white-space: nowrap;
   @media screen and (min-width: 48rem) {
-    margin-top: 1rem;
+    position: static;
+    padding-top: 1rem;
   }
 `;
 
-const Hint = styled.div`
-  display: inline-block;
-  margin-right: 2rem;
-  padding: 1.5rem 0;
-  font-size: .75rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: .66;
-  color: #171717;
-
-  @media screen and (min-width: 48rem) {
-    display: none;
-  }
+const FilterContent = styled.p`
+  margin: 0;
+  white-space: nowrap;
 `;
 
-export default () =>
-  (<Filters>
-    <div>
-      <Hint>Refine by</Hint>
-      <span>
-        <Button>Category</Button>
-        <Button>Colour</Button>
-        <Button>Size</Button>
-      </span>
-    </div>
-    <Button>Sort by price</Button>
-  </Filters>);
+class Filters extends Component {
+  state = {
+    activeFilter: undefined,
+  };
+
+  handleFilterToggle = (filterName, toggledOn) => {
+    if (toggledOn) {
+      this.setState({ activeFilter: filterName });
+    } else {
+      this.setState({ activeFilter: undefined });
+    }
+    this.props.onToggle(toggledOn);
+  };
+
+  render() {
+    return (
+      <Background>
+        <div className="container">
+          <FiltersStyled>
+            <div>
+              {['Category', 'Colour', 'Size'].map(filterName =>
+                (<Filter
+                  title={filterName}
+                  onToggle={toggledOn => this.handleFilterToggle(filterName, toggledOn)}
+                  isActive={
+                    this.state.activeFilter !== undefined && this.state.activeFilter !== filterName
+                  }
+                >
+                  <FilterContent>
+                    Content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content
+                  </FilterContent>
+                </Filter>),
+              )}
+            </div>
+            <Filter
+              title="Sort by price"
+              rightSideAlign
+              onToggle={toggledOn => this.handleFilterToggle('Sort by price', toggledOn)}
+              isActive={
+                this.state.activeFilter !== undefined && this.state.activeFilter !== 'Sort by price'
+              }
+            >
+              <FilterContent>
+                high or<br />
+                low<br />
+                it’s medium length of<br />
+                content
+              </FilterContent>
+            </Filter>
+          </FiltersStyled>
+        </div>
+      </Background>
+    );
+  }
+}
+
+Filters.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+};
+
+export default Filters;

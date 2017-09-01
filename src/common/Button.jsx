@@ -13,6 +13,7 @@ const Button = styled.button`
   background: ${props => (props.primary ? '#171717' : 'transparent')};
   border: solid 1px #171717;
   color: ${props => (props.primary ? '#fff' : '#171717')};
+  cursor: pointer;
 `;
 
 export default Button;

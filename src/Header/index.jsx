@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
-import breakpoints from '../common/breakpoints';
-import DropdownButton from '../common/DropdownButton';
 import logo from '../assets/logo.svg';
 import hamburgerIcon from '../assets/hamburger.svg';
 import Navigation from './Navigation';
+import LocationSelector from './LocationSelector';
 
 const Logo = styled.img`
   display: block;
@@ -26,41 +25,37 @@ const HamburgerButton = styled.button`
   width: 1rem;
   margin-top: 1rem;
   background: url(${hamburgerIcon}) no-repeat;
+  outline: none;
   border: none;
   @media screen and (min-width: 48rem) {
     display: none;
   }
 `;
 
-const LocationSelector = DropdownButton.extend`
-  @media screen and (min-width: 48rem) {
-    margin: 0;
-    font-size: .75rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #999;
-  }
-  @media screen and (min-width: 62rem) {
-    padding: 2rem 0;
-  }
-`;
+const sampleLocations = ['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)'];
 
-export default () =>
-  (<div className="container">
-    <header className="row">
-      <div className="col-xs-2 col-md-4">
-        <HamburgerButton />
-        <MediaQuery minDeviceWidth={breakpoints.md}>
-          <LocationSelector>Shopping in: United Kingdom (£)</LocationSelector>
-        </MediaQuery>
-      </div>
-      <div className="col-xs-8 col-md-4">
-        <Link to="/">
-          <Logo alt="Logo" src={logo} />
-        </Link>
-      </div>
-      <div className="col-xs-12">
-        <Navigation />
-      </div>
-    </header>
+const Header = props =>
+  (<div>
+    <div className="container">
+      <header className="row">
+        <div className="col-xs-2 col-md-4">
+          <HamburgerButton onClick={props.onHamburgerClick} />
+          <LocationSelector locations={sampleLocations} />
+        </div>
+        <div className="col-xs-8 col-md-4">
+          <Link to="/">
+            <Logo alt="Logo" src={logo} />
+          </Link>
+        </div>
+        <div className="col-xs-12">
+          <Navigation />
+        </div>
+      </header>
+    </div>
   </div>);
+
+Header.propTypes = {
+  onHamburgerClick: PropTypes.func.isRequired,
+};
+
+export default Header;

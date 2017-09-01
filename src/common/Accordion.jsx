@@ -26,7 +26,7 @@ export const Container = styled.section`
     position: absolute;
     content: url(${triangleIcon});
     right: .5rem;
-    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
+    ${props => (props.isActive ? 'transform: rotate(180deg);' : '')};
   }
   @media screen and (min-width: 48rem) {
     ::after {
@@ -58,7 +58,7 @@ export const Title = styled.h2`
 `;
 
 export const Content = styled.div`
-  display: ${props => (props.active ? 'block' : 'none')};
+  display: ${props => (props.isActive ? 'block' : 'none')};
   margin-top: 2rem;
   font-size: .875rem;
   line-height: 1.5rem;
@@ -85,27 +85,28 @@ export const Content = styled.div`
 class Accordion extends Component {
   constructor() {
     super();
-    this.state = {
-      active: false,
-    };
     this.toggle = this.toggle.bind(this);
   }
 
+  state = {
+    isActive: false,
+  };
+
   toggle() {
-    this.setState(state => ({
-      active: !state.active,
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
     }));
   }
 
   render() {
     return (
-      <Container active={this.state.active}>
+      <Container isActive={this.state.isActive}>
         <ToggleButton type="button" onClick={this.toggle}>
           <Title>
             {this.props.title}
           </Title>
         </ToggleButton>
-        <Content active={this.state.active}>
+        <Content isActive={this.state.isActive}>
           {this.props.children}
         </Content>
       </Container>

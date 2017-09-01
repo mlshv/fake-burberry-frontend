@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link as RouteLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
-import Underline from '../common/Underline';
-import heartIcon from '../assets/heart.svg';
+import Underline from '../../common/Underline';
+import LikeButton from './LikeButton';
 
 const CardStyled = styled.div`
   display: flex;
@@ -30,16 +30,6 @@ const Tag = styled.p`
   line-height: 1.4;
   @media screen and (min-width: 48rem) {
     line-height: 1.4;
-  }
-`;
-
-const Like = styled.button`
-  padding: 1rem .4375rem;
-  content: " ";
-  border: none;
-  background: url(${heartIcon}) no-repeat center .5625rem;
-  @media screen and (min-width: 62rem) {
-    background-position: center .5rem;
   }
 `;
 
@@ -97,7 +87,7 @@ const Card = props =>
       <Tag>
         {props.tag}
       </Tag>
-      <Like />
+      <LikeButton />
     </TagLikeWrapper>
     <Link to={props.to}>
       <Name>

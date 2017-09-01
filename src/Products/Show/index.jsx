@@ -40,8 +40,15 @@ const DescriptionMainImage = styled.img`
   }
 `;
 
-export default () =>
-  (<main>
+const sampleColors = [
+  { name: 'Khaki Green', value: '#746F59' },
+  { name: 'Black', value: '#232122' },
+];
+
+const sampleSizes = ['S', 'M', 'L', 'XL'];
+
+export default () => (
+  <main>
     <Helmet>
       <title>Lightweight Grainy Nubuck Trench Coat | Men - Burberry</title>
     </Helmet>
@@ -55,7 +62,7 @@ export default () =>
             <Showcase />
           </div>
           <div className="col-xs-12 col-md-5 col-lg-6">
-            <MainPanel />
+            <MainPanel colors={sampleColors} sizes={sampleSizes} />
           </div>
         </div>
       </section>
@@ -65,15 +72,15 @@ export default () =>
         <div className="col-xs-12 col-lg-4">
           <Accordion title="Description">
             <p>
-              A trench coat made in Italy from ultra-light nubuck, buffed on the grain side for a
-              velvety-soft and supple feel.
+                A trench coat made in Italy from ultra-light nubuck, buffed on the grain side for a
+                velvety-soft and supple feel.
             </p>
             <p>The classically cut design is refined with neat painted edges.</p>
             <br />
             <ul>
               <li>
-                Coat length: 100cm/39.4in. This is based on a size IT 48 as proportions change
-                slightly according to size.
+                  Coat length: 100cm/39.4in. This is based on a size IT 48 as proportions change
+                  slightly according to size.
               </li>
               <li>Model’s height: 191cm/6ft 3in</li>
               <li>Outer: 100% calf suede</li>
@@ -83,8 +90,8 @@ export default () =>
               <li>Double-breasted button closure</li>
               <li>Button-through pockets</li>
               <li>
-                Signature details: epaulettes, hook-and-eye collar closure, gun flap, belted cuffs,
-                D-ring belt, storm shield
+                  Signature details: epaulettes, hook-and-eye collar closure, gun flap, belted
+                  cuffs, D-ring belt, storm shield
               </li>
               <li>Specialist leather clean</li>
               <li>Made in Italy</li>
@@ -111,4 +118,5 @@ export default () =>
         <Recommendations />
       </section>
     </section>
-  </main>);
+  </main>
+);
