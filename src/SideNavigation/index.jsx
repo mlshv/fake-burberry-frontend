@@ -94,7 +94,7 @@ const subNavigation = [
   {
     title: 'Men',
     image:
-      'https://assets.burberry.com/is/image/Burberryltd/d68dce82ea0a299febf5a35de882c78f0d70ad7d.jpg?$BBY_V2_BASIC$&wid=390',
+      'https://assets.burberry.com/is/image/Burberryltd/d68dce82ea0a299febf5a35de882c78f0d70ad7d.jpg?$BBY_V2_BASIC$',
     links: [
       { title: 'New Arrivals', url: '/men/new-arrivals' },
       { title: 'Clothing', url: '/men/clothing' },
@@ -109,7 +109,7 @@ const subNavigation = [
   {
     title: 'Women',
     image:
-      'https://assets.burberry.com/is/image/Burberryltd/4234f8a6cd1084d7710a3e40d0b0752d9674e798.jpg?$BBY_V2_BASIC$&wid=390',
+      'https://assets.burberry.com/is/image/Burberryltd/4234f8a6cd1084d7710a3e40d0b0752d9674e798.jpg?$BBY_V2_BASIC$',
     links: [
       { title: 'New Arrivals', url: '/women/new-arrivals' },
       { title: 'Clothing', url: '/women/clothing' },
@@ -126,7 +126,7 @@ const subNavigation = [
   {
     title: 'Children',
     image:
-      'https://assets.burberry.com/is/image/Burberryltd/cf6e1b1b9d32f13a7b684b141dbdf26bd842020b.jpg?$BBY_V2_BASIC$&wid=390',
+      'https://assets.burberry.com/is/image/Burberryltd/cf6e1b1b9d32f13a7b684b141dbdf26bd842020b.jpg?$BBY_V2_BASIC$',
     links: [
       { title: 'New In', url: '/children/new-in' },
       { title: 'Baby', url: '/children/baby' },
@@ -139,7 +139,7 @@ const subNavigation = [
   {
     title: 'Beauty',
     image:
-      'https://assets.burberry.com/is/image/Burberryltd/dcdefeb4e3c9da75bda644c8b8873cc22da50449.jpg?$BBY_V2_BASIC$&wid=390',
+      'https://assets.burberry.com/is/image/Burberryltd/dcdefeb4e3c9da75bda644c8b8873cc22da50449.jpg?$BBY_V2_BASIC$',
     links: [
       { title: 'Make-up', url: '/beauty/make-up' },
       { title: 'Women′s Fragrance', url: '/beauty/womens-fragrance' },
