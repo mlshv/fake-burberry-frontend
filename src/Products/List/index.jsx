@@ -128,7 +128,7 @@ class List extends Component {
                 />
               </div>
             </div>
-            <MediaQuery minDeviceWidth={breakpoints.md - 1}>
+            <MediaQuery minWidth={breakpoints.md - 1}>
               <div className="row">
                 <div className="col-xs-6 col-md-3">
                   <Card
@@ -216,7 +216,7 @@ class List extends Component {
                 />
               </div>
             </div>
-            <MediaQuery minDeviceWidth={breakpoints.md - 1}>
+            <MediaQuery minWidth={breakpoints.md - 1}>
               <div className="row">
                 <div className="col-xs-6 col-md-3">
                   <Card

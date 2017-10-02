@@ -54,7 +54,7 @@ export default () => (
     </Helmet>
     <Background>
       <section className="container">
-        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <MediaQuery maxWidth={breakpoints.lg - 1}>
           <Title>Lightweight Grainy Nubuck Trench Coat</Title>
         </MediaQuery>
         <div className="row middle-lg">
@@ -106,7 +106,7 @@ export default () => (
           />
         </div>
       </div>
-      <MediaQuery minDeviceWidth={breakpoints.lg}>
+      <MediaQuery minWidth={breakpoints.lg}>
         <div className="row">
           <Gallery />
         </div>

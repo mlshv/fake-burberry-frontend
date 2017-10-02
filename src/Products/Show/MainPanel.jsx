@@ -133,7 +133,7 @@ class MainPanel extends Component {
   render() {
     return (
       <MainPanelStyled>
-        <MediaQuery minDeviceWidth={breakpoints.lg}>
+        <MediaQuery minWidth={breakpoints.lg}>
           <Title>Lightweight Grainy Nubuck Trench Coat</Title>
         </MediaQuery>
         <PriceAndId />
@@ -143,7 +143,7 @@ class MainPanel extends Component {
               Colour: <b>{this.props.colors[this.state.selectedColor].name}</b>
             </ColorName>
           </div>
-          <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <MediaQuery minWidth={breakpoints.lg}>
             <div className="col-lg-6">
               <Size>
                 {this.props.sizes[this.state.selectedSize]}
@@ -167,7 +167,7 @@ class MainPanel extends Component {
             </ColorButtons>
             <Divider />
           </div>
-          <MediaQuery minDeviceWidth={breakpoints.lg}>
+          <MediaQuery minWidth={breakpoints.lg}>
             <div className="col-lg-6">
               {this.props.sizes.map((size, index) =>
                 (<SizeButton
@@ -180,13 +180,13 @@ class MainPanel extends Component {
             </div>
           </MediaQuery>
         </div>
-        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <MediaQuery maxWidth={breakpoints.lg - 1}>
           <ButtonWrapper>
             <SizeSelector sizes={this.props.sizes} />
             <Button type="button">Find in store</Button>
           </ButtonWrapper>
         </MediaQuery>
-        <MediaQuery minDeviceWidth={breakpoints.lg}>
+        <MediaQuery minWidth={breakpoints.lg}>
           <div className="row">
             <div className="col-lg-6">
               <ButtonWrapper>
@@ -202,10 +202,10 @@ class MainPanel extends Component {
             </div>
           </div>
         </MediaQuery>
-        <MediaQuery maxDeviceWidth={breakpoints.lg - 1}>
+        <MediaQuery maxWidth={breakpoints.lg - 1}>
           <TextButton type="button">Need size help?</TextButton>
         </MediaQuery>
-        <MediaQuery minDeviceWidth={breakpoints.lg}>
+        <MediaQuery minWidth={breakpoints.lg}>
           <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
           <DeliveryText>Order before 7pm Monday to Thursday for delivery the next Day</DeliveryText>
         </MediaQuery>
